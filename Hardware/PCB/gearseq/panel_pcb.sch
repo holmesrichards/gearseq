@@ -14,10 +14,10 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L power:GND1 #PWR050
+L power:GND1 #PWR051
 U 1 1 6112F162
 P 4950 4750
-F 0 "#PWR050" H 4950 4500 50  0001 C CNN
+F 0 "#PWR051" H 4950 4500 50  0001 C CNN
 F 1 "GND1" H 4955 4577 50  0000 C CNN
 F 2 "" H 4950 4750 50  0001 C CNN
 F 3 "" H 4950 4750 50  0001 C CNN
@@ -127,8 +127,8 @@ L ao_symbols:MountingHole H?
 U 1 1 6146FF72
 P 2300 5900
 AR Path="/6146FF72" Ref="H?"  Part="1" 
-AR Path="/61124C5F/6146FF72" Ref="H5"  Part="1" 
-F 0 "H5" H 2400 5946 50  0000 L CNN
+AR Path="/61124C5F/6146FF72" Ref="H4"  Part="1" 
+F 0 "H4" H 2400 5946 50  0000 L CNN
 F 1 "MountingHole" H 2400 5855 50  0000 L CNN
 F 2 "ao_tht:MountingHole_3.2mm_M3" H 2300 5900 50  0001 C CNN
 F 3 "" H 2300 5900 50  0001 C CNN
@@ -141,8 +141,8 @@ L ao_symbols:MountingHole H?
 U 1 1 6146FF79
 P 3100 5900
 AR Path="/6146FF79" Ref="H?"  Part="1" 
-AR Path="/61124C5F/6146FF79" Ref="H7"  Part="1" 
-F 0 "H7" H 3200 5946 50  0000 L CNN
+AR Path="/61124C5F/6146FF79" Ref="H6"  Part="1" 
+F 0 "H6" H 3200 5946 50  0000 L CNN
 F 1 "MountingHole" H 3200 5855 50  0000 L CNN
 F 2 "ao_tht:MountingHole_3.2mm_M3" H 3100 5900 50  0001 C CNN
 F 3 "" H 3100 5900 50  0001 C CNN
@@ -163,10 +163,10 @@ Wire Notes Line
 Text Notes 2150 5700 0    50   ~ 0
 Hardware
 $Comp
-L power:GND1 #PWR049
+L power:GND1 #PWR050
 U 1 1 6133F470
 P 3350 3550
-F 0 "#PWR049" H 3350 3300 50  0001 C CNN
+F 0 "#PWR050" H 3350 3300 50  0001 C CNN
 F 1 "GND1" H 3355 3377 50  0000 C CNN
 F 2 "" H 3350 3550 50  0001 C CNN
 F 3 "" H 3350 3550 50  0001 C CNN
@@ -174,10 +174,10 @@ F 3 "" H 3350 3550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x11 J12
+L Connector_Generic:Conn_01x11 J14
 U 1 1 6133F476
 P 3850 3300
-F 0 "J12" V 4050 3300 50  0000 C CNN
+F 0 "J14" V 4050 3300 50  0000 C CNN
 F 1 "Conn_01x11" V 3950 3300 50  0000 C CNN
 F 2 "Connector_PinSocket_2.54mm:PinSocket_1x11_P2.54mm_Vertical" H 3850 3300 50  0001 C CNN
 F 3 "~" H 3850 3300 50  0001 C CNN
@@ -185,10 +185,10 @@ F 3 "~" H 3850 3300 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L power:PWR_FLAG #FLG03
+L power:PWR_FLAG #FLG02
 U 1 1 6133F499
 P 2250 3800
-F 0 "#FLG03" H 2250 3875 50  0001 C CNN
+F 0 "#FLG02" H 2250 3875 50  0001 C CNN
 F 1 "PWR_FLAG" H 2250 3973 50  0000 C CNN
 F 2 "" H 2250 3800 50  0001 C CNN
 F 3 "~" H 2250 3800 50  0001 C CNN
@@ -196,10 +196,10 @@ F 3 "~" H 2250 3800 50  0001 C CNN
 	1    0    0    1   
 $EndComp
 $Comp
-L power:PWR_FLAG #FLG04
+L power:PWR_FLAG #FLG03
 U 1 1 6133F4A6
 P 2550 3600
-F 0 "#FLG04" H 2550 3675 50  0001 C CNN
+F 0 "#FLG03" H 2550 3675 50  0001 C CNN
 F 1 "PWR_FLAG" H 2550 3773 50  0000 C CNN
 F 2 "" H 2550 3600 50  0001 C CNN
 F 3 "~" H 2550 3600 50  0001 C CNN
@@ -238,10 +238,10 @@ VCC
 Wire Wire Line
 	3450 3500 3450 3800
 $Comp
-L power:GND1 #PWR048
+L power:GND1 #PWR049
 U 1 1 617444E6
 P 2550 3600
-F 0 "#PWR048" H 2550 3350 50  0001 C CNN
+F 0 "#PWR049" H 2550 3350 50  0001 C CNN
 F 1 "GND1" H 2555 3427 50  0000 C CNN
 F 2 "" H 2550 3600 50  0001 C CNN
 F 3 "" H 2550 3600 50  0001 C CNN
@@ -308,8 +308,8 @@ L ao_symbols:MountingHole H?
 U 1 1 618E5B83
 P 2300 6250
 AR Path="/618E5B83" Ref="H?"  Part="1" 
-AR Path="/61124C5F/618E5B83" Ref="H6"  Part="1" 
-F 0 "H6" H 2400 6296 50  0000 L CNN
+AR Path="/61124C5F/618E5B83" Ref="H5"  Part="1" 
+F 0 "H5" H 2400 6296 50  0000 L CNN
 F 1 "MountingHole" H 2400 6205 50  0000 L CNN
 F 2 "ao_tht:MountingHole_3.2mm_M3" H 2300 6250 50  0001 C CNN
 F 3 "" H 2300 6250 50  0001 C CNN
@@ -327,4 +327,90 @@ Wire Notes Line
 	1900 2000 6400 2000
 Text Notes 2300 2300 2    50   ~ 0
 Pots
+$Comp
+L ao_symbols:SW_Push SW1
+U 1 1 615ADE7E
+P 6950 5000
+F 0 "SW1" H 6950 5285 50  0000 C CNN
+F 1 "SW_Push" H 6950 5194 50  0000 C CNN
+F 2 "ao_tht:Push_button_A-5050" H 6950 5000 50  0001 C CNN
+F 3 "~" H 6950 5000 50  0001 C CNN
+F 4 "Tayda" H 6950 5000 50  0001 C CNN "Vendor"
+F 5 "A-3487" H 6950 5000 50  0001 C CNN "SKU"
+	1    6950 5000
+	1    0    0    -1  
+$EndComp
+$Comp
+L ao_symbols:2_pin_Molex_connector J15
+U 1 1 615AE230
+P 7000 5450
+F 0 "J15" V 7150 5400 50  0000 L CNN
+F 1 "2_pin_Molex_connector" V 7250 5000 50  0000 L CNN
+F 2 "ao_tht:Molex_KK-254_AE-6410-02A_1x02_P2.54mm_Vertical" H 7000 5450 50  0001 C CNN
+F 3 "" H 7000 5450 50  0001 C CNN
+F 4 "Tayda" H 7000 5450 50  0001 C CNN "Vendor"
+F 5 "A-826" H 7000 5450 50  0001 C CNN "SKU"
+	1    7000 5450
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6750 5000 6700 5000
+Wire Wire Line
+	6700 5000 6700 5250
+Wire Wire Line
+	6700 5250 6900 5250
+Wire Wire Line
+	7150 5000 7200 5000
+Wire Wire Line
+	7200 5000 7200 5250
+Wire Wire Line
+	7200 5250 7000 5250
+$Comp
+L ao_symbols:SW_Push SW2
+U 1 1 615B2113
+P 7900 5000
+F 0 "SW2" H 7900 5285 50  0000 C CNN
+F 1 "SW_Push" H 7900 5194 50  0000 C CNN
+F 2 "ao_tht:Push_button_A-5050" H 7900 5000 50  0001 C CNN
+F 3 "~" H 7900 5000 50  0001 C CNN
+F 4 "Tayda" H 7900 5000 50  0001 C CNN "Vendor"
+F 5 "A-3487" H 7900 5000 50  0001 C CNN "SKU"
+	1    7900 5000
+	1    0    0    -1  
+$EndComp
+$Comp
+L ao_symbols:2_pin_Molex_connector J16
+U 1 1 615B211B
+P 7950 5450
+F 0 "J16" V 8100 5400 50  0000 L CNN
+F 1 "2_pin_Molex_connector" V 8200 5000 50  0000 L CNN
+F 2 "ao_tht:Molex_KK-254_AE-6410-02A_1x02_P2.54mm_Vertical" H 7950 5450 50  0001 C CNN
+F 3 "" H 7950 5450 50  0001 C CNN
+F 4 "Tayda" H 7950 5450 50  0001 C CNN "Vendor"
+F 5 "A-826" H 7950 5450 50  0001 C CNN "SKU"
+	1    7950 5450
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7700 5000 7650 5000
+Wire Wire Line
+	7650 5000 7650 5250
+Wire Wire Line
+	7650 5250 7850 5250
+Wire Wire Line
+	8100 5000 8150 5000
+Wire Wire Line
+	8150 5000 8150 5250
+Wire Wire Line
+	8150 5250 7950 5250
+Wire Notes Line
+	6500 4300 8500 4300
+Wire Notes Line
+	8500 4300 8500 5800
+Wire Notes Line
+	8500 5800 6500 5800
+Wire Notes Line
+	6500 5800 6500 4300
+Text Notes 6600 4600 0    50   ~ 0
+Push buttons (panel mounted)\nConnect to Clock and Reset inputs\nvia Molex
 $EndSCHEMATC
