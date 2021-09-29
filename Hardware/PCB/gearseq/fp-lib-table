@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name gearseq_panel)(type KiCad)(uri "/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Hardware/Panel/gearseq_panel/gearseq_panel.pretty")(options "")(descr ""))
+)
