@@ -5,7 +5,7 @@
    viewBox="0 0 8.5 11"
    version="1.1"
    id="svg8"
-   inkscape:version="1.1 (1:1.1+202105261517+ce6663b3b7)"
+   inkscape:version="1.1.1 (1:1.1+202109281949+c3084ef5ed)"
    sodipodi:docname="gear_panel.svg"
    inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Gap sequencer/Hardware/Panel/gapseq_holes.png"
    inkscape:export-xdpi="999.99799"
@@ -19,6 +19,72 @@
    xmlns:dc="http://purl.org/dc/elements/1.1/">
   <defs
      id="defs2">
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect8853"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect8849"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect8845"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect8841"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect8724"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect8720"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
     <inkscape:path-effect
        effect="bspline"
        id="path-effect21250"
@@ -578,6 +644,20 @@
        apply_no_weight="true"
        apply_with_weight="true"
        only_selected="false" />
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter1493"
+       x="0"
+       y="0"
+       width="1"
+       height="1">
+      <feBlend
+         inkscape:collect="always"
+         mode="screen"
+         in2="BackgroundImage"
+         id="feBlend1495" />
+    </filter>
   </defs>
   <sodipodi:namedview
      id="base"
@@ -587,10 +667,10 @@
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
      inkscape:zoom="0.85"
-     inkscape:cx="456.47059"
-     inkscape:cy="594.70588"
+     inkscape:cx="307.05882"
+     inkscape:cy="606.47059"
      inkscape:document-units="mm"
-     inkscape:current-layer="layer12"
+     inkscape:current-layer="layer16"
      showgrid="false"
      units="in"
      inkscape:window-width="1581"
@@ -603,7 +683,7 @@
      inkscape:snap-midpoints="false"
      inkscape:snap-others="true"
      inkscape:snap-grids="true"
-     inkscape:snap-nodes="true"
+     inkscape:snap-nodes="false"
      inkscape:snap-object-midpoints="true"
      inkscape:snap-center="true"
      inkscape:snap-text-baseline="true"
@@ -652,28 +732,15 @@
        id="guide1431"
        inkscape:locked="false" />
     <sodipodi:guide
-       position="1.9488186,3.6377966"
-       orientation="0,1"
-       id="guide1433"
-       inkscape:locked="false" />
-    <sodipodi:guide
        position="1.968504,1.6692913"
        orientation="0,-1"
        id="guide3116" />
-    <sodipodi:guide
-       position="1.968504,2.6535433"
-       orientation="0,-1"
-       id="guide3118" />
-    <sodipodi:guide
-       position="1.968504,3.1259842"
-       orientation="0,-1"
-       id="guide3120" />
     <sodipodi:guide
        position="1.9488186,4.3070879"
        orientation="0,-1"
        id="guide3122" />
     <sodipodi:guide
-       position="2.7559055,5.2913385"
+       position="2.4606292,5.4881892"
        orientation="0,-1"
        id="guide3126" />
     <sodipodi:guide
@@ -729,10 +796,6 @@
        orientation="0,-1"
        id="guide2514" />
     <sodipodi:guide
-       position="1.9488192,3.5590539"
-       orientation="0,-1"
-       id="guide2574" />
-    <sodipodi:guide
        position="4.1338583,7.8503938"
        orientation="1,0"
        id="guide9917" />
@@ -744,14 +807,6 @@
        position="3.9370079,1.3149595"
        orientation="0,-1"
        id="guide2212" />
-    <sodipodi:guide
-       position="1.9488187,3.3228359"
-       orientation="0,-1"
-       id="guide2259" />
-    <sodipodi:guide
-       position="1.9462084,2.9291351"
-       orientation="0,-1"
-       id="guide2261" />
     <sodipodi:guide
        position="1.9462079,2.3385823"
        orientation="0,-1"
@@ -765,57 +820,17 @@
        orientation="1,0"
        id="guide2335" />
     <sodipodi:guide
-       position="1.9488187,4.1102375"
-       orientation="0,-1"
-       id="guide4266" />
-    <sodipodi:guide
-       position="1.9488187,3.9133871"
-       orientation="0,-1"
-       id="guide4268" />
-    <sodipodi:guide
-       position="2.4606292,4.1102362"
-       orientation="-0.70710678,-0.70710678"
-       id="guide20410" />
-    <sodipodi:guide
-       position="2.4606292,3.1259842"
-       orientation="0.70710678,-0.70710678"
-       id="guide20597" />
-    <sodipodi:guide
-       position="2.7559055,5.2913378"
-       orientation="-0.70710678,-0.70710678"
-       id="guide3291" />
-    <sodipodi:guide
-       position="4.1338535,5.2913385"
-       orientation="0.70710678,-0.70710678"
-       id="guide3293" />
-    <sodipodi:guide
        position="2.9527559,4.1102409"
        orientation="1,0"
        id="guide3295" />
     <sodipodi:guide
-       position="3.4448828,3.1259842"
-       orientation="0.70710678,-0.70710678"
-       id="guide3297" />
-    <sodipodi:guide
-       position="4.1338583,4.3070879"
-       orientation="0.70710678,-0.70710678"
-       id="guide3299" />
-    <sodipodi:guide
-       position="4.1338583,6.6692904"
-       orientation="0.70710678,-0.70710678"
-       id="guide3487" />
-    <sodipodi:guide
-       position="2.9527559,4.3070879"
-       orientation="-0.70710678,-0.70710678"
-       id="guide3491" />
-    <sodipodi:guide
-       position="2.7559012,6.6692913"
-       orientation="0.70710678,-0.70710678"
-       id="guide3495" />
-    <sodipodi:guide
        position="2.1653543,5.4881889"
        orientation="1,0"
        id="guide3497" />
+    <sodipodi:guide
+       position="1.9488187,3.1259855"
+       orientation="0,-1"
+       id="guide3744" />
   </sodipodi:namedview>
   <metadata
      id="metadata5">
@@ -842,7 +857,7 @@
        inkscape:export-xdpi="999.99799"
        inkscape:export-ydpi="999.99799"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_holes.png"
-       width="2.9527559" />
+       width="3.9370079" />
   </g>
   <g
      inkscape:label="Standards"
@@ -1608,7 +1623,7 @@
     </g>
     <g
        id="g2874-6"
-       transform="translate(10.039365,-2.6141722)"
+       transform="translate(10.825401,-0.05511809)"
        style="display:inline"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Gap sequencer/Hardware/Panel/mockup_9knob.png"
        inkscape:export-xdpi="999.99799"
@@ -1640,15 +1655,15 @@
     <path
        inkscape:connector-curvature="0"
        id="path3132"
-       d="m 2.1496063,6.5787404 h 0.622047 V 7.2007879 H 2.3149603 L 2.1496063,7.0433076 Z"
+       d="m 2.1496067,2.8385803 h 0.622047 V 3.4606278 H 2.3149607 L 2.1496067,3.3031475 Z"
        style="opacity:1;fill:#999999;fill-opacity:1;fill-rule:evenodd;stroke:#ff0000;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Gap sequencer/Hardware/Panel/mockup_9knob.png"
        inkscape:export-xdpi="999.99799"
        inkscape:export-ydpi="999.99799" />
     <circle
        r="0.21653543"
-       cy="6.8897662"
-       cx="2.4606295"
+       cy="3.1496062"
+       cx="2.4606299"
        id="circle3134"
        style="opacity:1;vector-effect:none;fill:#666666;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Gap sequencer/Hardware/Panel/mockup_9knob.png"
@@ -1657,15 +1672,15 @@
     <path
        inkscape:connector-curvature="0"
        id="path3254"
-       d="m 3.1338582,7.5630013 h 0.622047 V 8.1850488 H 3.2992122 L 3.1338582,8.0275685 Z"
+       d="m 2.1496068,6.3818865 h 0.622047 V 7.003934 H 2.3149608 L 2.1496068,6.8464537 Z"
        style="opacity:1;fill:#999999;fill-opacity:1;fill-rule:evenodd;stroke:#ff0000;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Gap sequencer/Hardware/Panel/mockup_9knob.png"
        inkscape:export-xdpi="999.99799"
        inkscape:export-ydpi="999.99799" />
     <circle
        r="0.21653543"
-       cy="7.8740282"
-       cx="3.4448817"
+       cy="6.6929135"
+       cx="2.4606304"
        id="circle3256"
        style="opacity:1;vector-effect:none;fill:#666666;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Gap sequencer/Hardware/Panel/mockup_9knob.png"
@@ -1674,15 +1689,15 @@
     <path
        inkscape:connector-curvature="0"
        id="path3258"
-       d="m 3.1338567,6.5787449 h 0.622047 V 7.2007924 H 3.2992107 L 3.1338567,7.0433121 Z"
+       d="m 2.1496063,4.0196829 h 0.622047 V 4.6417304 H 2.3149603 L 2.1496063,4.4842501 Z"
        style="opacity:1;fill:#999999;fill-opacity:1;fill-rule:evenodd;stroke:#ff0000;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Gap sequencer/Hardware/Panel/mockup_9knob.png"
        inkscape:export-xdpi="999.99799"
        inkscape:export-ydpi="999.99799" />
     <circle
        r="0.21653543"
-       cy="6.8897705"
-       cx="3.44488"
+       cy="4.3307085"
+       cx="2.4606297"
        id="circle3260"
        style="opacity:1;vector-effect:none;fill:#666666;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Gap sequencer/Hardware/Panel/mockup_9knob.png"
@@ -1706,7 +1721,7 @@
        transform="rotate(-90)" />
     <g
        id="g11258"
-       transform="translate(10.038295,-1.2362213)"
+       transform="translate(9.3503946,-1.2362202)"
        style="display:inline"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Gap sequencer/Hardware/Panel/mockup_9knob.png"
        inkscape:export-xdpi="999.99799"
@@ -1726,7 +1741,7 @@
     </g>
     <g
        id="g11264"
-       transform="translate(10.039365,0.14173291)"
+       transform="translate(9.3503946,1.1259832)"
        style="display:inline"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Gap sequencer/Hardware/Panel/mockup_9knob.png"
        inkscape:export-xdpi="999.99799"
@@ -1746,7 +1761,7 @@
     </g>
     <g
        id="g11270"
-       transform="translate(8.6603374,0.1417341)"
+       transform="translate(9.3503947,-0.05511808)"
        style="display:inline"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Gap sequencer/Hardware/Panel/mockup_9knob.png"
        inkscape:export-xdpi="999.99799"
@@ -1766,7 +1781,7 @@
     </g>
     <g
        id="g11294"
-       transform="translate(8.6614168,-1.2362219)"
+       transform="translate(9.3503947,-2.4173226)"
        style="display:inline"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Gap sequencer/Hardware/Panel/mockup_9knob.png"
        inkscape:export-xdpi="999.99799"
@@ -1787,15 +1802,15 @@
     <path
        inkscape:connector-curvature="0"
        id="path11304"
-       d="m 4.1181103,7.5629921 h 0.622047 V 8.1850396 H 4.2834643 L 4.1181103,8.0275593 Z"
+       d="m 5.1002992,8.5472421 h 0.622047 V 9.1692896 H 5.2656532 L 5.1002992,9.0118093 Z"
        style="opacity:1;fill:#999999;fill-opacity:1;fill-rule:evenodd;stroke:#ff0000;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Gap sequencer/Hardware/Panel/mockup_9knob.png"
        inkscape:export-xdpi="999.99799"
        inkscape:export-ydpi="999.99799" />
     <circle
        r="0.21653543"
-       cy="7.8740177"
-       cx="4.4291334"
+       cy="8.8582678"
+       cx="5.4113221"
        id="circle11306"
        style="opacity:1;vector-effect:none;fill:#666666;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Gap sequencer/Hardware/Panel/mockup_9knob.png"
@@ -1821,15 +1836,15 @@
     <path
        inkscape:connector-curvature="0"
        id="path11312"
-       d="m 2.1460321,7.5629909 h 0.622047 V 8.1850384 H 2.3113861 L 2.1460321,8.0275581 Z"
+       d="m 2.1496069,5.2007851 h 0.622047 V 5.8228326 H 2.3149609 L 2.1496069,5.6653523 Z"
        style="opacity:1;fill:#999999;fill-opacity:1;fill-rule:evenodd;stroke:#ff0000;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Gap sequencer/Hardware/Panel/mockup_9knob.png"
        inkscape:export-xdpi="999.99799"
        inkscape:export-ydpi="999.99799" />
     <circle
        r="0.21653543"
-       cy="7.8740168"
-       cx="2.4570551"
+       cy="5.5118108"
+       cx="2.4606299"
        id="circle11314"
        style="opacity:1;vector-effect:none;fill:#666666;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Gap sequencer/Hardware/Panel/mockup_9knob.png"
@@ -1854,7 +1869,7 @@
        inkscape:export-ydpi="999.99799" />
     <path
        style="font-variation-settings:normal;vector-effect:none;fill:#00ffff;fill-opacity:1;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
-       d="m 2.0602743,2.5708666 h 1.3937013 v 1.318898 l -0.42126,-10e-8 V 3.7716543 H 2.4815343 v 0.1181102 l -0.42126,4e-7 z"
+       d="m 4.2242582,3.7519684 h 1.3937013 v 1.318898 l -0.42126,-1e-7 V 4.9527561 H 4.6455182 v 0.1181102 l -0.42126,4e-7 z"
        id="path9635"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Gap sequencer/Hardware/Panel/mockup_9knob.png"
        inkscape:export-xdpi="999.99799"
@@ -1863,8 +1878,8 @@
        style="font-variation-settings:normal;opacity:0.353095;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.00520833;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        id="rect7922"
        width="1.3582677"
-       x="2.077991"
-       y="2.7775593"
+       x="4.2419748"
+       y="3.9586611"
        height="0.9055118"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Gap sequencer/Hardware/Panel/mockup_9knob.png"
        inkscape:export-xdpi="999.99799"
@@ -1872,8 +1887,8 @@
     <circle
        style="vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="path8748"
-       cx="2.1586995"
-       cy="2.669292"
+       cx="4.3226833"
+       cy="3.8503938"
        r="0.05905512"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Gap sequencer/Hardware/Panel/mockup_9knob.png"
        inkscape:export-xdpi="999.99799"
@@ -1881,8 +1896,8 @@
     <circle
        style="vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="circle8978"
-       cx="3.3555501"
-       cy="2.669292"
+       cx="5.5195341"
+       cy="3.8503938"
        r="0.05905512"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Gap sequencer/Hardware/Panel/mockup_9knob.png"
        inkscape:export-xdpi="999.99799"
@@ -1890,8 +1905,8 @@
     <circle
        style="vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="circle8982"
-       cx="2.1586995"
-       cy="3.7913394"
+       cx="4.3226833"
+       cy="4.9724412"
        r="0.05905512"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Gap sequencer/Hardware/Panel/mockup_9knob.png"
        inkscape:export-xdpi="999.99799"
@@ -1899,8 +1914,8 @@
     <circle
        style="vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="circle8986"
-       cx="3.3555501"
-       cy="3.7913394"
+       cx="5.5195341"
+       cy="4.9724412"
        r="0.05905512"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Gap sequencer/Hardware/Panel/mockup_9knob.png"
        inkscape:export-xdpi="999.99799"
@@ -1910,8 +1925,8 @@
        id="rect10385"
        width="1.1582677"
        height="0.57874018"
-       x="2.1767716"
-       y="2.8602364"
+       x="4.3407555"
+       y="4.041338"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Gap sequencer/Hardware/Panel/mockup_9knob.png"
        inkscape:export-xdpi="999.99799"
        inkscape:export-ydpi="999.99799" />
@@ -1974,20 +1989,40 @@
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Gap sequencer/Hardware/Panel/mockup_9knob.png"
        inkscape:export-xdpi="999.99799"
        inkscape:export-ydpi="999.99799" />
+    <circle
+       style="display:inline;fill:#999999;fill-opacity:1;fill-rule:evenodd;stroke:#ff0000;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="circle4681-7"
+       cx="2.4606292"
+       cy="7.8740144"
+       r="0.27559054"
+       inkscape:export-xdpi="101.46574"
+       inkscape:export-ydpi="101.46574"
+       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Kassutronics/Precision ADSR/PrecADSRmod/Images/precadsr-panel.png" />
+    <circle
+       style="display:inline;fill:#999999;fill-opacity:1;fill-rule:evenodd;stroke:#ff0000;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="circle10437-8"
+       cx="3.444881"
+       cy="7.8740144"
+       r="0.27559054"
+       inkscape:export-xdpi="101.46574"
+       inkscape:export-ydpi="101.46574"
+       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Kassutronics/Precision ADSR/PrecADSRmod/Images/precadsr-panel.png" />
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer14"
      inkscape:label="Art"
-     style="display:inline"
-     sodipodi:insensitive="true">
+     style="display:inline">
     <rect
        style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0208333;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.993004;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
        id="rect20152"
-       width="2.9527569"
-       height="7.8740182"
+       width="3.9370079"
+       height="7.8740158"
        x="1.9685044"
-       y="1.9685053" />
+       y="1.9685053"
+       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_art.png"
+       inkscape:export-xdpi="999.99799"
+       inkscape:export-ydpi="999.99799" />
     <rect
        y="1.9685047"
        x="1.9685038"
@@ -2002,20 +2037,20 @@
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
        id="path1048"
-       d="M 1.9685037,2.3622049 H 4.9212596"
-       style="display:inline;opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.0312502;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 1.9685036,2.3622048 H 5.9055114"
+       style="display:inline;opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.0312503;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        inkscape:export-xdpi="999.99799"
        inkscape:export-ydpi="999.99799"
-       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Gap sequencer/Hardware/Panel/gapseq_panel.png" />
+       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_art.png" />
     <path
        sodipodi:nodetypes="cc"
        style="display:inline;opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.03125;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       d="M 1.9685037,9.4488189 H 4.9212596"
+       d="M 1.9685036,9.4488186 H 5.9055114"
        id="path1050"
        inkscape:connector-curvature="0"
        inkscape:export-xdpi="999.99799"
        inkscape:export-ydpi="999.99799"
-       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Gap sequencer/Hardware/Panel/gapseq_panel.png" />
+       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_art.png" />
     <flowRoot
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.249999px;line-height:0;font-family:Limelight;-inkscape-font-specification:'Limelight, Normal';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:middle;white-space:normal;shape-padding:0;display:inline;opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="flowRoot3370"
@@ -2039,29 +2074,29 @@
     <text
        xml:space="preserve"
        style="font-size:0.194444px;line-height:0;font-family:Limelight;-inkscape-font-specification:Limelight;text-align:center;text-decoration:none;text-decoration-line:none;text-decoration-color:#000000;text-anchor:middle;fill:#ff0000;stroke-width:0.01;stroke-linejoin:bevel;stop-color:#000000"
-       x="3.4448819"
+       x="3.9370079"
        y="2.2440946"
        id="text3657"
-       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Gap sequencer/Hardware/Panel/gapseq_panel.png"
+       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_art.png"
        inkscape:export-xdpi="999.99799"
        inkscape:export-ydpi="999.99799"><tspan
          sodipodi:role="line"
          id="tspan3655"
-         x="3.4448819"
+         x="3.9370079"
          y="2.2440946"
          style="font-size:0.194444px;fill:#000000;stroke-width:0.01">G.E.A.R. SEQUENCER</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:0.194444px;line-height:0;font-family:Limelight;-inkscape-font-specification:Limelight;text-align:center;text-decoration:none;text-decoration-line:none;text-decoration-color:#000000;text-anchor:middle;display:inline;fill:#ff0000;stroke-width:0.01;stroke-linejoin:bevel;stop-color:#000000"
-       x="3.4448819"
+       x="3.9370079"
        y="9.6850405"
        id="text3657-4"
-       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Gap sequencer/Hardware/Panel/gapseq_panel.png"
+       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_art.png"
        inkscape:export-xdpi="999.99799"
        inkscape:export-ydpi="999.99799"><tspan
          sodipodi:role="line"
          id="tspan3655-4"
-         x="3.4448819"
+         x="3.9370079"
          y="9.6850405"
          style="font-size:0.194444px;fill:#000000;stroke-width:0.01">ANALOG OUTPUT</tspan></text>
   </g>
@@ -2071,43 +2106,75 @@
      inkscape:label="Labels"
      style="display:inline">
     <path
-       style="display:inline;font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.03125;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
-       d="m 4.1338549,5.7086633 4.8e-6,0.9842509 -1.4e-6,0.4921261 -0.1968491,0.1968528 -0.4921309,0.4921308"
-       id="path3485"
-       sodipodi:nodetypes="ccccc" />
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.03125;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+       d="m 3.4448822,8.8582656 c 0,0 -0.4907548,0.1981774 -0.4907548,0.1981774"
+       id="path5248"
+       inkscape:path-effect="#path-effect5250"
+       inkscape:original-d="M 3.4448822,8.8582656 2.9541274,9.056443"
+       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_art.png"
+       inkscape:export-xdpi="999.99799"
+       inkscape:export-ydpi="999.99799" />
     <path
-       style="display:inline;font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.03125;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
-       d="M 4.1338597,4.330711 3.4448839,5.0196867 v 1.8700777"
-       id="path3489" />
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.03125;stroke-linejoin:round;stroke-opacity:0.993004"
+       d="m 2.46063,6.6929142 c 0,0 0.9842539,0 0.9842539,0"
+       id="path8851"
+       inkscape:path-effect="#path-effect8853"
+       inkscape:original-d="M 2.46063,6.6929142 H 3.4448839"
+       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_art.png"
+       inkscape:export-xdpi="999.99799"
+       inkscape:export-ydpi="999.99799" />
     <path
-       style="display:inline;font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.03125;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
-       d="m 2.7559066,5.708664 -2e-7,0.7873997 0.1968505,0.1968505 V 7.3818929 L 2.46063,7.8740184"
-       id="path3493" />
-    <rect
-       style="font-variation-settings:normal;display:inline;opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0208333;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.993004;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
-       id="rect3756"
-       width="0.39370093"
-       height="0.19685046"
-       x="2.5590558"
-       y="6.1417322" />
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.03125;stroke-linejoin:round;stroke-opacity:0.993004"
+       d="m 2.46063,5.5118126 c 0,0 0.9842539,0 0.9842539,0"
+       id="path8847"
+       inkscape:path-effect="#path-effect8849"
+       inkscape:original-d="M 2.46063,5.5118126 H 3.4448839"
+       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_art.png"
+       inkscape:export-xdpi="999.99799"
+       inkscape:export-ydpi="999.99799" />
     <path
-       style="display:inline;font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.03125;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
-       d="M 2.46063,6.8897647 2.165355,6.594491 V 4.9212572 L 2.7559064,4.3307058"
-       id="path3499" />
-    <rect
-       style="font-variation-settings:normal;display:inline;opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0208333;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.993004;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
-       id="rect20862"
-       width="0.39370093"
-       height="0.19685046"
-       x="3.9370079"
-       y="6.1417322" />
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.03125;stroke-linejoin:round;stroke-opacity:0.993004"
+       d="m 2.46063,4.3307101 c 0,0 0.9842539,0 0.9842539,0"
+       id="path8843"
+       inkscape:path-effect="#path-effect8845"
+       inkscape:original-d="M 2.46063,4.3307101 H 3.4448839"
+       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_art.png"
+       inkscape:export-xdpi="999.99799"
+       inkscape:export-ydpi="999.99799" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.03125;stroke-linejoin:round;stroke-opacity:0.993004"
+       d="m 2.46063,3.1496073 c 0,0 0.9842539,0 0.9842539,0"
+       id="path8839"
+       inkscape:path-effect="#path-effect8841"
+       inkscape:original-d="M 2.46063,3.1496073 H 3.4448839"
+       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_art.png"
+       inkscape:export-xdpi="999.99799"
+       inkscape:export-ydpi="999.99799" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.03125;stroke-linejoin:round;stroke-opacity:0.993004"
+       d="m 3.4448839,7.874017 c 0,0 0,0.9842536 0,0.9842536"
+       id="path8722"
+       inkscape:path-effect="#path-effect8724"
+       inkscape:original-d="M 3.4448839,7.874017 V 8.8582706"
+       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_art.png"
+       inkscape:export-xdpi="999.99799"
+       inkscape:export-ydpi="999.99799" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.03125;stroke-linejoin:round;stroke-opacity:0.993004"
+       d="m 2.46063,7.874017 c 0,0 0,0.9842536 0,0.9842536"
+       id="path8718"
+       inkscape:path-effect="#path-effect8720"
+       inkscape:original-d="M 2.46063,7.874017 V 8.8582706"
+       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_art.png"
+       inkscape:export-xdpi="999.99799"
+       inkscape:export-ydpi="999.99799" />
     <path
        style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.03125;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
        d="m 2.4803148,8.8582678 c 0,0 0.4724411,-0.1968504 0.4724411,-0.1968504"
        id="path4948"
        inkscape:path-effect="#path-effect4950"
        inkscape:original-d="M 2.4803148,8.8582678 2.9527559,8.6614174"
-       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Gap sequencer/Hardware/Panel/gapseq_panel.png"
+       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_art.png"
        inkscape:export-xdpi="999.99799"
        inkscape:export-ydpi="999.99799" />
     <flowRoot
@@ -3582,29 +3649,29 @@
        style="display:inline;opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.00104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="circle3136"
        cx="2.4606295"
-       cy="6.8897643"
+       cy="3.1496081"
        r="0.27559054"
        inkscape:export-xdpi="999.99799"
        inkscape:export-ydpi="999.99799"
-       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Gap sequencer/Hardware/Panel/gapseq_panel.png" />
+       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_art.png" />
     <circle
        style="display:inline;opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.00104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="circle3270"
-       cx="3.4448817"
-       cy="7.8740263"
+       cx="2.4592621"
+       cy="6.691596"
        r="0.27559054"
        inkscape:export-xdpi="999.99799"
        inkscape:export-ydpi="999.99799"
-       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Gap sequencer/Hardware/Panel/gapseq_panel.png" />
+       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_art.png" />
     <circle
        style="display:inline;opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.00104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="circle3272"
-       cx="3.44488"
-       cy="6.8897686"
+       cx="2.4606292"
+       cy="4.3307085"
        r="0.27559054"
        inkscape:export-xdpi="999.99799"
        inkscape:export-ydpi="999.99799"
-       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Gap sequencer/Hardware/Panel/gapseq_panel.png" />
+       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_art.png" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.333333px;line-height:0;font-family:'Noto Sans Display';-inkscape-font-specification:'Noto Sans Display, Normal';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -3626,7 +3693,7 @@
        id="text3400"
        inkscape:export-xdpi="999.99799"
        inkscape:export-ydpi="999.99799"
-       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Gap sequencer/Hardware/Panel/gapseq_panel.png"><tspan
+       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_art.png"><tspan
          sodipodi:role="line"
          id="tspan3398"
          x="3.4448812"
@@ -3640,23 +3707,23 @@
        id="text2543-7"
        inkscape:export-xdpi="999.99799"
        inkscape:export-ydpi="999.99799"
-       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Gap sequencer/Hardware/Panel/gapseq_panel.png"><tspan
+       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_art.png"><tspan
          sodipodi:role="line"
          id="tspan2541-0"
          x="2.4606299"
          y="9.3307076"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.194444px;font-family:'Copasetic NF';-inkscape-font-specification:'Copasetic NF, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;stroke-width:0.0104167">CLOCK</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.194444px;font-family:'Copasetic NF';-inkscape-font-specification:'Copasetic NF, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;stroke-width:0.0104167">STEP</tspan></text>
     <rect
        style="display:inline;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect1500-9"
-       width="0.90551174"
-       height="1.9685057"
-       x="3.976378"
-       y="7.4409456"
+       width="1.8897638"
+       height="0.98425448"
+       x="3.9763777"
+       y="8.4251966"
        ry="0"
        inkscape:export-xdpi="999.99799"
        inkscape:export-ydpi="999.99799"
-       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Gap sequencer/Hardware/Panel/gapseq_panel.png" />
+       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_art.png" />
     <g
        id="g6656"
        transform="translate(2.1426789,5.5743924)"
@@ -3679,108 +3746,108 @@
        id="text2133"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.333333px;line-height:0;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;white-space:pre;shape-inside:url(#rect2135);shape-padding:0;shape-margin:0;inline-size:0;opacity:1;vector-effect:none;fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:0.01;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1" />
     <circle
-       cy="2.9527559"
-       cx="4.1338582"
+       cy="5.5118108"
+       cx="4.9198895"
        id="circle2017"
        style="display:inline;opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.00104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        r="0.17716536"
-       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Gap sequencer/Hardware/Panel/gapseq_panel.png"
-       inkscape:export-xdpi="999.99799"
-       inkscape:export-ydpi="999.99799" />
-    <circle
-       cy="4.330709"
-       cx="4.1327877"
-       id="circle2087"
-       style="display:inline;opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.00104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       r="0.17716536"
-       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Gap sequencer/Hardware/Panel/gapseq_panel.png"
+       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_art.png"
        inkscape:export-xdpi="999.99799"
        inkscape:export-ydpi="999.99799" />
     <circle
        cy="4.3307085"
-       cx="2.7559054"
+       cx="3.4448829"
+       id="circle2087"
+       style="display:inline;opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.00104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       r="0.17716536"
+       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_art.png"
+       inkscape:export-xdpi="999.99799"
+       inkscape:export-ydpi="999.99799" />
+    <circle
+       cy="3.1496062"
+       cx="3.4448829"
        id="circle2093"
        style="display:inline;opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.00104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        r="0.17716536"
-       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Gap sequencer/Hardware/Panel/gapseq_panel.png"
+       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_art.png"
        inkscape:export-xdpi="999.99799"
        inkscape:export-ydpi="999.99799" />
     <circle
-       cy="5.7086616"
-       cx="4.1338582"
+       cy="6.6929121"
+       cx="3.4448829"
        id="circle2154"
        style="display:inline;opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.00104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        r="0.17716536"
-       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Gap sequencer/Hardware/Panel/gapseq_panel.png"
+       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_art.png"
        inkscape:export-xdpi="999.99799"
        inkscape:export-ydpi="999.99799" />
     <circle
-       cy="5.7086616"
-       cx="2.7559054"
+       cy="5.5118108"
+       cx="3.4448829"
        id="circle2220"
        style="display:inline;opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.00104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        r="0.17716536"
-       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Gap sequencer/Hardware/Panel/gapseq_panel.png"
+       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_art.png"
        inkscape:export-xdpi="999.99799"
        inkscape:export-ydpi="999.99799" />
     <text
        id="text2224"
-       y="3.5433073"
-       x="4.1338582"
+       y="6.1023622"
+       x="4.9198895"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.333333px;line-height:0;font-family:'Noto Sans Display';-inkscape-font-specification:'Noto Sans Display, Normal';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        xml:space="preserve"
-       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Gap sequencer/Hardware/Panel/gapseq_panel.png"
+       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_art.png"
        inkscape:export-xdpi="999.99799"
        inkscape:export-ydpi="999.99799"><tspan
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.194444px;font-family:'Copasetic NF';-inkscape-font-specification:'Copasetic NF, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;stroke-width:0.0104167"
-         y="3.5433073"
-         x="4.1338582"
+         y="6.1023622"
+         x="4.9198895"
          id="tspan2222"
          sodipodi:role="line">ALGORITHM</tspan></text>
     <circle
        style="display:inline;opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.00104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="circle2337"
-       cx="4.4291344"
+       cx="5.412014"
        cy="8.8582697"
        r="0.27559054"
        inkscape:export-xdpi="999.99799"
        inkscape:export-ydpi="999.99799"
-       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Gap sequencer/Hardware/Panel/gapseq_panel.png" />
+       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_art.png" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.333333px;line-height:0;font-family:'Noto Sans Display';-inkscape-font-specification:'Noto Sans Display, Normal';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;display:inline;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       x="4.4291334"
-       y="8.3464556"
+       x="4.4291286"
+       y="9.3307066"
        id="text2341"
        inkscape:export-xdpi="999.99799"
        inkscape:export-ydpi="999.99799"
-       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Gap sequencer/Hardware/Panel/gapseq_panel.png"><tspan
+       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_art.png"><tspan
          sodipodi:role="line"
          id="tspan2339"
-         x="4.4291334"
-         y="8.3464556"
+         x="4.4291286"
+         y="9.3307066"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.194444px;font-family:'Copasetic NF';-inkscape-font-specification:'Copasetic NF, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;stroke-width:0.0104167">PERIOD</tspan></text>
     <circle
        style="display:inline;opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.00104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="circle2359"
        cx="2.4570603"
-       cy="7.8740158"
+       cy="5.5118108"
        r="0.27559054"
        inkscape:export-xdpi="999.99799"
        inkscape:export-ydpi="999.99799"
-       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Gap sequencer/Hardware/Panel/gapseq_panel.png" />
+       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_art.png" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.333333px;line-height:0;font-family:'Noto Sans Display';-inkscape-font-specification:'Noto Sans Display, Normal';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;display:inline;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       x="4.4291339"
+       x="5.4120135"
        y="9.3307085"
        id="text2363"
        inkscape:export-xdpi="999.99799"
        inkscape:export-ydpi="999.99799"
-       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Gap sequencer/Hardware/Panel/gapseq_panel.png"><tspan
+       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_art.png"><tspan
          sodipodi:role="line"
          id="tspan2361"
-         x="4.4291339"
+         x="5.4120135"
          y="9.3307085"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.194444px;font-family:'Copasetic NF';-inkscape-font-specification:'Copasetic NF, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;stroke-width:0.0104167">SEQUENCE</tspan></text>
     <circle
@@ -3791,51 +3858,37 @@
        r="0.27559054"
        inkscape:export-xdpi="999.99799"
        inkscape:export-ydpi="999.99799"
-       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Gap sequencer/Hardware/Panel/gapseq_panel.png" />
+       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_art.png" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.333333px;line-height:0;font-family:'Noto Sans Display';-inkscape-font-specification:'Noto Sans Display, Normal';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;display:inline;vector-effect:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        x="2.4606297"
-       y="7.3621912"
+       y="3.622035"
        id="text2385"
        inkscape:export-xdpi="999.99799"
        inkscape:export-ydpi="999.99799"
-       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Gap sequencer/Hardware/Panel/gapseq_panel.png"><tspan
+       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_art.png"><tspan
          sodipodi:role="line"
          id="tspan2383"
          x="2.4606297"
-         y="7.3621912"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.194444px;font-family:'Copasetic NF';-inkscape-font-specification:'Copasetic NF, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;stroke-width:0.0104167">CV 1</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.333333px;line-height:0;font-family:'Noto Sans Display';-inkscape-font-specification:'Noto Sans Display, Normal';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;display:inline;vector-effect:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       x="2.7559054"
-       y="4.9212599"
-       id="text2385-5"
-       inkscape:export-xdpi="999.99799"
-       inkscape:export-ydpi="999.99799"
-       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Gap sequencer/Hardware/Panel/gapseq_panel.png"><tspan
-         sodipodi:role="line"
-         id="tspan2383-7"
-         x="2.7559054"
-         y="4.9212599"
+         y="3.622035"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.194444px;font-family:'Copasetic NF';-inkscape-font-specification:'Copasetic NF, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;stroke-width:0.0104167">CV 1</tspan></text>
     <circle
        style="display:inline;opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.00104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="circle2403"
-       cx="4.4291387"
-       cy="7.8740168"
+       cx="4.4291339"
+       cy="8.8582678"
        r="0.27559054"
        inkscape:export-xdpi="999.99799"
        inkscape:export-ydpi="999.99799"
-       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Gap sequencer/Hardware/Panel/gapseq_panel.png" />
+       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_art.png" />
     <circle
        r="0.098425195"
        style="display:inline;opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.00104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="circle2420"
        cx="2.9527559"
        cy="8.6614161"
-       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Gap sequencer/Hardware/Panel/gapseq_panel.png"
+       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_art.png"
        inkscape:export-xdpi="999.99799"
        inkscape:export-ydpi="999.99799" />
     <circle
@@ -3844,7 +3897,7 @@
        id="circle2430"
        cx="-2.9541287"
        cy="-9.0551186"
-       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Gap sequencer/Hardware/Panel/gapseq_panel.png"
+       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_art.png"
        inkscape:export-xdpi="999.99799"
        inkscape:export-ydpi="999.99799"
        transform="scale(-1)" />
@@ -3852,36 +3905,28 @@
        r="0.098425195"
        style="display:inline;opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.00104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="circle2450"
-       cx="3.9370079"
-       cy="8.0708647"
-       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Gap sequencer/Hardware/Panel/gapseq_panel.png"
+       cx="-4.9198895"
+       cy="-8.6600904"
+       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_art.png"
        inkscape:export-xdpi="999.99799"
-       inkscape:export-ydpi="999.99799" />
+       inkscape:export-ydpi="999.99799"
+       transform="scale(-1)" />
     <circle
        r="0.098425195"
        style="display:inline;opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.00104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="circle2460"
-       cx="3.9370084"
+       cx="4.919888"
        cy="9.0564432"
-       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Gap sequencer/Hardware/Panel/gapseq_panel.png"
-       inkscape:export-xdpi="999.99799"
-       inkscape:export-ydpi="999.99799" />
-    <path
-       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.03125;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
-       d="m 3.4448822,8.8582656 c 0,0 -0.4907548,0.1981774 -0.4907548,0.1981774"
-       id="path5248"
-       inkscape:path-effect="#path-effect5250"
-       inkscape:original-d="M 3.4448822,8.8582656 2.9541274,9.056443"
-       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Gap sequencer/Hardware/Panel/gapseq_panel.png"
+       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_art.png"
        inkscape:export-xdpi="999.99799"
        inkscape:export-ydpi="999.99799" />
     <path
        style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.03125;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
-       d="m 3.9370101,9.0551197 c 0,0 0.4921235,-0.1955218 0.4921235,-0.1955218"
+       d="m 4.9198898,9.0551197 c 0,0 0.4921235,-0.1955218 0.4921235,-0.1955218"
        id="path5256"
        inkscape:path-effect="#path-effect5258"
-       inkscape:original-d="M 3.9370101,9.0551197 4.4291336,8.8595979"
-       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Gap sequencer/Hardware/Panel/gapseq_panel.png"
+       inkscape:original-d="M 4.9198898,9.0551197 5.4120133,8.8595979"
+       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_art.png"
        inkscape:export-xdpi="999.99799"
        inkscape:export-ydpi="999.99799" />
     <circle
@@ -3892,97 +3937,76 @@
        r="0.27559054"
        inkscape:export-xdpi="999.99799"
        inkscape:export-ydpi="999.99799"
-       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Gap sequencer/Hardware/Panel/gapseq_panel.png" />
+       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_art.png" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.333333px;line-height:0;font-family:'Noto Sans Display';-inkscape-font-specification:'Noto Sans Display, Normal';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;display:inline;vector-effect:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       x="3.4448819"
-       y="7.3621931"
+       x="2.4606311"
+       y="4.803133"
        id="text6575"
        inkscape:export-xdpi="999.99799"
        inkscape:export-ydpi="999.99799"
-       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Gap sequencer/Hardware/Panel/gapseq_panel.png"><tspan
+       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_art.png"><tspan
          sodipodi:role="line"
          id="tspan6573"
-         x="3.4448819"
-         y="7.3621931"
+         x="2.4606311"
+         y="4.803133"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.194444px;font-family:'Copasetic NF';-inkscape-font-specification:'Copasetic NF, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;stroke-width:0.0104167">CV 2</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.333333px;line-height:0;font-family:'Noto Sans Display';-inkscape-font-specification:'Noto Sans Display, Normal';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;display:inline;vector-effect:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        x="2.4606297"
-       y="8.3464546"
+       y="5.9842496"
        id="text12853"
        inkscape:export-xdpi="999.99799"
        inkscape:export-ydpi="999.99799"
-       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Gap sequencer/Hardware/Panel/gapseq_panel.png"><tspan
+       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_art.png"><tspan
          sodipodi:role="line"
          id="tspan12851"
          x="2.4606297"
-         y="8.3464546"
+         y="5.9842496"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.194444px;font-family:'Copasetic NF';-inkscape-font-specification:'Copasetic NF, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;stroke-width:0.0104167">CV 3</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.333333px;line-height:0;font-family:'Noto Sans Display';-inkscape-font-specification:'Noto Sans Display, Normal';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;display:inline;vector-effect:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       x="3.4448819"
-       y="8.3464565"
+       x="2.4592624"
+       y="7.1640263"
        id="text12857"
        inkscape:export-xdpi="999.99799"
        inkscape:export-ydpi="999.99799"
-       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Gap sequencer/Hardware/Panel/gapseq_panel.png"><tspan
+       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_art.png"><tspan
          sodipodi:role="line"
          id="tspan12855"
-         x="3.4448819"
-         y="8.3464565"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.194444px;font-family:'Copasetic NF';-inkscape-font-specification:'Copasetic NF, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;stroke-width:0.0104167">CV 4</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.333333px;line-height:0;font-family:'Noto Sans Display';-inkscape-font-specification:'Noto Sans Display, Normal';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;display:inline;vector-effect:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       x="4.1338582"
-       y="4.9212599"
-       id="text15774"
-       inkscape:export-xdpi="999.99799"
-       inkscape:export-ydpi="999.99799"
-       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Gap sequencer/Hardware/Panel/gapseq_panel.png"><tspan
-         sodipodi:role="line"
-         id="tspan15772"
-         x="4.1338582"
-         y="4.9212599"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.194444px;font-family:'Copasetic NF';-inkscape-font-specification:'Copasetic NF, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;stroke-width:0.0104167">CV 2</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.333333px;line-height:0;font-family:'Noto Sans Display';-inkscape-font-specification:'Noto Sans Display, Normal';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;display:inline;vector-effect:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       x="2.7559054"
-       y="6.2992125"
-       id="text15778"
-       inkscape:export-xdpi="999.99799"
-       inkscape:export-ydpi="999.99799"
-       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Gap sequencer/Hardware/Panel/gapseq_panel.png"><tspan
-         sodipodi:role="line"
-         id="tspan15776"
-         x="2.7559054"
-         y="6.2992125"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.194444px;font-family:'Copasetic NF';-inkscape-font-specification:'Copasetic NF, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;stroke-width:0.0104167">CV 3</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.333333px;line-height:0;font-family:'Noto Sans Display';-inkscape-font-specification:'Noto Sans Display, Normal';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;display:inline;vector-effect:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       x="4.1338582"
-       y="6.2992125"
-       id="text15782"
-       inkscape:export-xdpi="999.99799"
-       inkscape:export-ydpi="999.99799"
-       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Gap sequencer/Hardware/Panel/gapseq_panel.png"><tspan
-         sodipodi:role="line"
-         id="tspan15780"
-         x="4.1338582"
-         y="6.2992125"
+         x="2.4592624"
+         y="7.1640263"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.194444px;font-family:'Copasetic NF';-inkscape-font-specification:'Copasetic NF, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;stroke-width:0.0104167">CV 4</tspan></text>
     <path
        style="fill:#ffffff;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.03125;stroke-linejoin:round;stroke-opacity:0.993004"
-       d="m 4.4291352,7.8840358 c 0,0 -0.4921262,0.1868314 -0.4921262,0.1868314"
+       d="m 4.427762,8.8469193 c 0,0 0.4921262,-0.1868314 0.4921262,-0.1868314"
        id="path21248"
        inkscape:path-effect="#path-effect21250"
-       inkscape:original-d="M 4.4291352,7.8840358 3.937009,8.0708672" />
+       inkscape:original-d="M 4.427762,8.8469193 4.9198882,8.6600879"
+       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_art.png"
+       inkscape:export-xdpi="999.99799"
+       inkscape:export-ydpi="999.99799" />
+    <circle
+       style="display:inline;vector-effect:none;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.00104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="circle4681"
+       cx="2.4606299"
+       cy="7.8740168"
+       r="0.27559054"
+       inkscape:export-xdpi="999.99799"
+       inkscape:export-ydpi="999.99799"
+       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_art.png" />
+    <circle
+       style="display:inline;vector-effect:none;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.00104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="circle10437"
+       cx="3.4448819"
+       cy="7.8740168"
+       r="0.27559054"
+       inkscape:export-xdpi="999.99799"
+       inkscape:export-ydpi="999.99799"
+       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_art.png" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -4361,15 +4385,15 @@
     <circle
        style="opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="circle3290"
-       cx="3.4448817"
-       cy="7.8740263"
+       cx="2.4592621"
+       cy="6.691596"
        r="0.19685039"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_holes.png"
        inkscape:export-xdpi="999.99799"
        inkscape:export-ydpi="999.99799" />
     <path
        style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       d="M 3.4448772,7.7756006 V 7.9724511"
+       d="M 2.4592577,6.5931703 V 6.7900208"
        id="path3292"
        inkscape:connector-curvature="0"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_holes.png"
@@ -4377,7 +4401,7 @@
        inkscape:export-ydpi="999.99799" />
     <path
        style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       d="m 3.5433022,7.8740258 h -0.19685"
+       d="m 2.5576827,6.6915955 h -0.19685"
        id="path3294"
        inkscape:connector-curvature="0"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_holes.png"
@@ -4475,8 +4499,8 @@
          inkscape:connector-curvature="0" />
     </g>
     <circle
-       cy="2.9527559"
-       cx="4.1338582"
+       cy="5.5118108"
+       cx="4.9198895"
        id="circle2023"
        style="opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        r="0.13779527"
@@ -4486,7 +4510,7 @@
     <path
        inkscape:connector-curvature="0"
        id="path2025"
-       d="m 4.1338536,2.8543317 v 0.19685"
+       d="m 4.9198847,5.4133866 v 0.19685"
        style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_holes.png"
        inkscape:export-xdpi="999.99799"
@@ -4494,14 +4518,14 @@
     <path
        inkscape:connector-curvature="0"
        id="path2027"
-       d="m 4.2322786,2.9527567 h -0.19685"
+       d="m 5.0183097,5.5118116 h -0.19685"
        style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_holes.png"
        inkscape:export-xdpi="999.99799"
        inkscape:export-ydpi="999.99799" />
     <circle
-       cy="4.330709"
-       cx="4.1327877"
+       cy="4.3307085"
+       cx="3.4448829"
        id="circle2105"
        style="opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        r="0.13779527"
@@ -4511,7 +4535,7 @@
     <path
        inkscape:connector-curvature="0"
        id="path2107"
-       d="m 4.1327832,4.2322846 v 0.19685"
+       d="m 3.4448783,4.2322843 v 0.19685"
        style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_holes.png"
        inkscape:export-xdpi="999.99799"
@@ -4519,14 +4543,14 @@
     <path
        inkscape:connector-curvature="0"
        id="path2109"
-       d="m 4.2312082,4.3307096 h -0.19685"
+       d="m 3.5433033,4.3307093 h -0.19685"
        style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_holes.png"
        inkscape:export-xdpi="999.99799"
        inkscape:export-ydpi="999.99799" />
     <circle
-       cy="4.3307085"
-       cx="2.7559054"
+       cy="3.1496062"
+       cx="3.4448829"
        id="circle2111"
        style="opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        r="0.13779527"
@@ -4536,7 +4560,7 @@
     <path
        inkscape:connector-curvature="0"
        id="path2113"
-       d="m 2.7559012,4.2322848 v 0.19685"
+       d="m 3.4448786,3.0511826 v 0.19685"
        style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_holes.png"
        inkscape:export-xdpi="999.99799"
@@ -4544,14 +4568,14 @@
     <path
        inkscape:connector-curvature="0"
        id="path2115"
-       d="m 2.8543262,4.3307098 h -0.19685"
+       d="m 3.5433036,3.1496076 h -0.19685"
        style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_holes.png"
        inkscape:export-xdpi="999.99799"
        inkscape:export-ydpi="999.99799" />
     <circle
-       cy="4.3307085"
-       cx="2.7559054"
+       cy="3.1496062"
+       cx="3.4448829"
        id="circle2117"
        style="opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        r="0.13779527"
@@ -4561,7 +4585,7 @@
     <path
        inkscape:connector-curvature="0"
        id="path2119"
-       d="m 2.7559012,4.2322848 v 0.19685"
+       d="m 3.4448786,3.0511826 v 0.19685"
        style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_holes.png"
        inkscape:export-xdpi="999.99799"
@@ -4569,14 +4593,14 @@
     <path
        inkscape:connector-curvature="0"
        id="path2121"
-       d="m 2.8543262,4.3307098 h -0.19685"
+       d="m 3.5433036,3.1496076 h -0.19685"
        style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_holes.png"
        inkscape:export-xdpi="999.99799"
        inkscape:export-ydpi="999.99799" />
     <circle
-       cy="5.7086616"
-       cx="4.1338582"
+       cy="6.6929121"
+       cx="3.4448829"
        id="circle2172"
        style="opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        r="0.13779527"
@@ -4586,7 +4610,7 @@
     <path
        inkscape:connector-curvature="0"
        id="path2174"
-       d="m 4.1338535,5.610237 v 0.19685"
+       d="m 3.4448782,6.5944875 v 0.19685"
        style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_holes.png"
        inkscape:export-xdpi="999.99799"
@@ -4594,14 +4618,14 @@
     <path
        inkscape:connector-curvature="0"
        id="path2176"
-       d="m 4.2322785,5.708662 h -0.19685"
+       d="m 3.5433032,6.6929125 h -0.19685"
        style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_holes.png"
        inkscape:export-xdpi="999.99799"
        inkscape:export-ydpi="999.99799" />
     <circle
-       cy="5.7086616"
-       cx="2.7559054"
+       cy="5.5118108"
+       cx="3.4448829"
        id="circle2238"
        style="opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        r="0.13779527"
@@ -4611,7 +4635,7 @@
     <path
        inkscape:connector-curvature="0"
        id="path2240"
-       d="m 2.755901,5.6102372 v 0.19685"
+       d="m 3.4448784,5.4133864 v 0.19685"
        style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_holes.png"
        inkscape:export-xdpi="999.99799"
@@ -4619,14 +4643,14 @@
     <path
        inkscape:connector-curvature="0"
        id="path2242"
-       d="M 2.854326,5.7086622 H 2.657476"
+       d="m 3.5433034,5.5118114 h -0.19685"
        style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_holes.png"
        inkscape:export-xdpi="999.99799"
        inkscape:export-ydpi="999.99799" />
     <path
        style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       d="M 3.4462487,7.7769171 V 7.9737676"
+       d="M 2.4606292,6.5944868 V 6.7913373"
        id="path2345"
        inkscape:connector-curvature="0"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_holes.png"
@@ -4634,7 +4658,7 @@
        inkscape:export-ydpi="999.99799" />
     <path
        style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       d="m 3.5446737,7.8753423 h -0.19685"
+       d="m 2.5590542,6.692912 h -0.19685"
        id="path2347"
        inkscape:connector-curvature="0"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_holes.png"
@@ -4695,7 +4719,7 @@
          y="3.0255902" />
     </g>
     <g
-       transform="matrix(-1.000002,0,0,1.000002,8.5551265,6.6358221)"
+       transform="matrix(-1.000002,0,0,1.000002,9.5393785,6.6358221)"
        id="g2110-0-1"
        style="display:inline;fill:#000000"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_holes.png"
@@ -4753,7 +4777,7 @@
          y="3.0255902" />
     </g>
     <g
-       transform="matrix(-1.000002,0,0,1.000002,8.5551265,-1.0019733)"
+       transform="matrix(-1.000002,0,0,1.000002,9.5393785,-1.0019733)"
        id="g2110-0-1-7"
        style="display:inline;fill:#000000"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_holes.png"
@@ -4786,16 +4810,16 @@
        id="rect11283"
        width="1.1582677"
        height="0.57874018"
-       x="2.1767716"
-       y="2.8602364"
+       x="4.3407555"
+       y="4.0413384"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_holes.png"
        inkscape:export-xdpi="999.99799"
        inkscape:export-ydpi="999.99799" />
     <circle
        style="display:inline;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="circle12962"
-       cx="2.1586995"
-       cy="2.669292"
+       cx="4.3226833"
+       cy="3.8503938"
        r="0.05905512"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_holes.png"
        inkscape:export-xdpi="999.99799"
@@ -4803,8 +4827,8 @@
     <circle
        style="display:inline;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="circle12964"
-       cx="3.3555501"
-       cy="2.669292"
+       cx="5.5195336"
+       cy="3.8503938"
        r="0.05905512"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_holes.png"
        inkscape:export-xdpi="999.99799"
@@ -4812,8 +4836,8 @@
     <circle
        style="display:inline;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="circle12966"
-       cx="2.1586995"
-       cy="3.7913394"
+       cx="4.3226833"
+       cy="4.9724412"
        r="0.05905512"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_holes.png"
        inkscape:export-xdpi="999.99799"
@@ -4821,8 +4845,8 @@
     <circle
        style="display:inline;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="circle12968"
-       cx="3.3555501"
-       cy="3.7913394"
+       cx="5.5195336"
+       cy="4.9724412"
        r="0.05905512"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_holes.png"
        inkscape:export-xdpi="999.99799"
@@ -4913,14 +4937,15 @@
        r="0.098425195"
        style="opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="circle2452"
-       cx="3.9370074"
-       cy="8.0708637"
+       cx="-4.9198899"
+       cy="-8.6600914"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_holes.png"
        inkscape:export-xdpi="999.99799"
-       inkscape:export-ydpi="999.99799" />
+       inkscape:export-ydpi="999.99799"
+       transform="scale(-1)" />
     <path
        style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       d="m 3.9370077,8.0314946 v 0.07874"
+       d="m 4.9198895,8.6994605 v -0.07874"
        id="path2454"
        inkscape:connector-curvature="0"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_holes.png"
@@ -4928,7 +4953,7 @@
        inkscape:export-ydpi="999.99799" />
     <path
        style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       d="m 3.9763779,8.0695374 h -0.07874"
+       d="m 4.8805193,8.6614177 h 0.07874"
        id="path2456"
        inkscape:connector-curvature="0"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_holes.png"
@@ -4938,14 +4963,14 @@
        r="0.098425195"
        style="opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="circle2462"
-       cx="3.9370084"
+       cx="4.919888"
        cy="9.0564423"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_holes.png"
        inkscape:export-xdpi="999.99799"
        inkscape:export-ydpi="999.99799" />
     <path
        style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       d="m 3.9370083,9.017074 v 0.07874"
+       d="m 4.919888,9.017074 v 0.07874"
        id="path2464"
        inkscape:connector-curvature="0"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_holes.png"
@@ -4953,7 +4978,7 @@
        inkscape:export-ydpi="999.99799" />
     <path
        style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       d="m 3.9763785,9.0551168 h -0.07874"
+       d="m 4.9592582,9.0551168 h -0.07874"
        id="path2466"
        inkscape:connector-curvature="0"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_holes.png"
@@ -4988,14 +5013,14 @@
        style="display:inline;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="circle6577-0"
        cx="2.4606292"
-       cy="6.8897624"
+       cy="3.1496062"
        r="0.19685039"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_holes.png"
        inkscape:export-xdpi="999.99799"
        inkscape:export-ydpi="999.99799" />
     <path
        style="display:inline;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       d="M 2.4606243,6.7913368 V 6.9881873"
+       d="M 2.4606243,3.0511807 V 3.2480312"
        id="path6579-3"
        inkscape:connector-curvature="0"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_holes.png"
@@ -5003,7 +5028,7 @@
        inkscape:export-ydpi="999.99799" />
     <path
        style="display:inline;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       d="m 2.5590493,6.889762 h -0.19685"
+       d="m 2.5590493,3.1496059 h -0.19685"
        id="path6581-0"
        inkscape:connector-curvature="0"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_holes.png"
@@ -5012,15 +5037,15 @@
     <circle
        style="display:inline;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="circle2651"
-       cx="3.4448812"
-       cy="6.8897638"
+       cx="2.4606304"
+       cy="4.3307037"
        r="0.19685039"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_holes.png"
        inkscape:export-xdpi="999.99799"
        inkscape:export-ydpi="999.99799" />
     <path
        style="display:inline;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       d="M 3.4448763,6.7913382 V 6.9881887"
+       d="M 2.4606255,4.2322783 V 4.4291288"
        id="path2653"
        inkscape:connector-curvature="0"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_holes.png"
@@ -5028,7 +5053,7 @@
        inkscape:export-ydpi="999.99799" />
     <path
        style="display:inline;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       d="m 3.5433013,6.8897634 h -0.19685"
+       d="m 2.5590505,4.3307035 h -0.19685"
        id="path2655"
        inkscape:connector-curvature="0"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_holes.png"
@@ -5037,15 +5062,15 @@
     <circle
        style="display:inline;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="circle2657"
-       cx="4.4291339"
-       cy="7.8740158"
+       cx="4.4291291"
+       cy="8.8582668"
        r="0.19685039"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_holes.png"
        inkscape:export-xdpi="999.99799"
        inkscape:export-ydpi="999.99799" />
     <path
        style="display:inline;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       d="M 4.4291289,7.7755902 V 7.9724407"
+       d="M 4.4277683,8.9553649 V 8.7585144"
        id="path2659"
        inkscape:connector-curvature="0"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_holes.png"
@@ -5053,7 +5078,7 @@
        inkscape:export-ydpi="999.99799" />
     <path
        style="display:inline;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       d="m 4.5275539,7.8740154 h -0.19685"
+       d="m 4.3293433,8.8569397 h 0.19685"
        id="path2661"
        inkscape:connector-curvature="0"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_holes.png"
@@ -5062,7 +5087,7 @@
     <circle
        style="display:inline;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="circle2663"
-       cx="4.4291339"
+       cx="5.4120135"
        cy="8.8582678"
        r="0.19685039"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_holes.png"
@@ -5070,7 +5095,7 @@
        inkscape:export-ydpi="999.99799" />
     <path
        style="display:inline;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       d="M 4.4291288,8.7598425 V 8.956693"
+       d="M 5.4120085,8.7598425 V 8.956693"
        id="path2665"
        inkscape:connector-curvature="0"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_holes.png"
@@ -5078,7 +5103,7 @@
        inkscape:export-ydpi="999.99799" />
     <path
        style="display:inline;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       d="m 4.5275538,8.8582677 h -0.19685"
+       d="m 5.5104335,8.8582677 h -0.19685"
        id="path2667"
        inkscape:connector-curvature="0"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_holes.png"
@@ -5088,14 +5113,14 @@
        style="display:inline;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="circle2669"
        cx="2.4606292"
-       cy="7.8740158"
+       cy="5.5118108"
        r="0.19685039"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_holes.png"
        inkscape:export-xdpi="999.99799"
        inkscape:export-ydpi="999.99799" />
     <path
        style="display:inline;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       d="M 2.4606241,7.7755905 V 7.972441"
+       d="M 2.4606241,5.4133855 V 5.610236"
        id="path2671"
        inkscape:connector-curvature="0"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_holes.png"
@@ -5103,12 +5128,70 @@
        inkscape:export-ydpi="999.99799" />
     <path
        style="display:inline;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       d="m 2.5590491,7.8740157 h -0.19685"
+       d="m 2.5590491,5.5118107 h -0.19685"
        id="path2673"
        inkscape:connector-curvature="0"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_holes.png"
        inkscape:export-xdpi="999.99799"
        inkscape:export-ydpi="999.99799" />
+    <g
+       id="g2051"
+       transform="translate(3.2666808,2.3055615)"
+       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_holes.png"
+       inkscape:export-xdpi="999.99799"
+       inkscape:export-ydpi="999.99799"
+       style="display:inline">
+      <circle
+         r="0.24015749"
+         cy="5.564013"
+         cx="-0.80605155"
+         id="circle1350"
+         style="display:inline;opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <g
+         id="g1356-39"
+         transform="matrix(0.8000016,0,0,0.8000016,-3.2060564,2.3684466)"
+         style="display:inline;opacity:1;stroke:#ffffff;stroke-width:1.25;filter:url(#filter1493)">
+        <path
+           style="opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:0.0130208;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           d="m 3,3.875 v 0.25"
+           id="path1352-6"
+           inkscape:connector-curvature="0" />
+        <path
+           inkscape:connector-curvature="0"
+           id="path1354-4"
+           d="m 2.875,4 h 0.25"
+           style="opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:0.0130208;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      </g>
+    </g>
+    <g
+       id="g10347"
+       transform="translate(4.2509328,2.3055615)"
+       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_holes.png"
+       inkscape:export-xdpi="999.99799"
+       inkscape:export-ydpi="999.99799"
+       style="display:inline">
+      <circle
+         r="0.24015749"
+         cy="5.564013"
+         cx="-0.80605155"
+         id="circle10339"
+         style="display:inline;opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <g
+         id="g10345"
+         transform="matrix(0.8000016,0,0,0.8000016,-3.2060564,2.3684466)"
+         style="display:inline;opacity:1;stroke:#ffffff;stroke-width:1.25;filter:url(#filter1493)">
+        <path
+           style="opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:0.0130208;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           d="m 3,3.875 v 0.25"
+           id="path10341"
+           inkscape:connector-curvature="0" />
+        <path
+           inkscape:connector-curvature="0"
+           id="path10343"
+           d="m 2.875,4 h 0.25"
+           style="opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:0.0130208;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      </g>
+    </g>
   </g>
   <g
      inkscape:groupmode="layer"
@@ -5150,42 +5233,60 @@
      id="layer11"
      inkscape:label="Panel Hardware"
      style="display:inline">
+    <circle
+       r="0.37007874"
+       cy="7.8740144"
+       cx="3.4448812"
+       id="circle7532"
+       style="display:inline;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Kassutronics/Precision ADSR/PrecADSRmod/Images/precadsr-panel.png"
+       inkscape:export-xdpi="101.46574"
+       inkscape:export-ydpi="101.46574" />
+    <circle
+       r="0.23622048"
+       style="display:inline;vector-effect:none;fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke:#b3b3b3;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="circle7534"
+       cx="3.4448812"
+       cy="7.8740144"
+       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Kassutronics/Precision ADSR/PrecADSRmod/Images/precadsr-panel.png"
+       inkscape:export-xdpi="101.46574"
+       inkscape:export-ydpi="101.46574" />
     <text
        xml:space="preserve"
        style="font-size:0.111111px;line-height:1;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-color:#000000;text-anchor:start;display:inline;fill:#00ffff;stroke-width:0.01;stroke-linejoin:bevel;stop-color:#000000"
-       x="2.222703"
-       y="3.0116675"
+       x="4.3866868"
+       y="4.1927695"
        id="text2611-7"><tspan
          sodipodi:role="line"
          id="tspan2609-8"
          style="font-size:0.111111px;text-align:start;text-anchor:start;fill:#00ffff;stroke-width:0.01"
-         x="2.222703"
-         y="3.0116675">Lorem ipsum dolor sit </tspan><tspan
+         x="4.3866868"
+         y="4.1927695">Lorem ipsum dolor sit </tspan><tspan
          sodipodi:role="line"
          style="font-size:0.111111px;text-align:start;text-anchor:start;fill:#00ffff;stroke-width:0.01"
-         x="2.222703"
-         y="3.1227784"
+         x="4.3866868"
+         y="4.3038807"
          id="tspan8865-5">amet, consectetur </tspan><tspan
          sodipodi:role="line"
          style="font-size:0.111111px;text-align:start;text-anchor:start;fill:#00ffff;stroke-width:0.01"
-         x="2.222703"
-         y="3.2338896"
+         x="4.3866868"
+         y="4.4149914"
          id="tspan12219-7">adipiscing elit, sed do </tspan><tspan
          sodipodi:role="line"
          style="font-size:0.111111px;text-align:start;text-anchor:start;fill:#00ffff;stroke-width:0.01"
-         x="2.222703"
-         y="3.3450005"
+         x="4.3866868"
+         y="4.5261025"
          id="tspan13325-4">eiusmod tempor</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:0.111111px;line-height:1;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-color:#000000;text-anchor:start;display:inline;fill:#ffff00;stroke-width:0.01;stroke-linejoin:bevel;stop-color:#000000"
-       x="2.222703"
-       y="3.0116675"
+       x="4.3866868"
+       y="4.1927695"
        id="text15955-1"><tspan
          sodipodi:role="line"
          style="font-size:0.111111px;text-align:start;text-anchor:start;fill:#ffff00;stroke-width:0.01"
-         x="2.222703"
-         y="3.0116675"
+         x="4.3866868"
+         y="4.1927695"
          id="tspan15953-8">Lorem ipsum dolor sit </tspan></text>
     <g
        id="g3230-5"
@@ -5726,7 +5827,7 @@
          inkscape:connector-curvature="0" />
     </g>
     <g
-       transform="matrix(1.000002,0,0,1.000002,3.0154213,0.91957093)"
+       transform="matrix(1.000002,0,0,1.000002,3.0154213,-2.8205852)"
        style="display:inline"
        id="g3156">
       <circle
@@ -5769,7 +5870,7 @@
          style="opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
     </g>
     <g
-       transform="matrix(1.000002,0,0,1.000002,3.9996732,1.9038318)"
+       transform="matrix(1.000002,0,0,1.000002,3.0140537,0.72140155)"
        style="display:inline"
        id="g3322">
       <circle
@@ -5812,7 +5913,7 @@
          style="opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
     </g>
     <g
-       transform="matrix(1.000002,0,0,1.000002,3.9996717,0.91957543)"
+       transform="matrix(1.000002,0,0,1.000002,3.0154209,-1.6394845)"
        style="display:inline"
        id="g3332">
       <circle
@@ -5975,7 +6076,7 @@
     <g
        style="display:inline"
        id="g2039"
-       transform="matrix(-0.62017717,0,0,0.62017717,5.6001486,-1.4311355)">
+       transform="matrix(-0.62017717,0,0,0.62017717,6.3861797,1.1279194)">
       <circle
          r="0.61374104"
          cy="7.0687695"
@@ -6002,7 +6103,7 @@
     <g
        style="display:inline"
        id="g2131"
-       transform="matrix(-0.62017717,0,0,0.62017717,5.5990782,-0.05318267)">
+       transform="matrix(-0.62017717,0,0,0.62017717,4.9111733,-0.05318295)">
       <circle
          r="0.61374104"
          cy="7.0687695"
@@ -6029,7 +6130,7 @@
     <g
        style="display:inline"
        id="g2142"
-       transform="matrix(-0.62017717,0,0,0.62017717,4.2221962,-0.05318239)">
+       transform="matrix(-0.62017717,0,0,0.62017717,4.9111736,-1.2342846)">
       <circle
          r="0.61374104"
          cy="7.0687695"
@@ -6056,7 +6157,7 @@
     <g
        style="display:inline"
        id="g2198"
-       transform="matrix(-0.62017717,0,0,0.62017717,5.6001485,1.3247697)">
+       transform="matrix(-0.62017717,0,0,0.62017717,4.9111732,2.3090202)">
       <circle
          r="0.61374104"
          cy="7.0687695"
@@ -6083,7 +6184,7 @@
     <g
        style="display:inline"
        id="g2264"
-       transform="matrix(-0.62017717,0,0,0.62017717,4.222196,1.3247699)">
+       transform="matrix(-0.62017717,0,0,0.62017717,4.9111737,1.132475)">
       <circle
          r="0.61374104"
          cy="7.0687695"
@@ -6108,7 +6209,7 @@
          style="opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;stroke:#ffffff;stroke-width:0.0312499;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
     </g>
     <g
-       transform="matrix(1.000002,0,0,1.000002,4.9839259,2.8880749)"
+       transform="matrix(1.000002,0,0,1.000002,5.9668056,2.8880749)"
        style="display:inline"
        id="g2357">
       <circle
@@ -6151,7 +6252,7 @@
          style="opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
     </g>
     <g
-       transform="matrix(1.000002,0,0,1.000002,3.0118516,1.9038206)"
+       transform="matrix(1.000002,0,0,1.000002,3.0118516,-0.45838441)"
        style="display:inline"
        id="g2379">
       <circle
@@ -6237,7 +6338,7 @@
          style="opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
     </g>
     <g
-       transform="matrix(1.000002,0,0,1.000002,4.9839298,1.9038218)"
+       transform="matrix(1.000002,0,0,1.000002,4.9839249,2.8880728)"
        style="display:inline"
        id="g2423">
       <circle
@@ -6296,7 +6397,7 @@
     </g>
     <g
        id="g16154-5"
-       transform="translate(6.3792405,1.568176)"
+       transform="translate(8.5432242,2.7492779)"
        style="display:inline">
       <circle
          cy="1.1011159"
@@ -6312,7 +6413,7 @@
     </g>
     <g
        id="g16154-53"
-       transform="translate(7.5760911,1.568176)"
+       transform="translate(9.7400748,2.7492779)"
        style="display:inline">
       <circle
          cy="1.1011159"
@@ -6328,7 +6429,7 @@
     </g>
     <g
        id="g16154-3"
-       transform="translate(7.5760911,2.6902236)"
+       transform="translate(9.7400748,3.8713255)"
        style="display:inline">
       <circle
          cy="1.1011159"
@@ -6344,7 +6445,7 @@
     </g>
     <g
        id="g16154-3-6"
-       transform="translate(6.3792405,2.6902236)"
+       transform="translate(8.5432242,3.8713255)"
        style="display:inline">
       <circle
          cy="1.1011159"
@@ -6472,14 +6573,15 @@
        style="display:inline;opacity:1;vector-effect:none;fill:#00ff00;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        r="0.098425187" />
     <circle
-       cy="8.0708637"
-       cx="3.9370074"
+       cy="-8.6600914"
+       cx="-4.9198899"
        id="circle2458"
        style="display:inline;opacity:1;vector-effect:none;fill:#00ff00;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       r="0.098425187" />
+       r="0.098425187"
+       transform="scale(-1)" />
     <circle
        cy="9.0564423"
-       cx="3.9370084"
+       cx="4.919888"
        id="circle2468"
        style="display:inline;opacity:1;vector-effect:none;fill:#00ff00;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        r="0.098425187" />
@@ -6526,15 +6628,34 @@
          id="circle6589"
          style="opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
     </g>
+    <circle
+       r="0.37007874"
+       cy="7.8740144"
+       cx="2.4606292"
+       id="path872"
+       style="display:inline;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Kassutronics/Precision ADSR/PrecADSRmod/Images/precadsr-panel.png"
+       inkscape:export-xdpi="101.46574"
+       inkscape:export-ydpi="101.46574" />
+    <circle
+       r="0.23622048"
+       style="display:inline;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#b3b3b3;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="circle874"
+       cx="2.4606292"
+       cy="7.8740144"
+       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Kassutronics/Precision ADSR/PrecADSRmod/Images/precadsr-panel.png"
+       inkscape:export-xdpi="101.46574"
+       inkscape:export-ydpi="101.46574" />
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer2"
      inkscape:label="Mockup"
-     style="display:none">
+     style="display:none"
+     sodipodi:insensitive="true">
     <g
        id="g2153"
-       transform="translate(-0.32773058,-9.3166123)"
+       transform="translate(0.45830044,-6.7575574)"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Gap sequencer/Hardware/Panel/mockup_9knob.png"
        inkscape:export-xdpi="999.99799"
        inkscape:export-ydpi="999.99799">
@@ -6868,7 +6989,7 @@
     </g>
     <g
        id="g3323-1"
-       transform="translate(9.3504226,6.1371854)"
+       transform="translate(9.3504226,3.7749806)"
        style="display:inline"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Gap sequencer/Hardware/Panel/mockup_9knob.png"
        inkscape:export-xdpi="999.99799"
@@ -7086,7 +7207,7 @@
     </g>
     <g
        id="g3808"
-       transform="translate(11.318927,6.1371856)"
+       transform="translate(9.3504231,7.1214376)"
        style="display:inline"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Gap sequencer/Hardware/Panel/mockup_9knob.png"
        inkscape:export-xdpi="999.99799"
@@ -7134,7 +7255,7 @@
     </g>
     <g
        id="g3824"
-       transform="translate(9.3468537,7.1214375)"
+       transform="translate(10.331106,7.1214375)"
        style="display:inline"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Gap sequencer/Hardware/Panel/mockup_9knob.png"
        inkscape:export-xdpi="999.99799"
@@ -7182,7 +7303,7 @@
     </g>
     <g
        id="g3969"
-       transform="translate(-0.32773465,-6.5607058)"
+       transform="translate(-1.0167061,-5.5764561)"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Gap sequencer/Hardware/Panel/mockup_9knob.png"
        inkscape:export-xdpi="999.99799"
        inkscape:export-ydpi="999.99799">
@@ -7220,7 +7341,7 @@
     </g>
     <g
        id="g1999"
-       transform="translate(10.334675,6.1371855)"
+       transform="translate(9.350423,4.9560831)"
        style="display:inline"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Gap sequencer/Hardware/Panel/mockup_9knob.png"
        inkscape:export-xdpi="999.99799"
@@ -7268,7 +7389,7 @@
     </g>
     <g
        id="g4005"
-       transform="matrix(1.0096916,0,0,1.0096916,-1.7489234,-6.6729393)"
+       transform="matrix(1.0096916,0,0,1.0096916,-1.059946,-6.8764672)"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Gap sequencer/Hardware/Panel/mockup_9knob.png"
        inkscape:export-xdpi="999.99799"
        inkscape:export-ydpi="999.99799"
@@ -7307,7 +7428,7 @@
     </g>
     <g
        id="g8694"
-       transform="translate(11.316863,7.1214374)"
+       transform="translate(12.301115,7.1214374)"
        style="display:inline"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Gap sequencer/Hardware/Panel/mockup_9knob.png"
        inkscape:export-xdpi="999.99799"
@@ -7355,7 +7476,7 @@
     </g>
     <g
        id="g10100"
-       transform="translate(10.334675,7.1214374)"
+       transform="translate(11.318927,7.1214374)"
        style="display:inline"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Gap sequencer/Hardware/Panel/mockup_9knob.png"
        inkscape:export-xdpi="999.99799"
@@ -7403,7 +7524,7 @@
     </g>
     <g
        id="g2129"
-       transform="translate(-0.3288057,-7.9386586)"
+       transform="translate(-1.0167061,-7.9386595)"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Gap sequencer/Hardware/Panel/mockup_9knob.png"
        inkscape:export-xdpi="999.99799"
        inkscape:export-ydpi="999.99799">
@@ -7441,7 +7562,7 @@
     </g>
     <g
        id="g2141"
-       transform="matrix(1.0096916,0,0,1.0096916,-1.7489234,-8.0642467)"
+       transform="matrix(1.0096916,0,0,1.0096916,-1.059946,-9.2386717)"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Gap sequencer/Hardware/Panel/mockup_9knob.png"
        inkscape:export-xdpi="999.99799"
        inkscape:export-ydpi="999.99799"
@@ -7483,11 +7604,11 @@
        id="rect23230"
        width="1.3779528"
        height="0.78740162"
-       x="2.0669291"
-       y="2.7559056" />
+       x="4.2309132"
+       y="3.9370074" />
     <g
        id="g4184"
-       transform="translate(9.3504226,5.1529334)"
+       transform="translate(9.3504226,1.4127758)"
        style="display:inline"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Gap sequencer/Hardware/Panel/mockup_9knob.png"
        inkscape:export-xdpi="999.99799"
@@ -7535,7 +7656,7 @@
     </g>
     <g
        id="g4200"
-       transform="translate(10.334675,5.1529335)"
+       transform="translate(9.350423,2.5938783)"
        style="display:inline"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Gap sequencer/Hardware/Panel/mockup_9knob.png"
        inkscape:export-xdpi="999.99799"
@@ -7580,6 +7701,82 @@
            x="-668.97638"
            y="1354.5826"
            style="font-size:16px">jack</tspan></text>
+    </g>
+    <g
+       id="g3767"
+       transform="translate(-2.0009597,-4.3953537)"
+       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Gap sequencer/Hardware/Panel/mockup_9knob.png"
+       inkscape:export-xdpi="999.99799"
+       inkscape:export-ydpi="999.99799">
+      <circle
+         r="0.38062817"
+         cy="12.269368"
+         cx="-4.4615889"
+         id="circle3757"
+         style="vector-effect:none;fill:#ffff00;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         transform="scale(-1,1)" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:0;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:middle;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;vector-effect:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.96;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
+         x="-668.97638"
+         y="1354.5826"
+         id="text3761"
+         transform="matrix(0.01041667,0,0,0.01041667,11.413658,-1.9125744)"><tspan
+           sodipodi:role="line"
+           id="tspan3759"
+           x="-668.97638"
+           y="1354.5826"
+           style="font-size:16px">Clock</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:0;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:middle;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;vector-effect:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.96;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
+         x="-668.97638"
+         y="1354.5826"
+         id="text3765"
+         transform="matrix(0.01041667,0,0,0.01041667,11.413658,-1.676354)"><tspan
+           sodipodi:role="line"
+           id="tspan3763"
+           x="-668.97638"
+           y="1354.5826"
+           style="font-size:16px">button</tspan></text>
+    </g>
+    <g
+       id="g5103"
+       transform="translate(-1.0167061,-4.3953537)"
+       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Gap sequencer/Hardware/Panel/mockup_9knob.png"
+       inkscape:export-xdpi="999.99799"
+       inkscape:export-ydpi="999.99799">
+      <circle
+         r="0.38062817"
+         cy="12.269368"
+         cx="-4.4615889"
+         id="circle5093"
+         style="vector-effect:none;fill:#ffff00;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         transform="scale(-1,1)" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:0;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:middle;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;vector-effect:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.96;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
+         x="-668.97638"
+         y="1354.5826"
+         id="text5097"
+         transform="matrix(0.01041667,0,0,0.01041667,11.413658,-1.9125744)"><tspan
+           sodipodi:role="line"
+           id="tspan5095"
+           x="-668.97638"
+           y="1354.5826"
+           style="font-size:16px">Reset</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:0;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:middle;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;vector-effect:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.96;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
+         x="-668.97638"
+         y="1354.5826"
+         id="text5101"
+         transform="matrix(0.01041667,0,0,0.01041667,11.413658,-1.676354)"><tspan
+           sodipodi:role="line"
+           id="tspan5099"
+           x="-668.97638"
+           y="1354.5826"
+           style="font-size:16px">button</tspan></text>
     </g>
   </g>
   <g

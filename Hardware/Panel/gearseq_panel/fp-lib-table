@@ -1,3 +1,3 @@
 (fp_lib_table
-  (lib (name gapseq)(type KiCad)(uri ${KIPRJMOD}/../../PCB/gapseq/gapseq.pretty)(options "")(descr ""))
+  (lib (name gearseq_panel)(type KiCad)(uri ${KIPRJMOD}/gearseq_panel.pretty)(options "")(descr ""))
 )
