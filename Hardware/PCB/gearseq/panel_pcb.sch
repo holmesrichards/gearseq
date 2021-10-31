@@ -52,46 +52,50 @@ Wire Notes Line
 Wire Notes Line
 	6600 4150 6600 3200
 $Comp
-L Device:R_POT RV1
+L ao_symbols:R_POT RV1
 U 1 1 6114F64E
 P 3750 2500
 F 0 "RV1" V 3543 2500 50  0000 C CNN
 F 1 "10k" V 3634 2500 50  0000 C CNN
 F 2 "ao_tht:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical_centered" H 3750 2500 50  0001 C CNN
 F 3 "~" H 3750 2500 50  0001 C CNN
+F 4 "Tayda" H 3750 2500 50  0001 C CNN "Vendor"
 	1    3750 2500
 	0    -1   1    0   
 $EndComp
 $Comp
-L Device:R_POT RV2
+L ao_symbols:R_POT RV2
 U 1 1 6114F830
 P 3750 3000
 F 0 "RV2" V 3543 3000 50  0000 C CNN
 F 1 "10k" V 3634 3000 50  0000 C CNN
 F 2 "ao_tht:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical_centered" H 3750 3000 50  0001 C CNN
 F 3 "~" H 3750 3000 50  0001 C CNN
+F 4 "Tayda" H 3750 3000 50  0001 C CNN "Vendor"
 	1    3750 3000
 	0    -1   1    0   
 $EndComp
 $Comp
-L Device:R_POT RV3
+L ao_symbols:R_POT RV3
 U 1 1 61150713
 P 3750 3500
 F 0 "RV3" V 3543 3500 50  0000 C CNN
 F 1 "10k" V 3634 3500 50  0000 C CNN
 F 2 "ao_tht:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical_centered" H 3750 3500 50  0001 C CNN
 F 3 "~" H 3750 3500 50  0001 C CNN
+F 4 "Tayda" H 3750 3500 50  0001 C CNN "Vendor"
 	1    3750 3500
 	0    -1   1    0   
 $EndComp
 $Comp
-L Device:R_POT RV4
+L ao_symbols:R_POT RV4
 U 1 1 61150719
 P 3750 4000
 F 0 "RV4" V 3543 4000 50  0000 C CNN
 F 1 "10k" V 3634 4000 50  0000 C CNN
 F 2 "ao_tht:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical_centered" H 3750 4000 50  0001 C CNN
 F 3 "~" H 3750 4000 50  0001 C CNN
+F 4 "Tayda" H 3750 4000 50  0001 C CNN "Vendor"
 	1    3750 4000
 	0    -1   1    0   
 $EndComp
@@ -150,8 +154,6 @@ F 4 "DNF" H 3100 5900 50  0001 C CNN "Config"
 	1    3100 5900
 	1    0    0    -1  
 $EndComp
-Text Label 3950 2300 0    50   ~ 0
-VCC
 Wire Notes Line
 	2000 5550 3800 5550
 Wire Notes Line
@@ -187,23 +189,23 @@ $EndComp
 $Comp
 L power:PWR_FLAG #FLG02
 U 1 1 6133F499
-P 2250 3800
-F 0 "#FLG02" H 2250 3875 50  0001 C CNN
-F 1 "PWR_FLAG" H 2250 3973 50  0000 C CNN
-F 2 "" H 2250 3800 50  0001 C CNN
-F 3 "~" H 2250 3800 50  0001 C CNN
-	1    2250 3800
+P 2300 3950
+F 0 "#FLG02" H 2300 4025 50  0001 C CNN
+F 1 "PWR_FLAG" H 2300 4123 50  0000 C CNN
+F 2 "" H 2300 3950 50  0001 C CNN
+F 3 "~" H 2300 3950 50  0001 C CNN
+	1    2300 3950
 	1    0    0    1   
 $EndComp
 $Comp
 L power:PWR_FLAG #FLG03
 U 1 1 6133F4A6
-P 2550 3600
-F 0 "#FLG03" H 2550 3675 50  0001 C CNN
-F 1 "PWR_FLAG" H 2550 3773 50  0000 C CNN
-F 2 "" H 2550 3600 50  0001 C CNN
-F 3 "~" H 2550 3600 50  0001 C CNN
-	1    2550 3600
+P 2750 3850
+F 0 "#FLG03" H 2750 3925 50  0001 C CNN
+F 1 "PWR_FLAG" H 2750 4023 50  0000 C CNN
+F 2 "" H 2750 3850 50  0001 C CNN
+F 3 "~" H 2750 3850 50  0001 C CNN
+	1    2750 3850
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -233,25 +235,19 @@ Text GLabel 3100 2750 3    50   Input ~ 0
 POT_4_W_P
 Text GLabel 2700 2750 3    50   Input ~ 0
 POT_ALG_P
-Text Label 2200 3050 3    50   ~ 0
-VCC
-Wire Wire Line
-	2200 2750 2200 3050
 $Comp
 L power:GND1 #PWR049
 U 1 1 617444E6
-P 2550 3600
-F 0 "#PWR049" H 2550 3350 50  0001 C CNN
-F 1 "GND1" H 2555 3427 50  0000 C CNN
-F 2 "" H 2550 3600 50  0001 C CNN
-F 3 "" H 2550 3600 50  0001 C CNN
-	1    2550 3600
+P 2750 3850
+F 0 "#PWR049" H 2750 3600 50  0001 C CNN
+F 1 "GND1" H 2755 3677 50  0000 C CNN
+F 2 "" H 2750 3850 50  0001 C CNN
+F 3 "" H 2750 3850 50  0001 C CNN
+	1    2750 3850
 	1    0    0    -1  
 $EndComp
-Text Label 2250 3600 1    50   ~ 0
-VCC
 Wire Wire Line
-	2250 3600 2250 3800
+	2300 3750 2300 3950
 Text GLabel 3950 3000 2    50   Input ~ 0
 POT_1_CW_P
 Text GLabel 4000 3200 2    50   Output ~ 0
@@ -291,13 +287,14 @@ Wire Wire Line
 Wire Wire Line
 	3750 2700 4000 2700
 $Comp
-L Device:R_POT RV5
+L ao_symbols:R_POT RV5
 U 1 1 61152468
 P 3750 4500
 F 0 "RV5" V 3543 4500 50  0000 C CNN
 F 1 "10k" V 3634 4500 50  0000 C CNN
 F 2 "ao_tht:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical_centered" H 3750 4500 50  0001 C CNN
 F 3 "~" H 3750 4500 50  0001 C CNN
+F 4 "Tayda" H 3750 4500 50  0001 C CNN "Vendor"
 	1    3750 4500
 	0    -1   1    0   
 $EndComp
@@ -314,11 +311,11 @@ Wire Notes Line
 Text Notes 2300 2300 2    50   ~ 0
 Pots
 $Comp
-L ao_symbols:SW_Push SW1
+L ao_symbols:SW_Push_black SW1
 U 1 1 615ADE7E
 P 6950 5000
 F 0 "SW1" H 6950 5285 50  0000 C CNN
-F 1 "SW_Push" H 6950 5194 50  0000 C CNN
+F 1 "SW_Push_black" H 6950 5194 50  0000 C CNN
 F 2 "ao_tht:Push_button_A-5050" H 6950 5000 50  0001 C CNN
 F 3 "~" H 6950 5000 50  0001 C CNN
 F 4 "Tayda" H 6950 5000 50  0001 C CNN "Vendor"
@@ -352,15 +349,15 @@ Wire Wire Line
 Wire Wire Line
 	7200 5250 7000 5250
 $Comp
-L ao_symbols:SW_Push SW2
+L ao_symbols:SW_Push_red SW2
 U 1 1 615B2113
 P 7900 5000
 F 0 "SW2" H 7900 5285 50  0000 C CNN
-F 1 "SW_Push" H 7900 5194 50  0000 C CNN
+F 1 "SW_Push_red" H 7900 5194 50  0000 C CNN
 F 2 "ao_tht:Push_button_A-5050" H 7900 5000 50  0001 C CNN
 F 3 "~" H 7900 5000 50  0001 C CNN
 F 4 "Tayda" H 7900 5000 50  0001 C CNN "Vendor"
-F 5 "A-3487" H 7900 5000 50  0001 C CNN "SKU"
+F 5 "A-3486" H 7900 5000 50  0001 C CNN "SKU"
 	1    7900 5000
 	1    0    0    -1  
 $EndComp
@@ -411,40 +408,43 @@ F 3 "" H 4800 4750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R_POT RV6
+L ao_symbols:R_POT RV6
 U 1 1 617F83E5
 P 5000 2500
 F 0 "RV6" V 4793 2500 50  0000 C CNN
 F 1 "10k" V 4884 2500 50  0000 C CNN
 F 2 "ao_tht:Potentiometer_Alpha_16mm_Single_Vertical" H 5000 2500 50  0001 C CNN
 F 3 "~" H 5000 2500 50  0001 C CNN
+F 4 "Tayda" H 5000 2500 50  0001 C CNN "Vendor"
 	1    5000 2500
 	0    -1   1    0   
 $EndComp
 $Comp
-L Device:R_POT RV7
+L ao_symbols:R_POT RV7
 U 1 1 617F83EB
 P 5000 3000
 F 0 "RV7" V 4793 3000 50  0000 C CNN
 F 1 "10k" V 4884 3000 50  0000 C CNN
 F 2 "ao_tht:Potentiometer_Alpha_16mm_Single_Vertical" H 5000 3000 50  0001 C CNN
 F 3 "~" H 5000 3000 50  0001 C CNN
+F 4 "Tayda" H 5000 3000 50  0001 C CNN "Vendor"
 	1    5000 3000
 	0    -1   1    0   
 $EndComp
 $Comp
-L Device:R_POT RV8
+L ao_symbols:R_POT RV8
 U 1 1 617F83F1
 P 5000 3500
 F 0 "RV8" V 4793 3500 50  0000 C CNN
 F 1 "10k" V 4884 3500 50  0000 C CNN
 F 2 "ao_tht:Potentiometer_Alpha_16mm_Single_Vertical" H 5000 3500 50  0001 C CNN
 F 3 "~" H 5000 3500 50  0001 C CNN
+F 4 "Tayda" H 5000 3500 50  0001 C CNN "Vendor"
 	1    5000 3500
 	0    -1   1    0   
 $EndComp
 $Comp
-L Device:R_POT RV9
+L ao_symbols:R_POT RV9
 U 1 1 617F83F7
 P 5000 4000
 F 0 "RV9" V 4793 4000 50  0000 C CNN
@@ -481,8 +481,6 @@ Wire Wire Line
 Connection ~ 4800 4000
 Wire Wire Line
 	5200 2500 5200 2300
-Text Label 5200 2300 0    50   ~ 0
-VCC
 Wire Wire Line
 	4800 4000 4800 4500
 Wire Wire Line
@@ -529,13 +527,14 @@ Wire Wire Line
 Wire Wire Line
 	5000 2700 5250 2700
 $Comp
-L Device:R_POT RV10
+L ao_symbols:R_POT RV10
 U 1 1 617F8424
 P 5000 4500
 F 0 "RV10" V 4793 4500 50  0000 C CNN
 F 1 "10k" V 4884 4500 50  0000 C CNN
 F 2 "ao_tht:Potentiometer_Alpha_16mm_Single_Vertical" H 5000 4500 50  0001 C CNN
 F 3 "~" H 5000 4500 50  0001 C CNN
+F 4 "Tayda" H 5000 4500 50  0001 C CNN "Vendor"
 	1    5000 4500
 	0    -1   1    0   
 $EndComp
@@ -543,4 +542,50 @@ Wire Wire Line
 	5150 4500 5250 4500
 Text Notes 4150 5100 0    50   ~ 0
 Fit either 9 mm or 16 mm pots
+$Comp
+L ao_symbols:+5V_1 #PWR?
+U 1 1 6186CB18
+P 2200 3150
+F 0 "#PWR?" H 2200 3000 50  0001 C CNN
+F 1 "+5V_1" H 2215 3323 50  0000 C CNN
+F 2 "" H 2200 3150 50  0001 C CNN
+F 3 "" H 2200 3150 50  0001 C CNN
+	1    2200 3150
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2200 2750 2200 3150
+$Comp
+L ao_symbols:+5V_1 #PWR?
+U 1 1 6186EA4F
+P 2300 3750
+F 0 "#PWR?" H 2300 3600 50  0001 C CNN
+F 1 "+5V_1" H 2315 3923 50  0000 C CNN
+F 2 "" H 2300 3750 50  0001 C CNN
+F 3 "" H 2300 3750 50  0001 C CNN
+	1    2300 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L ao_symbols:+5V_1 #PWR?
+U 1 1 6187176A
+P 3950 2300
+F 0 "#PWR?" H 3950 2150 50  0001 C CNN
+F 1 "+5V_1" H 3965 2473 50  0000 C CNN
+F 2 "" H 3950 2300 50  0001 C CNN
+F 3 "" H 3950 2300 50  0001 C CNN
+	1    3950 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L ao_symbols:+5V_1 #PWR?
+U 1 1 61871E11
+P 5200 2300
+F 0 "#PWR?" H 5200 2150 50  0001 C CNN
+F 1 "+5V_1" H 5215 2473 50  0000 C CNN
+F 2 "" H 5200 2300 50  0001 C CNN
+F 3 "" H 5200 2300 50  0001 C CNN
+	1    5200 2300
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

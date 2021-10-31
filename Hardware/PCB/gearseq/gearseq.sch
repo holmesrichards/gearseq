@@ -409,13 +409,15 @@ A2 A5 EE B2 D4 1E 8B A5 0A 72 7E 53 3D C5 4E 9B EF C0 0F 7D 68 E9 0E B5 18 B4 3C
 EndData
 $EndBitmap
 $Comp
-L MCU_Module:Arduino_Nano_v3.x A1
+L ao_symbols:Arduino_Nano_v3.x A1
 U 1 1 60D8A882
 P 9250 2050
 F 0 "A1" H 9250 961 50  0000 C CNN
 F 1 "Arduino_Nano_v3.x" H 9250 870 50  0000 C CNN
-F 2 "ao_tht:Arduino_Nano" H 9250 2050 50  0001 C CIN
+F 2 "Module:Arduino_Nano" H 9250 2050 50  0001 C CIN
 F 3 "http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf" H 9250 2050 50  0001 C CNN
+F 4 "A-2864" H 9250 2050 50  0001 C CNN "SKU"
+F 5 "Tayda" H 9250 2050 50  0001 C CNN "Vendor"
 	1    9250 2050
 	1    0    0    -1  
 $EndComp
@@ -518,7 +520,7 @@ F 3 "" H 1650 1700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R1
+L ao_symbols:R R1
 U 1 1 60DAD338
 P 1650 1450
 F 0 "R1" H 1720 1496 50  0000 L CNN
@@ -563,7 +565,7 @@ F 3 "" H 1650 3000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R2
+L ao_symbols:R R2
 U 1 1 61103A8E
 P 1650 2750
 F 0 "R2" H 1720 2796 50  0000 L CNN
@@ -578,7 +580,7 @@ SEQ_OUT
 Wire Wire Line
 	5750 1250 5950 1250
 $Comp
-L Device:R R13
+L ao_symbols:R R13
 U 1 1 61145237
 P 6700 1250
 F 0 "R13" V 6493 1250 50  0000 C CNN
@@ -621,7 +623,7 @@ PER_OUT
 Wire Wire Line
 	5750 2000 5950 2000
 $Comp
-L Device:R R15
+L ao_symbols:R R15
 U 1 1 6115AD99
 P 6700 2000
 F 0 "R15" V 6493 2000 50  0000 C CNN
@@ -779,7 +781,7 @@ F 4 "DNF" H 9150 4300 50  0001 C CNN "Config"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R14
+L ao_symbols:R R14
 U 1 1 610D8070
 P 6700 1700
 F 0 "R14" V 6493 1700 50  0000 C CNN
@@ -950,7 +952,7 @@ Connection ~ 4250 6650
 Wire Wire Line
 	3200 1300 3700 1300
 $Comp
-L Regulator_Linear:L78L05_TO92 U2
+L ao_symbols:L78L05_TO92 U2
 U 1 1 61184880
 P 3500 6650
 F 0 "U2" H 3500 6892 50  0000 C CNN
@@ -961,7 +963,7 @@ F 3 "http://www.st.com/content/ccc/resource/technical/document/datasheet/15/55/e
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C2
+L ao_symbols:C C2
 U 1 1 61193643
 P 3100 6850
 F 0 "C2" H 3215 6896 50  0000 L CNN
@@ -978,7 +980,7 @@ Wire Wire Line
 Wire Wire Line
 	3100 6650 3200 6650
 $Comp
-L Device:C C3
+L ao_symbols:C C3
 U 1 1 6119DC4D
 P 3850 6850
 F 0 "C3" H 3965 6896 50  0000 L CNN
@@ -1075,7 +1077,7 @@ F 3 "" H 4600 2200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R10
+L ao_symbols:R R10
 U 1 1 610F2269
 P 4600 1950
 F 0 "R10" H 4670 1996 50  0000 L CNN
@@ -1086,7 +1088,7 @@ F 3 "~" H 4600 1950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R9
+L ao_symbols:R R9
 U 1 1 610F1D94
 P 4600 1550
 F 0 "R9" H 4670 1596 50  0000 L CNN
@@ -1140,7 +1142,7 @@ Text Notes 4300 2750 0    50   ~ 0
 Panel components\nboard
 Connection ~ 2600 6650
 $Comp
-L Device:CP C1
+L ao_symbols:CP C1
 U 1 1 5F73FA30
 P 2600 6800
 F 0 "C1" H 2718 6846 50  0000 L CNN
@@ -1239,13 +1241,15 @@ Wire Wire Line
 Wire Wire Line
 	5950 2000 6400 2000
 $Comp
-L Device:LED D16
+L ao_symbols:LED_green D16
 U 1 1 616219AE
 P 7400 1700
 F 0 "D16" H 7393 1445 50  0000 C CNN
-F 1 "LED" H 7393 1536 50  0000 C CNN
+F 1 "LED_green" H 7393 1536 50  0000 C CNN
 F 2 "LED_THT:LED_D5.0mm" H 7400 1700 50  0001 C CNN
 F 3 "~" H 7400 1700 50  0001 C CNN
+F 4 "A-1553" H 7400 1700 50  0001 C CNN "SKU"
+F 5 "Tayda" H 7400 1700 50  0001 C CNN "Vendor"
 	1    7400 1700
 	-1   0    0    1   
 $EndComp
@@ -1261,7 +1265,7 @@ Connection ~ 6400 1250
 Wire Wire Line
 	6400 1250 6550 1250
 $Comp
-L Device:R R16
+L ao_symbols:R R16
 U 1 1 61652A58
 P 6700 2450
 F 0 "R16" V 6493 2450 50  0000 C CNN
@@ -1287,13 +1291,15 @@ Wire Wire Line
 Text Label 6850 2450 0    50   ~ 0
 PER_LED
 $Comp
-L Device:LED D17
+L ao_symbols:LED_green D17
 U 1 1 61652A66
 P 7400 2450
 F 0 "D17" H 7393 2195 50  0000 C CNN
-F 1 "LED" H 7393 2286 50  0000 C CNN
+F 1 "LED_green" H 7393 2286 50  0000 C CNN
 F 2 "LED_THT:LED_D5.0mm" H 7400 2450 50  0001 C CNN
 F 3 "~" H 7400 2450 50  0001 C CNN
+F 4 "A-1553" H 7400 2450 50  0001 C CNN "SKU"
+F 5 "Tayda" H 7400 2450 50  0001 C CNN "Vendor"
 	1    7400 2450
 	-1   0    0    1   
 $EndComp
@@ -1328,7 +1334,7 @@ Wire Wire Line
 	2050 2500 2550 2500
 Connection ~ 2050 2500
 $Comp
-L Device:R R3
+L ao_symbols:R R3
 U 1 1 617A2991
 P 1850 1200
 F 0 "R3" V 1643 1200 50  0000 C CNN
@@ -1341,7 +1347,7 @@ $EndComp
 Wire Wire Line
 	1700 1200 1650 1200
 $Comp
-L Device:R R4
+L ao_symbols:R R4
 U 1 1 617A3663
 P 1850 2500
 F 0 "R4" V 1643 2500 50  0000 C CNN
@@ -1354,7 +1360,7 @@ $EndComp
 Wire Wire Line
 	2000 2500 2050 2500
 $Comp
-L Device:R R7
+L ao_symbols:R R7
 U 1 1 617BEAC2
 P 3400 1750
 F 0 "R7" V 3193 1750 50  0000 C CNN
@@ -1378,13 +1384,15 @@ $EndComp
 Wire Wire Line
 	3550 1750 3700 1750
 $Comp
-L Device:LED D8
+L ao_symbols:LED_red D8
 U 1 1 617BEAD0
 P 3850 1750
 F 0 "D8" H 3843 1495 50  0000 C CNN
-F 1 "LED" H 3843 1586 50  0000 C CNN
+F 1 "LED_red" H 3843 1586 50  0000 C CNN
 F 2 "LED_THT:LED_D5.0mm" H 3850 1750 50  0001 C CNN
 F 3 "~" H 3850 1750 50  0001 C CNN
+F 4 "A-1554" H 3850 1750 50  0001 C CNN "SKU"
+F 5 "Tayda" H 3850 1750 50  0001 C CNN "Vendor"
 	1    3850 1750
 	-1   0    0    1   
 $EndComp
@@ -1397,7 +1405,7 @@ Wire Wire Line
 Wire Wire Line
 	3150 2600 3200 2600
 $Comp
-L Device:R R8
+L ao_symbols:R R8
 U 1 1 617FD3D3
 P 3400 3050
 F 0 "R8" V 3193 3050 50  0000 C CNN
@@ -1421,13 +1429,15 @@ $EndComp
 Wire Wire Line
 	3550 3050 3700 3050
 $Comp
-L Device:LED D9
+L ao_symbols:LED_green D9
 U 1 1 617FD3E0
 P 3850 3050
 F 0 "D9" H 3843 2795 50  0000 C CNN
-F 1 "LED" H 3843 2886 50  0000 C CNN
+F 1 "LED_green" H 3843 2886 50  0000 C CNN
 F 2 "LED_THT:LED_D5.0mm" H 3850 3050 50  0001 C CNN
 F 3 "~" H 3850 3050 50  0001 C CNN
+F 4 "A-1553" H 3850 3050 50  0001 C CNN "SKU"
+F 5 "Tayda" H 3850 3050 50  0001 C CNN "Vendor"
 	1    3850 3050
 	-1   0    0    1   
 $EndComp
@@ -1579,7 +1589,7 @@ Connection ~ 2650 4050
 Wire Wire Line
 	2650 4050 2650 4100
 $Comp
-L Device:R R5
+L ao_symbols:R R5
 U 1 1 61696053
 P 2400 4100
 F 0 "R5" V 2193 4100 50  0000 C CNN
@@ -1676,7 +1686,7 @@ Wire Wire Line
 Wire Wire Line
 	4250 6700 4250 6650
 $Comp
-L Device:C C4
+L ao_symbols:C C4
 U 1 1 5F73FA42
 P 4250 6850
 F 0 "C4" H 4365 6896 50  0000 L CNN
@@ -1838,7 +1848,7 @@ Connection ~ 2650 5050
 Wire Wire Line
 	2650 5050 2650 5100
 $Comp
-L Device:R R6
+L ao_symbols:R R6
 U 1 1 616AC492
 P 2400 5100
 F 0 "R6" V 2193 5100 50  0000 C CNN
@@ -1962,7 +1972,7 @@ Connection ~ 5650 4050
 Wire Wire Line
 	5650 4050 5650 4100
 $Comp
-L Device:R R11
+L ao_symbols:R R11
 U 1 1 616B839A
 P 5400 4100
 F 0 "R11" V 5193 4100 50  0000 C CNN
@@ -2086,7 +2096,7 @@ Connection ~ 5650 5050
 Wire Wire Line
 	5650 5050 5650 5100
 $Comp
-L Device:R R12
+L ao_symbols:R R12
 U 1 1 616C6957
 P 5400 5100
 F 0 "R12" V 5193 5100 50  0000 C CNN
