@@ -755,18 +755,6 @@ F 4 "DNF" H 9000 5050 50  0001 C CNN "Config"
 	1    0    0    -1  
 $EndComp
 $Comp
-L ao_symbols:MountingHole H2
-U 1 1 6144DFAE
-P 9000 5250
-F 0 "H2" H 9100 5296 50  0000 L CNN
-F 1 "MountingHole" H 9100 5205 50  0000 L CNN
-F 2 "ao_tht:MountingHole_3.2mm_M3" H 9000 5250 50  0001 C CNN
-F 3 "" H 9000 5250 50  0001 C CNN
-F 4 "DNF" H 9000 5250 50  0001 C CNN "Config"
-	1    9000 5250
-	1    0    0    -1  
-$EndComp
-$Comp
 L ao_symbols:MountingHole H3
 U 1 1 6144E407
 P 9000 5450
@@ -859,7 +847,7 @@ P 7200 4000
 AR Path="/61124C5F/611F42A6" Ref="J?"  Part="1" 
 AR Path="/611F42A6" Ref="J10"  Part="1" 
 F 0 "J10" V 7400 4000 50  0000 C CNN
-F 1 "Conn_01x12" V 7300 4000 50  0000 C CNN
+F 1 "Conn_01x11" V 7300 4000 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x11_P2.54mm_Vertical" H 7200 4000 50  0001 C CNN
 F 3 "~" H 7200 4000 50  0001 C CNN
 	1    7200 4000
@@ -1658,7 +1646,7 @@ Wire Notes Line
 Wire Wire Line
 	2400 6650 2600 6650
 $Comp
-L Device:D_Schottky D3
+L ao_symbols:1N5817 D3
 U 1 1 5F73FA24
 P 2250 6650
 F 0 "D3" H 2250 6434 50  0000 C CNN

@@ -16,12 +16,12 @@ $EndDescr
 $Comp
 L power:GND1 #PWR051
 U 1 1 6112F162
-P 4950 4750
-F 0 "#PWR051" H 4950 4500 50  0001 C CNN
-F 1 "GND1" H 4955 4577 50  0000 C CNN
-F 2 "" H 4950 4750 50  0001 C CNN
-F 3 "" H 4950 4750 50  0001 C CNN
-	1    4950 4750
+P 3550 4750
+F 0 "#PWR051" H 3550 4500 50  0001 C CNN
+F 1 "GND1" H 3555 4577 50  0000 C CNN
+F 2 "" H 3550 4750 50  0001 C CNN
+F 3 "" H 3550 4750 50  0001 C CNN
+	1    3550 4750
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -54,74 +54,74 @@ Wire Notes Line
 $Comp
 L Device:R_POT RV1
 U 1 1 6114F64E
-P 5150 2500
-F 0 "RV1" V 4943 2500 50  0000 C CNN
-F 1 "10K" V 5034 2500 50  0000 C CNN
-F 2 "ao_tht:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical_centered" H 5150 2500 50  0001 C CNN
-F 3 "~" H 5150 2500 50  0001 C CNN
-	1    5150 2500
+P 3750 2500
+F 0 "RV1" V 3543 2500 50  0000 C CNN
+F 1 "10k" V 3634 2500 50  0000 C CNN
+F 2 "ao_tht:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical_centered" H 3750 2500 50  0001 C CNN
+F 3 "~" H 3750 2500 50  0001 C CNN
+	1    3750 2500
 	0    -1   1    0   
 $EndComp
 $Comp
 L Device:R_POT RV2
 U 1 1 6114F830
-P 5150 3000
-F 0 "RV2" V 4943 3000 50  0000 C CNN
-F 1 "10K" V 5034 3000 50  0000 C CNN
-F 2 "ao_tht:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical_centered" H 5150 3000 50  0001 C CNN
-F 3 "~" H 5150 3000 50  0001 C CNN
-	1    5150 3000
+P 3750 3000
+F 0 "RV2" V 3543 3000 50  0000 C CNN
+F 1 "10k" V 3634 3000 50  0000 C CNN
+F 2 "ao_tht:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical_centered" H 3750 3000 50  0001 C CNN
+F 3 "~" H 3750 3000 50  0001 C CNN
+	1    3750 3000
 	0    -1   1    0   
 $EndComp
 $Comp
 L Device:R_POT RV3
 U 1 1 61150713
-P 5150 3500
-F 0 "RV3" V 4943 3500 50  0000 C CNN
-F 1 "10K" V 5034 3500 50  0000 C CNN
-F 2 "ao_tht:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical_centered" H 5150 3500 50  0001 C CNN
-F 3 "~" H 5150 3500 50  0001 C CNN
-	1    5150 3500
+P 3750 3500
+F 0 "RV3" V 3543 3500 50  0000 C CNN
+F 1 "10k" V 3634 3500 50  0000 C CNN
+F 2 "ao_tht:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical_centered" H 3750 3500 50  0001 C CNN
+F 3 "~" H 3750 3500 50  0001 C CNN
+	1    3750 3500
 	0    -1   1    0   
 $EndComp
 $Comp
 L Device:R_POT RV4
 U 1 1 61150719
-P 5150 4000
-F 0 "RV4" V 4943 4000 50  0000 C CNN
-F 1 "10K" V 5034 4000 50  0000 C CNN
-F 2 "ao_tht:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical_centered" H 5150 4000 50  0001 C CNN
-F 3 "~" H 5150 4000 50  0001 C CNN
-	1    5150 4000
+P 3750 4000
+F 0 "RV4" V 3543 4000 50  0000 C CNN
+F 1 "10k" V 3634 4000 50  0000 C CNN
+F 2 "ao_tht:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical_centered" H 3750 4000 50  0001 C CNN
+F 3 "~" H 3750 4000 50  0001 C CNN
+	1    3750 4000
 	0    -1   1    0   
 $EndComp
 Wire Wire Line
-	5000 2500 4950 2500
+	3600 2500 3550 2500
 Wire Wire Line
-	4950 2500 4950 3000
+	3550 2500 3550 3000
 Wire Wire Line
-	5300 2500 5350 2500
+	3900 2500 3950 2500
 Wire Wire Line
-	4950 3000 5000 3000
-Connection ~ 4950 3000
+	3550 3000 3600 3000
+Connection ~ 3550 3000
 Wire Wire Line
-	4950 3000 4950 3500
+	3550 3000 3550 3500
 Wire Wire Line
-	5300 3000 5350 3000
+	3900 3000 3950 3000
 Wire Wire Line
-	5300 3500 5350 3500
+	3900 3500 3950 3500
 Wire Wire Line
-	5000 3500 4950 3500
-Connection ~ 4950 3500
+	3600 3500 3550 3500
+Connection ~ 3550 3500
 Wire Wire Line
-	4950 3500 4950 4000
+	3550 3500 3550 4000
 Wire Wire Line
-	5300 4000 5350 4000
+	3900 4000 3950 4000
 Wire Wire Line
-	5000 4000 4950 4000
-Connection ~ 4950 4000
+	3600 4000 3550 4000
+Connection ~ 3550 4000
 Wire Wire Line
-	5350 2500 5350 2300
+	3950 2500 3950 2300
 $Comp
 L ao_symbols:MountingHole H?
 U 1 1 6146FF72
@@ -150,7 +150,7 @@ F 4 "DNF" H 3100 5900 50  0001 C CNN "Config"
 	1    3100 5900
 	1    0    0    -1  
 $EndComp
-Text Label 5350 2300 0    50   ~ 0
+Text Label 3950 2300 0    50   ~ 0
 VCC
 Wire Notes Line
 	2000 5550 3800 5550
@@ -165,23 +165,23 @@ Hardware
 $Comp
 L power:GND1 #PWR050
 U 1 1 6133F470
-P 3350 3550
-F 0 "#PWR050" H 3350 3300 50  0001 C CNN
-F 1 "GND1" H 3355 3377 50  0000 C CNN
-F 2 "" H 3350 3550 50  0001 C CNN
-F 3 "" H 3350 3550 50  0001 C CNN
-	1    3350 3550
+P 2100 2800
+F 0 "#PWR050" H 2100 2550 50  0001 C CNN
+F 1 "GND1" H 2105 2627 50  0000 C CNN
+F 2 "" H 2100 2800 50  0001 C CNN
+F 3 "" H 2100 2800 50  0001 C CNN
+	1    2100 2800
 	1    0    0    -1  
 $EndComp
 $Comp
 L Connector_Generic:Conn_01x11 J14
 U 1 1 6133F476
-P 3850 3300
-F 0 "J14" V 4050 3300 50  0000 C CNN
-F 1 "Conn_01x11" V 3950 3300 50  0000 C CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_1x11_P2.54mm_Vertical" H 3850 3300 50  0001 C CNN
-F 3 "~" H 3850 3300 50  0001 C CNN
-	1    3850 3300
+P 2600 2550
+F 0 "J14" V 2800 2550 50  0000 C CNN
+F 1 "Conn_01x11" V 2700 2550 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x11_P2.54mm_Vertical" H 2600 2550 50  0001 C CNN
+F 3 "~" H 2600 2550 50  0001 C CNN
+	1    2600 2550
 	0    -1   -1   0   
 $EndComp
 $Comp
@@ -207,36 +207,36 @@ F 3 "~" H 2550 3600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4950 4000 4950 4500
+	3550 4000 3550 4500
 Wire Wire Line
-	5000 4500 4950 4500
-Connection ~ 4950 4500
+	3600 4500 3550 4500
+Connection ~ 3550 4500
 Wire Wire Line
-	4950 4500 4950 4750
+	3550 4500 3550 4750
 Wire Wire Line
-	3350 3500 3350 3550
-Text GLabel 3650 3500 3    50   Output ~ 0
+	2100 2750 2100 2800
+Text GLabel 2400 2750 3    50   Output ~ 0
 POT_1_CW_P
-Text GLabel 3550 3500 3    50   Input ~ 0
+Text GLabel 2300 2750 3    50   Input ~ 0
 POT_1_W_P
-Text GLabel 3850 3500 3    50   Output ~ 0
+Text GLabel 2600 2750 3    50   Output ~ 0
 POT_2_CW_P
-Text GLabel 3750 3500 3    50   Input ~ 0
+Text GLabel 2500 2750 3    50   Input ~ 0
 POT_2_W_P
-Text GLabel 4050 3500 3    50   Output ~ 0
+Text GLabel 2800 2750 3    50   Output ~ 0
 POT_3_CW_P
-Text GLabel 4150 3500 3    50   Input ~ 0
+Text GLabel 2900 2750 3    50   Input ~ 0
 POT_3_W_P
-Text GLabel 4250 3500 3    50   Output ~ 0
+Text GLabel 3000 2750 3    50   Output ~ 0
 POT_4_CW_P
-Text GLabel 4350 3500 3    50   Input ~ 0
+Text GLabel 3100 2750 3    50   Input ~ 0
 POT_4_W_P
-Text GLabel 3950 3500 3    50   Input ~ 0
+Text GLabel 2700 2750 3    50   Input ~ 0
 POT_ALG_P
-Text Label 3450 3800 3    50   ~ 0
+Text Label 2200 3050 3    50   ~ 0
 VCC
 Wire Wire Line
-	3450 3500 3450 3800
+	2200 2750 2200 3050
 $Comp
 L power:GND1 #PWR049
 U 1 1 617444E6
@@ -252,71 +252,57 @@ Text Label 2250 3600 1    50   ~ 0
 VCC
 Wire Wire Line
 	2250 3600 2250 3800
-Text GLabel 5350 3000 2    50   Input ~ 0
+Text GLabel 3950 3000 2    50   Input ~ 0
 POT_1_CW_P
-Text GLabel 5400 3200 2    50   Output ~ 0
+Text GLabel 4000 3200 2    50   Output ~ 0
 POT_1_W_P
 Wire Wire Line
-	5150 3150 5150 3200
+	3750 3150 3750 3200
 Wire Wire Line
-	5150 3200 5400 3200
-Text GLabel 5350 3500 2    50   Input ~ 0
+	3750 3200 4000 3200
+Text GLabel 3950 3500 2    50   Input ~ 0
 POT_2_CW_P
-Text GLabel 5350 4000 2    50   Input ~ 0
+Text GLabel 3950 4000 2    50   Input ~ 0
 POT_3_CW_P
-Text GLabel 5400 4500 2    50   Input ~ 0
+Text GLabel 4000 4500 2    50   Input ~ 0
 POT_4_CW_P
-Text GLabel 5400 3700 2    50   Output ~ 0
+Text GLabel 4000 3700 2    50   Output ~ 0
 POT_2_W_P
 Wire Wire Line
-	5150 3650 5150 3700
+	3750 3650 3750 3700
 Wire Wire Line
-	5150 3700 5400 3700
-Text GLabel 5400 4200 2    50   Output ~ 0
+	3750 3700 4000 3700
+Text GLabel 4000 4200 2    50   Output ~ 0
 POT_3_W_P
 Wire Wire Line
-	5150 4150 5150 4200
+	3750 4150 3750 4200
 Wire Wire Line
-	5150 4200 5400 4200
-Text GLabel 5400 4700 2    50   Output ~ 0
+	3750 4200 4000 4200
+Text GLabel 4000 4700 2    50   Output ~ 0
 POT_4_W_P
 Wire Wire Line
-	5150 4650 5150 4700
+	3750 4650 3750 4700
 Wire Wire Line
-	5150 4700 5400 4700
-Text GLabel 5400 2700 2    50   Output ~ 0
+	3750 4700 4000 4700
+Text GLabel 4000 2700 2    50   Output ~ 0
 POT_ALG_P
 Wire Wire Line
-	5150 2650 5150 2700
+	3750 2650 3750 2700
 Wire Wire Line
-	5150 2700 5400 2700
+	3750 2700 4000 2700
 $Comp
 L Device:R_POT RV5
 U 1 1 61152468
-P 5150 4500
-F 0 "RV5" V 4943 4500 50  0000 C CNN
-F 1 "10K" V 5034 4500 50  0000 C CNN
-F 2 "ao_tht:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical_centered" H 5150 4500 50  0001 C CNN
-F 3 "~" H 5150 4500 50  0001 C CNN
-	1    5150 4500
+P 3750 4500
+F 0 "RV5" V 3543 4500 50  0000 C CNN
+F 1 "10k" V 3634 4500 50  0000 C CNN
+F 2 "ao_tht:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical_centered" H 3750 4500 50  0001 C CNN
+F 3 "~" H 3750 4500 50  0001 C CNN
+	1    3750 4500
 	0    -1   1    0   
 $EndComp
 Wire Wire Line
-	5300 4500 5400 4500
-$Comp
-L ao_symbols:MountingHole H?
-U 1 1 618E5B83
-P 2300 6250
-AR Path="/618E5B83" Ref="H?"  Part="1" 
-AR Path="/61124C5F/618E5B83" Ref="H5"  Part="1" 
-F 0 "H5" H 2400 6296 50  0000 L CNN
-F 1 "MountingHole" H 2400 6205 50  0000 L CNN
-F 2 "ao_tht:MountingHole_3.2mm_M3" H 2300 6250 50  0001 C CNN
-F 3 "" H 2300 6250 50  0001 C CNN
-F 4 "DNF" H 2300 6250 50  0001 C CNN "Config"
-	1    2300 6250
-	1    0    0    -1  
-$EndComp
+	3900 4500 4000 4500
 Wire Notes Line
 	6400 2000 6400 5250
 Wire Notes Line
@@ -413,4 +399,148 @@ Wire Notes Line
 	6500 5800 6500 4300
 Text Notes 6600 4600 0    50   ~ 0
 Push buttons (panel mounted)\nConnect to Clock and Reset inputs\nvia Molex
+$Comp
+L power:GND1 #PWR052
+U 1 1 617F83DF
+P 4800 4750
+F 0 "#PWR052" H 4800 4500 50  0001 C CNN
+F 1 "GND1" H 4805 4577 50  0000 C CNN
+F 2 "" H 4800 4750 50  0001 C CNN
+F 3 "" H 4800 4750 50  0001 C CNN
+	1    4800 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_POT RV6
+U 1 1 617F83E5
+P 5000 2500
+F 0 "RV6" V 4793 2500 50  0000 C CNN
+F 1 "10k" V 4884 2500 50  0000 C CNN
+F 2 "ao_tht:Potentiometer_Alpha_16mm_Single_Vertical" H 5000 2500 50  0001 C CNN
+F 3 "~" H 5000 2500 50  0001 C CNN
+	1    5000 2500
+	0    -1   1    0   
+$EndComp
+$Comp
+L Device:R_POT RV7
+U 1 1 617F83EB
+P 5000 3000
+F 0 "RV7" V 4793 3000 50  0000 C CNN
+F 1 "10k" V 4884 3000 50  0000 C CNN
+F 2 "ao_tht:Potentiometer_Alpha_16mm_Single_Vertical" H 5000 3000 50  0001 C CNN
+F 3 "~" H 5000 3000 50  0001 C CNN
+	1    5000 3000
+	0    -1   1    0   
+$EndComp
+$Comp
+L Device:R_POT RV8
+U 1 1 617F83F1
+P 5000 3500
+F 0 "RV8" V 4793 3500 50  0000 C CNN
+F 1 "10k" V 4884 3500 50  0000 C CNN
+F 2 "ao_tht:Potentiometer_Alpha_16mm_Single_Vertical" H 5000 3500 50  0001 C CNN
+F 3 "~" H 5000 3500 50  0001 C CNN
+	1    5000 3500
+	0    -1   1    0   
+$EndComp
+$Comp
+L Device:R_POT RV9
+U 1 1 617F83F7
+P 5000 4000
+F 0 "RV9" V 4793 4000 50  0000 C CNN
+F 1 "10k" V 4884 4000 50  0000 C CNN
+F 2 "ao_tht:Potentiometer_Alpha_16mm_Single_Vertical" H 5000 4000 50  0001 C CNN
+F 3 "~" H 5000 4000 50  0001 C CNN
+	1    5000 4000
+	0    -1   1    0   
+$EndComp
+Wire Wire Line
+	4850 2500 4800 2500
+Wire Wire Line
+	4800 2500 4800 3000
+Wire Wire Line
+	5150 2500 5200 2500
+Wire Wire Line
+	4800 3000 4850 3000
+Connection ~ 4800 3000
+Wire Wire Line
+	4800 3000 4800 3500
+Wire Wire Line
+	5150 3000 5200 3000
+Wire Wire Line
+	5150 3500 5200 3500
+Wire Wire Line
+	4850 3500 4800 3500
+Connection ~ 4800 3500
+Wire Wire Line
+	4800 3500 4800 4000
+Wire Wire Line
+	5150 4000 5200 4000
+Wire Wire Line
+	4850 4000 4800 4000
+Connection ~ 4800 4000
+Wire Wire Line
+	5200 2500 5200 2300
+Text Label 5200 2300 0    50   ~ 0
+VCC
+Wire Wire Line
+	4800 4000 4800 4500
+Wire Wire Line
+	4850 4500 4800 4500
+Connection ~ 4800 4500
+Wire Wire Line
+	4800 4500 4800 4750
+Text GLabel 5200 3000 2    50   Input ~ 0
+POT_1_CW_P
+Text GLabel 5250 3200 2    50   Output ~ 0
+POT_1_W_P
+Wire Wire Line
+	5000 3150 5000 3200
+Wire Wire Line
+	5000 3200 5250 3200
+Text GLabel 5200 3500 2    50   Input ~ 0
+POT_2_CW_P
+Text GLabel 5200 4000 2    50   Input ~ 0
+POT_3_CW_P
+Text GLabel 5250 4500 2    50   Input ~ 0
+POT_4_CW_P
+Text GLabel 5250 3700 2    50   Output ~ 0
+POT_2_W_P
+Wire Wire Line
+	5000 3650 5000 3700
+Wire Wire Line
+	5000 3700 5250 3700
+Text GLabel 5250 4200 2    50   Output ~ 0
+POT_3_W_P
+Wire Wire Line
+	5000 4150 5000 4200
+Wire Wire Line
+	5000 4200 5250 4200
+Text GLabel 5250 4700 2    50   Output ~ 0
+POT_4_W_P
+Wire Wire Line
+	5000 4650 5000 4700
+Wire Wire Line
+	5000 4700 5250 4700
+Text GLabel 5250 2700 2    50   Output ~ 0
+POT_ALG_P
+Wire Wire Line
+	5000 2650 5000 2700
+Wire Wire Line
+	5000 2700 5250 2700
+$Comp
+L Device:R_POT RV10
+U 1 1 617F8424
+P 5000 4500
+F 0 "RV10" V 4793 4500 50  0000 C CNN
+F 1 "10k" V 4884 4500 50  0000 C CNN
+F 2 "ao_tht:Potentiometer_Alpha_16mm_Single_Vertical" H 5000 4500 50  0001 C CNN
+F 3 "~" H 5000 4500 50  0001 C CNN
+	1    5000 4500
+	0    -1   1    0   
+$EndComp
+Wire Wire Line
+	5150 4500 5250 4500
+Text Notes 4150 5100 0    50   ~ 0
+Fit either 9 mm or 16 mm pots
 $EndSCHEMATC
