@@ -414,7 +414,7 @@ U 1 1 60D8A882
 P 9250 2050
 F 0 "A1" H 9250 961 50  0000 C CNN
 F 1 "Arduino_Nano_v3.x" H 9250 870 50  0000 C CNN
-F 2 "Module:Arduino_Nano" H 9250 2050 50  0001 C CIN
+F 2 "ao_tht:Arduino_Nano" H 9250 2050 50  0001 C CIN
 F 3 "http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf" H 9250 2050 50  0001 C CNN
 F 4 "A-2864" H 9250 2050 50  0001 C CNN "SKU"
 F 5 "Tayda" H 9250 2050 50  0001 C CNN "Vendor"
@@ -451,27 +451,27 @@ Wire Wire Line
 $Comp
 L ao_symbols:Graphic GRAF1
 U 1 1 60E4F82B
-P 9150 4050
-F 0 "GRAF1" H 9428 4096 50  0000 L CNN
-F 1 "Holes" H 9428 4005 50  0000 L CNN
-F 2 "gearseq_panel:gearseq_panel_holes" H 9150 4050 50  0001 C CNN
-F 3 "" H 9150 4050 50  0001 C CNN
-F 4 "DNF" H 9150 4050 50  0001 C CNN "Config"
-	1    9150 4050
+P 9150 4300
+F 0 "GRAF1" H 9428 4346 50  0000 L CNN
+F 1 "Holes" H 9428 4255 50  0000 L CNN
+F 2 "gearseq_panel:gearseq_panel_holes" H 9150 4300 50  0001 C CNN
+F 3 "" H 9150 4300 50  0001 C CNN
+F 4 "DNF" H 9150 4300 50  0001 C CNN "Config"
+	1    9150 4300
 	1    0    0    -1  
 $EndComp
 Connection ~ 9350 3100
 $Comp
 L ao_symbols:AudioJack2 J3
 U 1 1 60E1D62F
-P 1150 1200
-F 0 "J3" H 970 1183 50  0000 R CNN
-F 1 "AudioJack2" H 970 1274 50  0000 R CNN
-F 2 "ao_tht:Jack_6.35mm_PJ_629HAN_slots" H 1150 1200 50  0001 C CNN
-F 3 "~" H 1150 1200 50  0001 C CNN
-F 4 "A-1121" H 1150 1200 50  0001 C CNN "SKU"
-F 5 "Tayda" H 1150 1200 50  0001 C CNN "Vendor"
-	1    1150 1200
+P 1250 1550
+F 0 "J3" H 1070 1533 50  0000 R CNN
+F 1 "AudioJack2" H 1070 1624 50  0000 R CNN
+F 2 "ao_tht:Jack_6.35mm_PJ_629HAN_slots" H 1250 1550 50  0001 C CNN
+F 3 "~" H 1250 1550 50  0001 C CNN
+F 4 "A-1121" H 1250 1550 50  0001 C CNN "SKU"
+F 5 "Tayda" H 1250 1550 50  0001 C CNN "Vendor"
+	1    1250 1550
 	1    0    0    1   
 $EndComp
 Wire Wire Line
@@ -488,91 +488,20 @@ F 3 "" H 9350 3300 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 Wire Wire Line
-	1350 1200 1650 1200
+	1450 1550 1750 1550
 Wire Wire Line
-	1450 1300 1450 1400
+	1550 1650 1550 1750
 Wire Wire Line
-	1350 1300 1450 1300
+	1450 1650 1550 1650
 $Comp
 L power:GND #PWR06
 U 1 1 60DAF2A8
-P 1450 1400
-F 0 "#PWR06" H 1450 1150 50  0001 C CNN
-F 1 "GND" H 1455 1227 50  0000 C CNN
-F 2 "" H 1450 1400 50  0001 C CNN
-F 3 "" H 1450 1400 50  0001 C CNN
-	1    1450 1400
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1650 1600 1650 1700
-Wire Wire Line
-	1650 1200 1650 1300
-$Comp
-L power:GND #PWR010
-U 1 1 60DAD763
-P 1650 1700
-F 0 "#PWR010" H 1650 1450 50  0001 C CNN
-F 1 "GND" H 1655 1527 50  0000 C CNN
-F 2 "" H 1650 1700 50  0001 C CNN
-F 3 "" H 1650 1700 50  0001 C CNN
-	1    1650 1700
-	1    0    0    -1  
-$EndComp
-$Comp
-L ao_symbols:R R1
-U 1 1 60DAD338
-P 1650 1450
-F 0 "R1" H 1720 1496 50  0000 L CNN
-F 1 "100k" H 1720 1405 50  0000 L CNN
-F 2 "ao_tht:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 1580 1450 50  0001 C CNN
-F 3 "~" H 1650 1450 50  0001 C CNN
-	1    1650 1450
-	1    0    0    -1  
-$EndComp
-Text GLabel 3700 1300 2    50   Output ~ 0
-RESET
-Wire Wire Line
-	1350 2500 1650 2500
-Wire Wire Line
-	1450 2600 1450 2700
-Wire Wire Line
-	1350 2600 1450 2600
-$Comp
-L power:GND #PWR07
-U 1 1 61103A7F
-P 1450 2700
-F 0 "#PWR07" H 1450 2450 50  0001 C CNN
-F 1 "GND" H 1455 2527 50  0000 C CNN
-F 2 "" H 1450 2700 50  0001 C CNN
-F 3 "" H 1450 2700 50  0001 C CNN
-	1    1450 2700
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1650 2900 1650 3000
-Wire Wire Line
-	1650 2500 1650 2600
-$Comp
-L power:GND #PWR011
-U 1 1 61103A88
-P 1650 3000
-F 0 "#PWR011" H 1650 2750 50  0001 C CNN
-F 1 "GND" H 1655 2827 50  0000 C CNN
-F 2 "" H 1650 3000 50  0001 C CNN
-F 3 "" H 1650 3000 50  0001 C CNN
-	1    1650 3000
-	1    0    0    -1  
-$EndComp
-$Comp
-L ao_symbols:R R2
-U 1 1 61103A8E
-P 1650 2750
-F 0 "R2" H 1720 2796 50  0000 L CNN
-F 1 "100k" H 1720 2705 50  0000 L CNN
-F 2 "ao_tht:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 1580 2750 50  0001 C CNN
-F 3 "~" H 1650 2750 50  0001 C CNN
-	1    1650 2750
+P 1550 1750
+F 0 "#PWR06" H 1550 1500 50  0001 C CNN
+F 1 "GND" H 1555 1577 50  0000 C CNN
+F 2 "" H 1550 1750 50  0001 C CNN
+F 3 "" H 1550 1750 50  0001 C CNN
+	1    1550 1750
 	1    0    0    -1  
 $EndComp
 Text GLabel 5750 1250 0    50   Input ~ 0
@@ -672,15 +601,15 @@ Text GLabel 9850 2450 2    50   Output ~ 0
 SDA
 Wire Wire Line
 	9750 2450 9850 2450
-Text GLabel 8650 1750 0    50   Input ~ 0
+Text GLabel 8650 1950 0    50   Input ~ 0
 RESET
 Wire Wire Line
 	8650 1650 8750 1650
-Text GLabel 8650 1850 0    50   Output ~ 0
+Text GLabel 8650 2050 0    50   Output ~ 0
 SEQ_OUT
 Wire Wire Line
 	8650 1750 8750 1750
-Text GLabel 8650 1950 0    50   Output ~ 0
+Text GLabel 8650 2150 0    50   Output ~ 0
 PER_OUT
 Wire Wire Line
 	8650 1850 8750 1850
@@ -690,10 +619,8 @@ Wire Wire Line
 	8650 2050 8750 2050
 Wire Wire Line
 	8650 2150 8750 2150
-Text Label 1350 1200 0    50   ~ 0
+Text Label 1450 1550 0    50   ~ 0
 RESET_J
-Text Label 1350 2500 0    50   ~ 0
-CLK_IN_J
 Text Label 6850 1250 0    50   ~ 0
 SEQ_J
 Text Label 6850 2000 0    50   ~ 0
@@ -721,21 +648,6 @@ F 3 "" H 9150 4800 50  0001 C CNN
 F 4 "DNF" H 9150 4800 50  0001 C CNN "Config"
 	1    9150 4800
 	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3150 1300 3200 1300
-$Comp
-L ao_symbols:AudioJack2 J4
-U 1 1 6108CBB7
-P 1150 2500
-F 0 "J4" H 971 2433 50  0000 R CNN
-F 1 "AudioJack2" H 971 2524 50  0000 R CNN
-F 2 "ao_tht:Jack_6.35mm_PJ_629HAN_slots" H 1150 2500 50  0001 C CNN
-F 3 "~" H 1150 2500 50  0001 C CNN
-F 4 "A-1121" H 1150 2500 50  0001 C CNN "SKU"
-F 5 "Tayda" H 1150 2500 50  0001 C CNN "Vendor"
-	1    1150 2500
-	1    0    0    1   
 $EndComp
 $Sheet
 S 4300 2850 850  500 
@@ -769,18 +681,6 @@ F 4 "DNF" H 9000 5450 50  0001 C CNN "Config"
 	1    0    0    -1  
 $EndComp
 $Comp
-L ao_symbols:Graphic GRAF2
-U 1 1 61462E10
-P 9150 4300
-F 0 "GRAF2" H 9428 4346 50  0000 L CNN
-F 1 "Holes" H 9428 4255 50  0000 L CNN
-F 2 "gearseq_panel:gearseq_panel_holes" H 9150 4300 50  0001 C CNN
-F 3 "" H 9150 4300 50  0001 C CNN
-F 4 "DNF" H 9150 4300 50  0001 C CNN "Config"
-	1    9150 4300
-	1    0    0    -1  
-$EndComp
-$Comp
 L ao_symbols:R R14
 U 1 1 610D8070
 P 6700 1700
@@ -804,31 +704,8 @@ F 3 "" H 7750 1700 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	6850 1700 7250 1700
-Wire Wire Line
-	2550 1400 2500 1400
-Connection ~ 3200 1300
-Wire Wire Line
-	2050 1200 2550 1200
-Text Label 3600 1750 3    50   ~ 0
-RESET1_LED
 Text Label 6850 1700 0    50   ~ 0
 SEQ_LED
-Text Label 3600 3050 3    50   ~ 0
-CLOCK_LED
-Text Label 2750 1600 0    50   ~ 0
-VREF
-Wire Wire Line
-	2500 1600 2500 1400
-Wire Wire Line
-	2500 1600 2750 1600
-Text Label 2800 2900 0    50   ~ 0
-VREF
-Wire Wire Line
-	2550 2900 2550 2700
-Wire Wire Line
-	2550 2900 2800 2900
-Text GLabel 3700 2600 2    50   Output ~ 0
-CLOCK_IN
 $Comp
 L power:GND #PWR040
 U 1 1 6133814D
@@ -915,42 +792,8 @@ F 3 "~" H 7300 5350 50  0001 C CNN
 	1    7300 5350
 	1    0    0    -1  
 $EndComp
-$Comp
-L Amplifier_Operational:MCP6002-xP U1
-U 1 1 61179F2E
-P 2850 1300
-F 0 "U1" H 2850 1667 50  0000 C CNN
-F 1 "MCP6002-xP" H 2850 1576 50  0000 C CNN
-F 2 "ao_tht:DIP-8_W7.62mm_Socket_LongPads" H 2800 1400 50  0001 C CNN
-F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/21733j.pdf" H 2900 1500 50  0001 C CNN
-	1    2850 1300
-	1    0    0    -1  
-$EndComp
-$Comp
-L Amplifier_Operational:MCP6002-xP U1
-U 2 1 6117C59F
-P 2850 2600
-F 0 "U1" H 2850 2967 50  0000 C CNN
-F 1 "MCP6002-xP" H 2850 2876 50  0000 C CNN
-F 2 "ao_tht:DIP-8_W7.62mm_Socket_LongPads" H 2800 2700 50  0001 C CNN
-F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/21733j.pdf" H 2900 2800 50  0001 C CNN
-	2    2850 2600
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+5V #PWR026
-U 1 1 611A307D
-P 4250 6650
-F 0 "#PWR026" H 4250 6500 50  0001 C CNN
-F 1 "+5V" H 4265 6823 50  0000 C CNN
-F 2 "" H 4250 6650 50  0001 C CNN
-F 3 "" H 4250 6650 50  0001 C CNN
-	1    4250 6650
-	1    0    0    -1  
-$EndComp
-Connection ~ 4250 6650
 Wire Wire Line
-	3200 1300 3700 1300
+	2850 1300 3350 1300
 $Comp
 L ao_symbols:L78L05_TO92 U2
 U 1 1 61184880
@@ -984,7 +827,7 @@ L ao_symbols:C C3
 U 1 1 6119DC4D
 P 3850 6850
 F 0 "C3" H 3965 6896 50  0000 L CNN
-F 1 "100nF" H 3965 6805 50  0000 L CNN
+F 1 "10nF" H 3965 6805 50  0000 L CNN
 F 2 "ao_tht:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 3888 6700 50  0001 C CNN
 F 3 "~" H 3850 6850 50  0001 C CNN
 F 4 "Tayda" H 3850 6850 50  0001 C CNN "Vendor"
@@ -1039,65 +882,6 @@ F 3 "" H 3100 6650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Connection ~ 3100 6650
-Text Notes 4250 1050 0    50   ~ 0
-Voltage reference\nfor comparators
-$Comp
-L power:+5V #PWR031
-U 1 1 6128D833
-P 4600 1300
-F 0 "#PWR031" H 4600 1150 50  0001 C CNN
-F 1 "+5V" H 4615 1473 50  0000 C CNN
-F 2 "" H 4600 1300 50  0001 C CNN
-F 3 "" H 4600 1300 50  0001 C CNN
-	1    4600 1300
-	1    0    0    -1  
-$EndComp
-Text Label 4950 1750 0    50   ~ 0
-VREF
-Wire Wire Line
-	4600 1750 4600 1800
-Connection ~ 4600 1750
-Wire Wire Line
-	4600 1750 4950 1750
-Wire Wire Line
-	4600 1700 4600 1750
-Wire Wire Line
-	4600 1400 4600 1300
-Wire Wire Line
-	4600 2200 4600 2100
-$Comp
-L power:GND #PWR032
-U 1 1 610F2610
-P 4600 2200
-F 0 "#PWR032" H 4600 1950 50  0001 C CNN
-F 1 "GND" H 4605 2027 50  0000 C CNN
-F 2 "" H 4600 2200 50  0001 C CNN
-F 3 "" H 4600 2200 50  0001 C CNN
-	1    4600 2200
-	1    0    0    -1  
-$EndComp
-$Comp
-L ao_symbols:R R10
-U 1 1 610F2269
-P 4600 1950
-F 0 "R10" H 4670 1996 50  0000 L CNN
-F 1 "10k" H 4670 1905 50  0000 L CNN
-F 2 "ao_tht:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4530 1950 50  0001 C CNN
-F 3 "~" H 4600 1950 50  0001 C CNN
-	1    4600 1950
-	1    0    0    -1  
-$EndComp
-$Comp
-L ao_symbols:R R9
-U 1 1 610F1D94
-P 4600 1550
-F 0 "R9" H 4670 1596 50  0000 L CNN
-F 1 "100k" H 4670 1505 50  0000 L CNN
-F 2 "ao_tht:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4530 1550 50  0001 C CNN
-F 3 "~" H 4600 1550 50  0001 C CNN
-	1    4600 1550
-	1    0    0    -1  
-$EndComp
 Wire Notes Line
 	4200 850  5150 850 
 Wire Notes Line
@@ -1106,8 +890,6 @@ Wire Notes Line
 	5150 2500 4200 2500
 Wire Notes Line
 	4200 2500 4200 850 
-Text Notes 650  900  0    50   ~ 0
-Reset input
 Wire Notes Line
 	500  3500 4150 3500
 Wire Notes Line
@@ -1134,8 +916,6 @@ Text Notes 650  6200 0    50   ~ 0
 Power
 Text Notes 8350 3800 0    50   ~ 0
 Hardware and \ngraphics
-Text Notes 650  2200 0    50   ~ 0
-Clock input
 Text Notes 6600 3750 0    50   ~ 0
 Headers
 Text Notes 4300 2750 0    50   ~ 0
@@ -1203,39 +983,6 @@ Wire Wire Line
 	5950 2400 5950 2500
 Connection ~ 5950 1250
 Connection ~ 5950 2000
-$Comp
-L ao_symbols:1N4733A D1
-U 1 1 6153E2F4
-P 2050 1450
-F 0 "D1" V 2004 1530 50  0000 L CNN
-F 1 "1N4733A" V 2095 1530 50  0000 L CNN
-F 2 "ao_tht:D_DO-41_SOD81_P10.16mm_Horizontal" H 2050 1450 50  0001 C CNN
-F 3 "http://www.vishay.com/docs/85790/zpy3v9.pdf" H 2050 1450 50  0001 C CNN
-F 4 "Vishay" H 2050 1450 50  0001 C CNN "Manufacturer"
-F 5 "A-169" H 2050 1450 50  0001 C CNN "SKU"
-F 6 "Tayda" H 2050 1450 50  0001 C CNN "Vendor"
-	1    2050 1450
-	0    1    1    0   
-$EndComp
-$Comp
-L power:GND #PWR013
-U 1 1 6153E2FA
-P 2050 1700
-F 0 "#PWR013" H 2050 1450 50  0001 C CNN
-F 1 "GND" H 2055 1527 50  0000 C CNN
-F 2 "" H 2050 1700 50  0001 C CNN
-F 3 "" H 2050 1700 50  0001 C CNN
-	1    2050 1700
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2050 1600 2050 1700
-Wire Wire Line
-	2050 1200 2000 1200
-Connection ~ 2050 1200
-Connection ~ 1650 1200
-Wire Wire Line
-	2050 1300 2050 1200
 Wire Wire Line
 	7050 1400 7050 1350
 Wire Wire Line
@@ -1312,158 +1059,84 @@ Wire Wire Line
 Connection ~ 6400 2000
 Wire Wire Line
 	6400 2000 6550 2000
-Wire Wire Line
-	2050 2600 2050 2500
-Wire Wire Line
-	2050 2900 2050 3000
-$Comp
-L power:GND #PWR014
-U 1 1 616BFD80
-P 2050 3000
-F 0 "#PWR014" H 2050 2750 50  0001 C CNN
-F 1 "GND" H 2055 2827 50  0000 C CNN
-F 2 "" H 2050 3000 50  0001 C CNN
-F 3 "" H 2050 3000 50  0001 C CNN
-	1    2050 3000
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1650 2500 1700 2500
-Connection ~ 1650 2500
-Wire Wire Line
-	2050 2500 2550 2500
-Connection ~ 2050 2500
-$Comp
-L ao_symbols:R R3
-U 1 1 617A2991
-P 1850 1200
-F 0 "R3" V 1643 1200 50  0000 C CNN
-F 1 "1k" V 1734 1200 50  0000 C CNN
-F 2 "ao_tht:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 1780 1200 50  0001 C CNN
-F 3 "~" H 1850 1200 50  0001 C CNN
-	1    1850 1200
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	1700 1200 1650 1200
-$Comp
-L ao_symbols:R R4
-U 1 1 617A3663
-P 1850 2500
-F 0 "R4" V 1643 2500 50  0000 C CNN
-F 1 "1k" V 1734 2500 50  0000 C CNN
-F 2 "ao_tht:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 1780 2500 50  0001 C CNN
-F 3 "~" H 1850 2500 50  0001 C CNN
-	1    1850 2500
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	2000 2500 2050 2500
 $Comp
 L ao_symbols:R R7
 U 1 1 617BEAC2
-P 3400 1750
-F 0 "R7" V 3193 1750 50  0000 C CNN
-F 1 "RL" V 3284 1750 50  0000 C CNN
-F 2 "ao_tht:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3330 1750 50  0001 C CNN
-F 3 "~" H 3400 1750 50  0001 C CNN
-	1    3400 1750
+P 4500 1650
+F 0 "R7" V 4293 1650 50  0000 C CNN
+F 1 "RL" V 4384 1650 50  0000 C CNN
+F 2 "ao_tht:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4430 1650 50  0001 C CNN
+F 3 "~" H 4500 1650 50  0001 C CNN
+	1    4500 1650
 	0    1    1    0   
 $EndComp
 $Comp
 L power:GND #PWR024
 U 1 1 617BEAC8
-P 4050 1750
-F 0 "#PWR024" H 4050 1500 50  0001 C CNN
-F 1 "GND" H 4055 1577 50  0000 C CNN
-F 2 "" H 4050 1750 50  0001 C CNN
-F 3 "" H 4050 1750 50  0001 C CNN
-	1    4050 1750
+P 5050 1650
+F 0 "#PWR024" H 5050 1400 50  0001 C CNN
+F 1 "GND" H 5055 1477 50  0000 C CNN
+F 2 "" H 5050 1650 50  0001 C CNN
+F 3 "" H 5050 1650 50  0001 C CNN
+	1    5050 1650
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3550 1750 3700 1750
+	4650 1650 4700 1650
 $Comp
 L ao_symbols:LED_red D8
 U 1 1 617BEAD0
-P 3850 1750
-F 0 "D8" H 3843 1495 50  0000 C CNN
-F 1 "LED_red" H 3843 1586 50  0000 C CNN
-F 2 "LED_THT:LED_D5.0mm" H 3850 1750 50  0001 C CNN
-F 3 "~" H 3850 1750 50  0001 C CNN
-F 4 "A-1554" H 3850 1750 50  0001 C CNN "SKU"
-F 5 "Tayda" H 3850 1750 50  0001 C CNN "Vendor"
-	1    3850 1750
+P 4850 1650
+F 0 "D8" H 4843 1395 50  0000 C CNN
+F 1 "LED_red" H 4843 1486 50  0000 C CNN
+F 2 "LED_THT:LED_D5.0mm" H 4850 1650 50  0001 C CNN
+F 3 "~" H 4850 1650 50  0001 C CNN
+F 4 "A-1554" H 4850 1650 50  0001 C CNN "SKU"
+F 5 "Tayda" H 4850 1650 50  0001 C CNN "Vendor"
+	1    4850 1650
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	4000 1750 4050 1750
-Wire Wire Line
-	3200 1750 3250 1750
-Wire Wire Line
-	3200 1300 3200 1750
-Wire Wire Line
-	3150 2600 3200 2600
+	5000 1650 5050 1650
 $Comp
 L ao_symbols:R R8
 U 1 1 617FD3D3
-P 3400 3050
-F 0 "R8" V 3193 3050 50  0000 C CNN
-F 1 "RL" V 3284 3050 50  0000 C CNN
-F 2 "ao_tht:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3330 3050 50  0001 C CNN
-F 3 "~" H 3400 3050 50  0001 C CNN
-	1    3400 3050
+P 4500 2200
+F 0 "R8" V 4293 2200 50  0000 C CNN
+F 1 "RL" V 4384 2200 50  0000 C CNN
+F 2 "ao_tht:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4430 2200 50  0001 C CNN
+F 3 "~" H 4500 2200 50  0001 C CNN
+	1    4500 2200
 	0    1    1    0   
 $EndComp
 $Comp
 L power:GND #PWR025
 U 1 1 617FD3D9
-P 4050 3050
-F 0 "#PWR025" H 4050 2800 50  0001 C CNN
-F 1 "GND" H 4055 2877 50  0000 C CNN
-F 2 "" H 4050 3050 50  0001 C CNN
-F 3 "" H 4050 3050 50  0001 C CNN
-	1    4050 3050
+P 5050 2200
+F 0 "#PWR025" H 5050 1950 50  0001 C CNN
+F 1 "GND" H 5055 2027 50  0000 C CNN
+F 2 "" H 5050 2200 50  0001 C CNN
+F 3 "" H 5050 2200 50  0001 C CNN
+	1    5050 2200
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3550 3050 3700 3050
+	4650 2200 4700 2200
 $Comp
 L ao_symbols:LED_green D9
 U 1 1 617FD3E0
-P 3850 3050
-F 0 "D9" H 3843 2795 50  0000 C CNN
-F 1 "LED_green" H 3843 2886 50  0000 C CNN
-F 2 "LED_THT:LED_D5.0mm" H 3850 3050 50  0001 C CNN
-F 3 "~" H 3850 3050 50  0001 C CNN
-F 4 "A-1553" H 3850 3050 50  0001 C CNN "SKU"
-F 5 "Tayda" H 3850 3050 50  0001 C CNN "Vendor"
-	1    3850 3050
+P 4850 2200
+F 0 "D9" H 4843 1945 50  0000 C CNN
+F 1 "LED_green" H 4843 2036 50  0000 C CNN
+F 2 "LED_THT:LED_D5.0mm" H 4850 2200 50  0001 C CNN
+F 3 "~" H 4850 2200 50  0001 C CNN
+F 4 "A-1553" H 4850 2200 50  0001 C CNN "SKU"
+F 5 "Tayda" H 4850 2200 50  0001 C CNN "Vendor"
+	1    4850 2200
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	4000 3050 4050 3050
-Wire Wire Line
-	3200 3050 3250 3050
-Wire Wire Line
-	3200 2600 3200 3050
-Connection ~ 3200 2600
-Wire Wire Line
-	3200 2600 3700 2600
-$Comp
-L ao_symbols:1N4733A D2
-U 1 1 61859467
-P 2050 2750
-F 0 "D2" V 2004 2830 50  0000 L CNN
-F 1 "1N4733A" V 2095 2830 50  0000 L CNN
-F 2 "ao_tht:D_DO-41_SOD81_P10.16mm_Horizontal" H 2050 2750 50  0001 C CNN
-F 3 "http://www.vishay.com/docs/85790/zpy3v9.pdf" H 2050 2750 50  0001 C CNN
-F 4 "Vishay" H 2050 2750 50  0001 C CNN "Manufacturer"
-F 5 "A-169" H 2050 2750 50  0001 C CNN "SKU"
-F 6 "Tayda" H 2050 2750 50  0001 C CNN "Vendor"
-	1    2050 2750
-	0    1    1    0   
-$EndComp
+	5000 2200 5050 2200
 $Comp
 L ao_symbols:1N4733A D14
 U 1 1 618599E2
@@ -1495,8 +1168,6 @@ $EndComp
 NoConn ~ 8750 2450
 NoConn ~ 8750 2550
 NoConn ~ 8750 2650
-NoConn ~ 8650 2050
-NoConn ~ 8650 2150
 NoConn ~ 8650 2250
 Wire Wire Line
 	9750 2050 9850 2050
@@ -1616,19 +1287,6 @@ F 3 "" H 1400 4400 50  0001 C CNN
 $EndComp
 Text Label 1350 4250 0    50   ~ 0
 CV_1_J
-$Comp
-L ao_symbols:AudioJack2_SwitchT J1
-U 1 1 6197A72D
-P 1050 4250
-F 0 "J1" H 1082 4575 50  0000 C CNN
-F 1 "AudioJack2_SwitchT" H 1082 4484 50  0000 C CNN
-F 2 "ao_tht:Jack_6.35mm_PJ_629HAN_slots" H 1050 4250 50  0001 C CNN
-F 3 "~" H 1050 4250 50  0001 C CNN
-F 4 "Tayda" H 1050 4250 50  0001 C CNN "Vendor"
-F 5 "A-1121" H 1050 4250 50  0001 C CNN "SKU"
-	1    1050 4250
-	1    0    0    -1  
-$EndComp
 Text GLabel 3000 5050 2    50   Output ~ 0
 CV_2
 Text GLabel 2150 5100 0    50   Input ~ 0
@@ -1668,54 +1326,6 @@ F 5 "A-159" H 2250 6650 50  0001 C CNN "SKU"
 	1    2250 6650
 	-1   0    0    1   
 $EndComp
-$Comp
-L power:GND #PWR023
-U 1 1 5F73FA4E
-P 4000 7050
-F 0 "#PWR023" H 4000 6800 50  0001 C CNN
-F 1 "GND" H 4005 6877 50  0000 C CNN
-F 2 "" H 4000 7050 50  0001 C CNN
-F 3 "" H 4000 7050 50  0001 C CNN
-	1    4000 7050
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4000 7050 4250 7050
-Wire Wire Line
-	4250 7000 4250 7050
-Wire Wire Line
-	4250 6700 4250 6650
-$Comp
-L ao_symbols:C C4
-U 1 1 5F73FA42
-P 4250 6850
-F 0 "C4" H 4365 6896 50  0000 L CNN
-F 1 "100nF" H 4365 6805 50  0000 L CNN
-F 2 "ao_tht:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 4288 6700 50  0001 C CNN
-F 3 "~" H 4250 6850 50  0001 C CNN
-F 4 "Tayda" H 4250 6850 50  0001 C CNN "Vendor"
-F 5 "A-553" H 4250 6850 50  0001 C CNN "SKU"
-	1    4250 6850
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4700 6650 4250 6650
-$Comp
-L Amplifier_Operational:MCP6002-xP U1
-U 3 1 61180FFC
-P 4800 6950
-F 0 "U1" H 4758 6996 50  0000 L CNN
-F 1 "MCP6002-xP" H 4758 6905 50  0000 L CNN
-F 2 "ao_tht:DIP-8_W7.62mm_Socket_LongPads" H 4750 7050 50  0001 C CNN
-F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/21733j.pdf" H 4850 7150 50  0001 C CNN
-	3    4800 6950
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4250 7050 4250 7250
-Wire Wire Line
-	4250 7250 4700 7250
-Connection ~ 4250 7050
 Wire Wire Line
 	2100 6650 1750 6650
 Connection ~ 1750 6650
@@ -1875,14 +1485,14 @@ $Comp
 L ao_symbols:AudioJack2_SwitchT J2
 U 1 1 616AC4A3
 P 1050 5250
-F 0 "J2" H 1082 5575 50  0000 C CNN
-F 1 "AudioJack2_SwitchT" H 1082 5484 50  0000 C CNN
+F 0 "J2" H 1050 4900 50  0000 C CNN
+F 1 "AudioJack2_SwitchT" H 1050 5000 50  0000 C CNN
 F 2 "ao_tht:Jack_6.35mm_PJ_629HAN_slots" H 1050 5250 50  0001 C CNN
 F 3 "~" H 1050 5250 50  0001 C CNN
 F 4 "Tayda" H 1050 5250 50  0001 C CNN "Vendor"
 F 5 "A-1121" H 1050 5250 50  0001 C CNN "SKU"
 	1    1050 5250
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 Wire Wire Line
 	2550 5100 2650 5100
@@ -1999,14 +1609,14 @@ $Comp
 L ao_symbols:AudioJack2_SwitchT J8
 U 1 1 616B83A9
 P 4050 4250
-F 0 "J8" H 4082 4575 50  0000 C CNN
-F 1 "AudioJack2_SwitchT" H 4082 4484 50  0000 C CNN
+F 0 "J8" H 4050 3900 50  0000 C CNN
+F 1 "AudioJack2_SwitchT" H 4050 4000 50  0000 C CNN
 F 2 "ao_tht:Jack_6.35mm_PJ_629HAN_slots" H 4050 4250 50  0001 C CNN
 F 3 "~" H 4050 4250 50  0001 C CNN
 F 4 "Tayda" H 4050 4250 50  0001 C CNN "Vendor"
 F 5 "A-1121" H 4050 4250 50  0001 C CNN "SKU"
 	1    4050 4250
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 Wire Wire Line
 	5550 4100 5650 4100
@@ -2123,14 +1733,14 @@ $Comp
 L ao_symbols:AudioJack2_SwitchT J9
 U 1 1 616C6966
 P 4050 5250
-F 0 "J9" H 4082 5575 50  0000 C CNN
-F 1 "AudioJack2_SwitchT" H 4082 5484 50  0000 C CNN
+F 0 "J9" H 4050 4900 50  0000 C CNN
+F 1 "AudioJack2_SwitchT" H 4050 5000 50  0000 C CNN
 F 2 "ao_tht:Jack_6.35mm_PJ_629HAN_slots" H 4050 5250 50  0001 C CNN
 F 3 "~" H 4050 5250 50  0001 C CNN
 F 4 "Tayda" H 4050 5250 50  0001 C CNN "Vendor"
 F 5 "A-1121" H 4050 5250 50  0001 C CNN "SKU"
 	1    4050 5250
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 Wire Wire Line
 	5550 5100 5650 5100
@@ -2188,54 +1798,388 @@ Wire Notes Line
 $Comp
 L ao_symbols:2_pin_Molex_header J6
 U 1 1 61592F5A
-P 1550 800
-F 0 "J6" H 1630 792 50  0000 L CNN
-F 1 "2_pin_Molex_header" H 1630 701 50  0000 L CNN
-F 2 "ao_tht:Molex_KK-254_AE-6410-02A_1x02_P2.54mm_Vertical" H 1550 800 50  0001 C CNN
-F 3 "" H 1550 800 50  0001 C CNN
-F 4 "Tayda" H 1550 800 50  0001 C CNN "Vendor"
-F 5 "A-804" H 1550 800 50  0001 C CNN "SKU"
-	1    1550 800 
+P 1650 1150
+F 0 "J6" H 1730 1142 50  0000 L CNN
+F 1 "2_pin_Molex_header" H 1730 1051 50  0000 L CNN
+F 2 "ao_tht:Molex_KK-254_AE-6410-02A_1x02_P2.54mm_Vertical" H 1650 1150 50  0001 C CNN
+F 3 "" H 1650 1150 50  0001 C CNN
+F 4 "Tayda" H 1650 1150 50  0001 C CNN "Vendor"
+F 5 "A-804" H 1650 1150 50  0001 C CNN "SKU"
+	1    1650 1150
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1350 900  1350 1200
-Connection ~ 1350 1200
+	1450 1250 1450 1550
+Connection ~ 1450 1550
 $Comp
 L power:+5V #PWR02
 U 1 1 6159DC41
-P 1350 800
-F 0 "#PWR02" H 1350 650 50  0001 C CNN
-F 1 "+5V" H 1365 973 50  0000 C CNN
-F 2 "" H 1350 800 50  0001 C CNN
-F 3 "" H 1350 800 50  0001 C CNN
-	1    1350 800 
+P 1450 1150
+F 0 "#PWR02" H 1450 1000 50  0001 C CNN
+F 1 "+5V" H 1465 1323 50  0000 C CNN
+F 2 "" H 1450 1150 50  0001 C CNN
+F 3 "" H 1450 1150 50  0001 C CNN
+	1    1450 1150
 	0    -1   -1   0   
 $EndComp
 $Comp
-L ao_symbols:2_pin_Molex_header J7
-U 1 1 6159FF65
-P 1550 2100
-F 0 "J7" H 1630 2092 50  0000 L CNN
-F 1 "2_pin_Molex_header" H 1630 2001 50  0000 L CNN
-F 2 "ao_tht:Molex_KK-254_AE-6410-02A_1x02_P2.54mm_Vertical" H 1550 2100 50  0001 C CNN
-F 3 "" H 1550 2100 50  0001 C CNN
-F 4 "Tayda" H 1550 2100 50  0001 C CNN "Vendor"
-F 5 "A-804" H 1550 2100 50  0001 C CNN "SKU"
-	1    1550 2100
+L ao_symbols:R R1
+U 1 1 618695F3
+P 1900 1550
+F 0 "R1" V 1693 1550 50  0000 C CNN
+F 1 "100k" V 1784 1550 50  0000 C CNN
+F 2 "ao_tht:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 1830 1550 50  0001 C CNN
+F 3 "" H 1900 1550 50  0001 C CNN
+F 4 "Tayda" H 1900 1550 50  0001 C CNN "Vendor"
+	1    1900 1550
+	0    1    1    0   
+$EndComp
+$Comp
+L ao_symbols:R R3
+U 1 1 6186A260
+P 2150 1800
+F 0 "R3" H 2220 1846 50  0000 L CNN
+F 1 "1M" H 2220 1755 50  0000 L CNN
+F 2 "ao_tht:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 2080 1800 50  0001 C CNN
+F 3 "" H 2150 1800 50  0001 C CNN
+F 4 "Tayda" H 2150 1800 50  0001 C CNN "Vendor"
+	1    2150 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L ao_symbols:R R9
+U 1 1 6186A7D1
+P 2850 1100
+F 0 "R9" H 2920 1146 50  0000 L CNN
+F 1 "10k" H 2920 1055 50  0000 L CNN
+F 2 "ao_tht:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 2780 1100 50  0001 C CNN
+F 3 "" H 2850 1100 50  0001 C CNN
+F 4 "Tayda" H 2850 1100 50  0001 C CNN "Vendor"
+	1    2850 1100
+	1    0    0    -1  
+$EndComp
+$Comp
+L ao_symbols:2N3904 Q1
+U 1 1 6186B615
+P 2750 1550
+F 0 "Q1" H 2940 1596 50  0000 L CNN
+F 1 "2N3904" H 2940 1505 50  0000 L CNN
+F 2 "ao_tht:TO-92_Inline_Wide" H 2950 1475 50  0001 L CIN
+F 3 "" H 2750 1550 50  0001 L CNN
+F 4 "Tayda" H 2750 1550 50  0001 C CNN "Vendor"
+F 5 "A-111" H 2750 1550 50  0001 C CNN "SKU"
+	1    2750 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L ao_symbols:1N4148 D1
+U 1 1 6186CDE0
+P 2450 1800
+F 0 "D1" V 2404 1880 50  0000 L CNN
+F 1 "1N4148" V 2495 1880 50  0000 L CNN
+F 2 "ao_tht:D_DO-35_SOD27_P7.62mm_Horizontal" H 2450 1625 50  0001 C CNN
+F 3 "" H 2450 1800 50  0001 C CNN
+F 4 "Tayda" H 2450 1800 50  0001 C CNN "Vendor"
+F 5 "A-157" H 2450 1800 50  0001 C CNN "SKU"
+	1    2450 1800
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR010
+U 1 1 6186F34D
+P 2150 2000
+F 0 "#PWR010" H 2150 1750 50  0001 C CNN
+F 1 "GND" H 2155 1827 50  0000 C CNN
+F 2 "" H 2150 2000 50  0001 C CNN
+F 3 "" H 2150 2000 50  0001 C CNN
+	1    2150 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR013
+U 1 1 6186F814
+P 2450 2000
+F 0 "#PWR013" H 2450 1750 50  0001 C CNN
+F 1 "GND" H 2455 1827 50  0000 C CNN
+F 2 "" H 2450 2000 50  0001 C CNN
+F 3 "" H 2450 2000 50  0001 C CNN
+	1    2450 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR032
+U 1 1 6186FA18
+P 2850 1900
+F 0 "#PWR032" H 2850 1650 50  0001 C CNN
+F 1 "GND" H 2855 1727 50  0000 C CNN
+F 2 "" H 2850 1900 50  0001 C CNN
+F 3 "" H 2850 1900 50  0001 C CNN
+	1    2850 1900
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1350 2200 1350 2500
+	2050 1550 2150 1550
+Wire Wire Line
+	2150 1650 2150 1550
+Connection ~ 2150 1550
+Wire Wire Line
+	2150 1550 2450 1550
+Wire Wire Line
+	2150 2000 2150 1950
+Wire Wire Line
+	2450 2000 2450 1950
+Wire Wire Line
+	2450 1650 2450 1550
+Connection ~ 2450 1550
+Wire Wire Line
+	2450 1550 2550 1550
+Wire Wire Line
+	2850 1900 2850 1750
+Wire Wire Line
+	2850 1350 2850 1300
+Connection ~ 2850 1300
+Wire Wire Line
+	2850 1300 2850 1250
+$Comp
+L power:+5V #PWR031
+U 1 1 618CA68F
+P 2850 900
+F 0 "#PWR031" H 2850 750 50  0001 C CNN
+F 1 "+5V" H 2865 1073 50  0000 C CNN
+F 2 "" H 2850 900 50  0001 C CNN
+F 3 "" H 2850 900 50  0001 C CNN
+	1    2850 900 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2850 900  2850 950 
+$Comp
+L power:+5V #PWR053
+U 1 1 6196F04F
+P 3100 2100
+F 0 "#PWR053" H 3100 1950 50  0001 C CNN
+F 1 "+5V" H 3115 2273 50  0000 C CNN
+F 2 "" H 3100 2100 50  0001 C CNN
+F 3 "" H 3100 2100 50  0001 C CNN
+	1    3100 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3100 2100 3100 2150
+Wire Wire Line
+	3100 2500 3100 2450
+Connection ~ 3100 2500
+Wire Wire Line
+	3100 2550 3100 2500
+Wire Wire Line
+	3100 3100 3100 2950
+Connection ~ 2450 2750
+Wire Wire Line
+	2450 2850 2450 2750
+Wire Wire Line
+	2450 3200 2450 3150
+Wire Wire Line
+	2150 3200 2150 3150
+Wire Wire Line
+	2150 2750 2450 2750
+Connection ~ 2150 2750
+Wire Wire Line
+	2150 2850 2150 2750
+Wire Wire Line
+	2050 2750 2150 2750
+$Comp
+L power:GND #PWR054
+U 1 1 6196F03C
+P 3100 3100
+F 0 "#PWR054" H 3100 2850 50  0001 C CNN
+F 1 "GND" H 3105 2927 50  0000 C CNN
+F 2 "" H 3100 3100 50  0001 C CNN
+F 3 "" H 3100 3100 50  0001 C CNN
+	1    3100 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR014
+U 1 1 6196F036
+P 2450 3200
+F 0 "#PWR014" H 2450 2950 50  0001 C CNN
+F 1 "GND" H 2455 3027 50  0000 C CNN
+F 2 "" H 2450 3200 50  0001 C CNN
+F 3 "" H 2450 3200 50  0001 C CNN
+	1    2450 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR011
+U 1 1 6196F030
+P 2150 3200
+F 0 "#PWR011" H 2150 2950 50  0001 C CNN
+F 1 "GND" H 2155 3027 50  0000 C CNN
+F 2 "" H 2150 3200 50  0001 C CNN
+F 3 "" H 2150 3200 50  0001 C CNN
+	1    2150 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L ao_symbols:1N4148 D2
+U 1 1 6196F02A
+P 2450 3000
+F 0 "D2" V 2404 3080 50  0000 L CNN
+F 1 "1N4148" V 2495 3080 50  0000 L CNN
+F 2 "ao_tht:D_DO-35_SOD27_P7.62mm_Horizontal" H 2450 2825 50  0001 C CNN
+F 3 "" H 2450 3000 50  0001 C CNN
+F 4 "Tayda" H 2450 3000 50  0001 C CNN "Vendor"
+F 5 "A-157" H 2450 3000 50  0001 C CNN "SKU"
+	1    2450 3000
+	0    1    1    0   
+$EndComp
+$Comp
+L ao_symbols:2N3904 Q2
+U 1 1 6196F022
+P 3000 2750
+F 0 "Q2" H 3190 2796 50  0000 L CNN
+F 1 "2N3904" H 3190 2705 50  0000 L CNN
+F 2 "ao_tht:TO-92_Inline_Wide" H 3200 2675 50  0001 L CIN
+F 3 "" H 3000 2750 50  0001 L CNN
+F 4 "Tayda" H 3000 2750 50  0001 C CNN "Vendor"
+F 5 "A-111" H 3000 2750 50  0001 C CNN "SKU"
+	1    3000 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L ao_symbols:R R10
+U 1 1 6196F01A
+P 3100 2300
+F 0 "R10" H 3170 2346 50  0000 L CNN
+F 1 "10k" H 3170 2255 50  0000 L CNN
+F 2 "ao_tht:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3030 2300 50  0001 C CNN
+F 3 "" H 3100 2300 50  0001 C CNN
+F 4 "Tayda" H 3100 2300 50  0001 C CNN "Vendor"
+	1    3100 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L ao_symbols:R R4
+U 1 1 6196F013
+P 2150 3000
+F 0 "R4" H 2220 3046 50  0000 L CNN
+F 1 "1M" H 2220 2955 50  0000 L CNN
+F 2 "ao_tht:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 2080 3000 50  0001 C CNN
+F 3 "" H 2150 3000 50  0001 C CNN
+F 4 "Tayda" H 2150 3000 50  0001 C CNN "Vendor"
+	1    2150 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L ao_symbols:R R2
+U 1 1 6196F00C
+P 1900 2750
+F 0 "R2" V 1693 2750 50  0000 C CNN
+F 1 "100k" V 1784 2750 50  0000 C CNN
+F 2 "ao_tht:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 1830 2750 50  0001 C CNN
+F 3 "" H 1900 2750 50  0001 C CNN
+F 4 "Tayda" H 1900 2750 50  0001 C CNN "Vendor"
+	1    1900 2750
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3100 2500 3350 2500
+Connection ~ 1450 2750
+Wire Wire Line
+	1450 2750 1750 2750
+Text Label 1450 2750 0    50   ~ 0
+CLK_IN_J
 $Comp
 L power:+5V #PWR03
 U 1 1 6159FF6C
-P 1350 2100
-F 0 "#PWR03" H 1350 1950 50  0001 C CNN
-F 1 "+5V" H 1365 2273 50  0000 C CNN
-F 2 "" H 1350 2100 50  0001 C CNN
-F 3 "" H 1350 2100 50  0001 C CNN
-	1    1350 2100
+P 1450 2350
+F 0 "#PWR03" H 1450 2200 50  0001 C CNN
+F 1 "+5V" H 1465 2523 50  0000 C CNN
+F 2 "" H 1450 2350 50  0001 C CNN
+F 3 "" H 1450 2350 50  0001 C CNN
+	1    1450 2350
 	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1450 2450 1450 2750
+$Comp
+L ao_symbols:2_pin_Molex_header J7
+U 1 1 6159FF65
+P 1650 2350
+F 0 "J7" H 1730 2342 50  0000 L CNN
+F 1 "2_pin_Molex_header" H 1730 2251 50  0000 L CNN
+F 2 "ao_tht:Molex_KK-254_AE-6410-02A_1x02_P2.54mm_Vertical" H 1650 2350 50  0001 C CNN
+F 3 "" H 1650 2350 50  0001 C CNN
+F 4 "Tayda" H 1650 2350 50  0001 C CNN "Vendor"
+F 5 "A-804" H 1650 2350 50  0001 C CNN "SKU"
+	1    1650 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L ao_symbols:AudioJack2 J4
+U 1 1 6108CBB7
+P 1250 2750
+F 0 "J4" H 1071 2683 50  0000 R CNN
+F 1 "AudioJack2" H 1071 2774 50  0000 R CNN
+F 2 "ao_tht:Jack_6.35mm_PJ_629HAN_slots" H 1250 2750 50  0001 C CNN
+F 3 "~" H 1250 2750 50  0001 C CNN
+F 4 "A-1121" H 1250 2750 50  0001 C CNN "SKU"
+F 5 "Tayda" H 1250 2750 50  0001 C CNN "Vendor"
+	1    1250 2750
+	1    0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR07
+U 1 1 61103A7F
+P 1550 2950
+F 0 "#PWR07" H 1550 2700 50  0001 C CNN
+F 1 "GND" H 1555 2777 50  0000 C CNN
+F 2 "" H 1550 2950 50  0001 C CNN
+F 3 "" H 1550 2950 50  0001 C CNN
+	1    1550 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1450 2850 1550 2850
+Wire Wire Line
+	1550 2850 1550 2950
+Wire Wire Line
+	2450 2750 2800 2750
+Text GLabel 4300 1600 1    50   Input ~ 0
+RES_LED
+Wire Wire Line
+	4300 1600 4300 1650
+Wire Wire Line
+	4300 1650 4350 1650
+Text GLabel 4300 2150 1    50   Input ~ 0
+CLOCK_LED
+Wire Wire Line
+	4300 2150 4300 2200
+Wire Wire Line
+	4300 2200 4350 2200
+Text GLabel 8650 1850 0    50   Output ~ 0
+RES_LED
+Text GLabel 8650 1750 0    50   Output ~ 0
+CLOCK_LED
+Text Notes 4250 1000 0    50   ~ 0
+Clock and reset LEDs
+Text Notes 550  800  0    50   ~ 0
+Clock and reset inputs
+Text GLabel 3350 1300 2    50   Output ~ 0
+RESET
+Text GLabel 3350 2500 2    50   Output ~ 0
+CLOCK_IN
+$Comp
+L ao_symbols:AudioJack2_SwitchT J1
+U 1 1 6197A72D
+P 1050 4250
+F 0 "J1" H 1050 3900 50  0000 C CNN
+F 1 "AudioJack2_SwitchT" H 1050 4000 50  0000 C CNN
+F 2 "ao_tht:Jack_6.35mm_PJ_629HAN_slots" H 1050 4250 50  0001 C CNN
+F 3 "~" H 1050 4250 50  0001 C CNN
+F 4 "Tayda" H 1050 4250 50  0001 C CNN "Vendor"
+F 5 "A-1121" H 1050 4250 50  0001 C CNN "SKU"
+	1    1050 4250
+	1    0    0    1   
 $EndComp
 $EndSCHEMATC
