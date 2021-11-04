@@ -8,118 +8,139 @@
 
  */
 
-#define SEQ_OUT_PIN       4
-#define PER_OUT_PIN       5
-#define RESET_IN_PIN      3
-#define CLOCK_PIN         2
-
-#define ALG_POT  A2
-#define CV1_POT  A6
-#define CV2_POT  A3
-#define CV3_POT  A1
-#define CV4_POT  A0
-
-int potlist[5] = {ALG_POT, CV1_POT, CV2_POT, CV3_POT, CV4_POT}; // alg first, then params pots
-
+enum Alg { NoneAlg, Gap, Euclid, ADC, Rand };
+String algNames[5] = {"None", "Gap", "Euclidean", "ADC", "Random"};
 #define MAX_PERIOD          32
 
-// Parameters for sequence: requested and actual
-int parReq[4] = {0, 0, 0, 0};
-int parAct[4] = {0, 0, 0, 0};
-int parMin[4] = {0, 0, 0, 0};
-int parMax[4] = {1, 1, 1, 1};  // maximum value + 1
-String parNames[4] = {"", "", "", ""};
+typedef unsigned short int param;
+typedef char stateindex;
 
-bool changed = false;  // algo or param 1–4 changed
-bool changedNotOffset = false; // algo or param 1–3 changed 
-
-int algo = 0;        
-String algNames[5] = {"None", "Gap", "Euclidean", "ADC", "Random"};
-bool states[MAX_PERIOD];          // List of on/off values
-int counter = -1;                 // Current step #
-int period = 0;
-int offset = 0;
-
-bool send_tick = false;
-bool clock_state = false;
-bool last_clock_state = false;
-bool last_reset_state = false;
-
-// Pots handling
-
-int last_pot_state[5] = {9999, 9999, 9999, 9999, 9999};
-int last_change_time = 0;
-bool change_pending = false;
-
-int gcd (int a,int b)
+class Algo
 {
-  int R;
-  while ((a % b) > 0)
-    {
-      R = a % b;
-      a = b;
-      b = R;
-    }
-  return b;
-}
-
-int actTrigs ()
-{
-  // For gap sequence, actual #trigs may be less than requested
-  // Return actual #trigs
+ public:
+  Algo(enum alg) {Setup(alg);}
+  void Setup(enum alg);
+  void DisPot (int ipot, int potState);
+  void DisParams();
+  void UpdatePars();
+  param ActPar(const int i) const {return par[i];} // value parAct will be set to
+  void SetupNextPeriod();
+  void SetStates() {return;}
+  bool GetState(stateindex i) const;
+  param PotToParam(int i) const;
   
-  mxt = parAct[2] > 0 ? parAct[0] / gcf(parAct[0], parAct[2]) : parAct[0];
-  return constrain (parAct[1], 0, mxt);
-}
+  Alg alg;
+  String name;
+  String parName[4];
+  param parMin[4];
+  param parMax[4];
+  param par[4];    // requested values
+  param parAct[4]; // actual values
+  bool states[MAX_PERIOD];
+  bool changed; // if any par different than last time
+  bool changeNotOffset; // if any of pars 0-3 different
+};
 
-int potToParam(int potvalue, int parmin, int parmax)
+class GapAlgo: public Algo
 {
-  // Map pot value to parmin..parmax
+  GapAlgo()
+    {
+      Algo::Setup(Gap);
+      parName[2] = "Generator";
+      parMin[2] = 1;
+      parMax[2] = MAX_PERIOD/2;
+      par[2] = 1;
+    }
+};
 
-  return int(float(potvalue)/(1024/(parmax-parmin)))+parmin;
+class EuclidAlgo: public Algo
+{
+  EuclidAlgo()
+    {
+      Algo::Setup(Euclid);
+    }
+};
+
+class ADCAlgo: public Algo
+{
+  ADCAlgo()
+    {
+      Algo::Setup(ADC);
+      parMax[0] = 10;
+      parName[2] = "Gray";
+      parMax[2] = 1;
+    }
+};
+
+class RandAlgo: public Algo
+{
+  RandAlgo()
+    {
+      Algo::Setup(Rand);
+      parName[2] = "Throw";
+    }
+};
+
+Algo noneAlgo(NoneAlg);
+GapAlgo gapAlgo;
+EuclidAlgo euclidAlgo;
+ADCAlgo adcAlgo;
+RandAlgo randAlgo;
+Algo algoList[5] = {noneAlgo, gapAlgo, euclidAlgo, adcAlgo, randAlgo};
+unsigned short int curAlgo = 0;
+
+void Algo::Setup(enum alg)
+{
+  alg = alg;
+  name = algNames[alg];
+  parName[0] = "Period";
+  parName[1] = "Triggers";
+  parName[2] = "";
+  parName[3] = "Offset";
+  parMin[0] = 2;
+  parMax[0] = MAX_PERIOD;
+  parMin[1] = 0;
+  parMax[1] = MAX_PERIOD;
+  parMin[2] = 0;
+  parMax[2] = 31;
+  parMin[3] = 0;
+  parMax[3] = MAX_PERIOD-1;
+  par[0] = 2;
+  par[1] = 0;
+  par[2] = 0;
+  par[3] = 0;
+  for (unsigned i = 0; i < 4; ++i)
+    parAct[i] = par[i];
+  for (stateindex i = 0; i < MAX_PERIOD; ++i)
+    states[i] = false;
+  changed = true;
+  changedNotOffset = true;
 }
 
-void disPot (int ipot, int pot_state)
+void Algo:DisPot (int ipot, int potState)
 {
   // Print pot status to serial monitor
 
   if (ipot == 0)
     {
       Serial.print ("Alg pot = ");
-      Serial.print (pot_state);
+      Serial.print (potState);
       Serial.print (" -> ");
-      Serial.print (potToParam(pot_state, 0, 5));
+      Serial.print (PotToParam(-1));
     }
   else
     {
       Serial.print ("Pot ");
       Serial.print (ipot);
       Serial.print (" = ");
-      Serial.print (pot_state);
+      Serial.print (potState);
       Serial.print (" -> ");
-      Serial.print (parName[ipot]);
-      Serial.print (potToParam(pot_state, parMin[ipot], parMax[ipot]));
+      Serial.print (parName[ipot-1]);
+      Serial.print (PotToParam(ipot-1));
     }
 }  
 
-bool checkPots()
-{
-  // Read pots and store new values if changed enough
-  
-  bool something_changed = false;
-  for (int ipot = 0; ipot < 5; ++ipot)
-    {
-      int pot_state = analogRead (potlist[ipot]);
-      if (abs(pot_state - last_pot_state[ipot]) < 10)
-	continue;
-      last_pot_state[ipot] = pot_state;
-      something_changed = true;
-      disPot (ipot, pot_state);
-    }
-  return something_changed;
-}
-
-void disParams ()
+void Algo::DisParams ()
 {
   // Print parameters and sequence to serial monitor
 
@@ -127,118 +148,33 @@ void disParams ()
     {
       if (parNames[ip] == "")
 	continue;
-      Serial.print (parNames[ip]);
+      Serial.print (parName[ip]);
       Serail.print (" ");
       Serial.print (parAct[ip]);
-      if (parAct[ip] != parReq[ip])
+      if (parAct[ip] != par[ip])
 	{
 	  Serial.print (" [");
-	  Serial.print (parReq[ip]);
+	  Serial.print (par[ip]);
 	  Serial.print ("]");
 	}
       Serial.print (" ");
     }
   Serial.println();
-  for (int i = 0; i < param1; ++i)
-    Serial.print (getState (i) ? "." : "O");
+  for (int i = 0; i < par[0]; ++i)
+    Serial.print (GetState (i) ? "." : "O");
   Serial.println();
 }
 
-void updateParams()
+void Algo::UpdatePars()
 {
   // Get new values for parameters; display them if changed
-  
-  // First check for new algorithm
-  
-  new_algo = potToParam(last_pot_state[0], 0, 5);
-  if (new_algo != algo)
-    {
-      algo = new_algo;
-      changed = true;
-      changedNotOffset = true;
-      
-      if (algo == 0)
-	{
-	  for (ipar = 0; ipar < 4; ++ipar)
-	    {
-	      parNames[ipar] = "";
-	      parMin[ipar] = 0;
-	      parMax[ipar] = 1;
-	    }
-	}
-      else if (algo == 1)
-	{
-	  parNames[0] = "Per";
-	  parMin[0] = 2;
-	  parMax[0] = MAX_PERIOD+1;
-	  parNames[1] = "Trig";
-	  parMin[1] = 0;
-	  parMax[1] = MAX_PERIOD+1;
-	  parNames[2] = "Gen";
-	  parMin[2] = 1;
-	  parMax[2] = MAX_PERIOD / 2 + 1;
-	  parNames[3] = "Off";
-	  parMin[3] = 0;
-	  parMax[3] = MAX_PERIOD;
-	}
-      else if (algo == 2)
-	{
-	  parNames[0] = "Per";
-	  parMin[0] = 2;
-	  parMax[0] = MAX_PERIOD+1;
-	  parNames[1] = "Trig";
-	  parMin[1] = 0;
-	  parMax[1] = MAX_PERIOD+1;
-	  parNames[2] = "";
-	  parMin[2] = 1;
-	  parMax[2] = 0;
-	  parNames[3] = "Off";
-	  parMin[3] = 0;
-	  parMax[3] = MAX_PERIOD;
-	}
-      else if (algo == 3)
-	{
-	  parNames[0] = "Per";
-	  parMin[0] = 2;
-	  parMax[0] = MAX_PERIOD+1;
-	  parNames[1] = "Val";
-	  parMin[1] = 0;
-	  parMax[1] = 1024;
-	  parNames[2] = "D/G";
-	  parMin[2] = 0;
-	  parMax[2] = 2;
-	  parNames[3] = "Off";
-	  parMin[3] = 0;
-	  parMax[3] = MAX_PERIOD;
-	}
-      else if (algo == 4)
-	{
-	  parNames[0] = "Per";
-	  parMin[0] = 2;
-	  parMax[0] = MAX_PERIOD+1;
-	  parNames[1] = "Trig";
-	  parMin[1] = 0;
-	  parMax[1] = MAX_PERIOD+1;
-	  parNames[2] = "";
-	  parMin[2] = 0;
-	  parMax[2] = 32;
-	  parNames[3] = "Off";
-	  parMin[3] = 0;
-	  parMax[3] = MAX_PERIOD;
-	}
-      
-    }
 
-  // Now check for new parameters and record requests
-  
   for (ip = 1; ip < 5; ++ip)
     {
-      int new_par = potToParam(last_pot_state[ip],
-			       parMin[ip-1],
-			       parMax[ip-1]);
-      if (new_par != parReq[ip-1])
+      param newPar = PotToParam(ip);
+      if (newPar != par[ip-1])
       {
-	parReq[ip-1] = new_par;
+	par[ip-1] = newPar;
 	changed = true;
 	if (ip != 4)
 	  changedNotOffset = true;
@@ -246,58 +182,47 @@ void updateParams()
     }
 }
 
-
-void setupNextPeriod()
+void Algo::SetupNextPeriod()
 {
   // Set things for upcoming period
 
   if (changed)
     {
       for (ip = 0; ip < 4; ++ip)
-	{
-	  parAct[ip] = parReq[ip];
-	  // For Gap, actual trig may be lower
-	  if (algo == 1 && ip == 1)
-	    parAct[ip] = actTrigs();
-	}
-    }  
+	parAct[ip] = ActPar(ip);
+      DisParams();
+    }
   
   // New states if change other than offset
   if (changedNotOffset)
-    {
-      period = parAct[0];
-      offset = parAct[3];
-      setStates ();
-    }
-  disParams ();
+    setStates ();
 
   changed = false;  // algo or param 1–4 changed
   changedNotOffset = false; // algo or param 1–3 changed 
 }
 
-bool getState(uint8_t index)
+bool Algo:GetState(stateindex index) const
 {
   // Get state value with offset
   
-  int step_idx = (index + offset) % period;
-  return states[step_idx];
+  stateindex stepIdx = (index + parAct[3]) % parAct[0];
+  return algoList[curAlgo].states[stepIdx];
 }
 
-void checkReset()
+param Algo::PotToParam(int i) const
 {
-  // See if we need to reset this sequence
-  
-  bool reset = analogRead(RESET_IN_PIN) > 500;
-  if (reset == last_reset_state) return;
-  last_reset_state = reset;
-  if (reset) counter = -1; // will be zero next clock pulse
+  // Map pot value to parMin..parMax
+  // i == -1 for algorithm pot, 0-3 for parameter pots
+
+  if (i == -1) // algorithm pot
+    return param(float(lastPotState[0])/(1024/5)); // 0 to 4
+  else
+    return param(float(lastPotState[i+1])/(1024/(parMax[i]-parMin[i]+1))+parMin[i]);
 }
 
-void setStatesGap()
+void GapAlgo::setStates()
 {
-  // Set states for a gap sequence
-
-  int index = 0;
+  stateindex index = 0;
   states[index] = true;
     
   for (int var = 1; var < parAct[1]; ++var)
@@ -307,15 +232,27 @@ void setStatesGap()
     }
 }
 
-void setStatesEuclidean()
+param GapAlgo::ActPar(const int i) const
 {
-  // Set states for a Euclidean sequence
+  // Actual maximum number of trigs may be a fraction of period
+  if (i == 1)
+    {
+      mxt = par[2] > 0 ? par[0] / gcf(par[0], par[2]) : par[0];
+      return constrain (par[1], 0, mxt);
+    }
+  else
+    return par[i];
+}
+      
+
+void EuclidAlgo::SetStates()
+{
   // Algorithm source:
   // https://www.computermusicdesign.com/simplest-euclidean-rhythm-algorithm-explained/
 
   int bucket = 0;
 
-  for (int var = 0; var < parAct[0]; ++var)
+  for (stateindex var = 0; var < parAct[0]; ++var)
     {
       bucket += parAct[1];
       if (bucket >= parAct[0])
@@ -328,11 +265,10 @@ void setStatesEuclidean()
     }
 }
 
-void setStatesADC()
+void ADCAlgo::SetStates()
 {
-  // Set states for an ADC sequence
   int bit = 1 << 9;
-  for (int var = 0; var < parAct[0]; ++var)
+  for (stateindex var = 0; var < parAct[0]; ++var)
     {
       states[var] = (bit & parAct[1] != 0);
       bit >>= 1;
@@ -343,7 +279,7 @@ void setStatesADC()
       states[var] = states[var]^states[var+1];
 }
 
-void setStatesRandom()
+void RandAlgo::SetStates()
 {
   // Set states for a random sequence
 
@@ -352,8 +288,8 @@ void setStatesRandom()
   // last entry excluded; et cetera
 
   int ldeck = parAct[0]
-  int deck[ldeck];
-  for (int id = 0; id < ldeck; ++id)
+  stateindex deck[ldeck];
+  for (stateindex id = 0; id < ldeck; ++id)
     deck[id] = id;
   
   for (int var = 0; var < parAct[1]; ++var)
@@ -367,20 +303,71 @@ void setStatesRandom()
     }
 }
 
-void setStates()
+#define SEQ_OUT_PIN       4
+#define PER_OUT_PIN       5
+#define RESET_IN_PIN      3
+#define CLOCK_PIN         2
+
+#define ALG_POT  A2
+#define CV1_POT  A6
+#define CV2_POT  A3
+#define CV3_POT  A1
+#define CV4_POT  A0
+
+int potlist[5] = {ALG_POT, CV1_POT, CV2_POT, CV3_POT, CV4_POT}; // alg first, then params pots
+
+int counter = -1;                 // Current step #
+
+bool sendTick = false;
+bool clockState = false;
+bool lastClockState = false;
+bool lastResetState = false;
+
+// Pots handling
+
+int lastPotState[5] = {9999, 9999, 9999, 9999, 9999};
+int lastChangeTime = 0;
+bool changePending = false;
+
+int gcd (int a,int b)
 {
-  // See which kind of sequence we need and call the appropriate method
+  int R;
+  while ((a % b) > 0)
+    {
+      R = a % b;
+      a = b;
+      b = R;
+    }
+  return b;
+}
+
+
+bool checkPots()
+{
+  // Read pots and store new values if changed enough
   
-  for (int i = 0; i < period; i++)
-    states[i] = false;
-  if (algo == 1)
-    setStatesGap();				 
-  else if (algo == 2)
-    setStatesEuclidean();
-  else if (algo == 3)
-    setStatesADC();
-  else
-    setStatesRandom();
+  bool somethingChanged = false;
+  for (int ipot = 0; ipot < 5; ++ipot)
+    {
+      int potState = analogRead (potlist[ipot]);
+      if (abs(potState - lastPotState[ipot]) < 10)
+	continue;
+      lastPotState[ipot] = potState;
+      somethingChanged = true;
+      disPot (ipot, potState);
+    }
+  return somethingChanged;
+}
+
+
+void checkReset()
+{
+  // See if we need to reset this sequence
+  
+  bool reset = analogRead(RESET_IN_PIN) > 500;
+  if (reset == lastResetState) return;
+  lastResetState = reset;
+  if (reset) counter = -1; // will be zero next clock pulse
 }
 
 void onClockOn()
@@ -388,13 +375,13 @@ void onClockOn()
   // Write the next state, and turn on period output if counter is 0
   
   counter += 1;
-  if (counter >= param1)
+  if (counter >= algoList[curAlgo].par[0])
     {
       counter = 0;
       digitalWrite(PER_OUT_PIN, HIGH);
     }
 
-  digitalWrite(TRIG_OUT_PIN, getState(counter));
+  digitalWrite(TRIG_OUT_PIN, algoList[curAlgo].GetState(counter));
 }
 
 void onClockOff()
@@ -416,7 +403,7 @@ void pciSetup(byte pin)
  
 ISR(PCINT0_vect)
 {
-  send_tick = true;
+  sendTick = true;
 }
 
 void setup()
@@ -435,24 +422,30 @@ void loop()
 {
   if (checkPots())
     {
-      last_change_time = millis();
-      change_pending = false;
+      lastChangeTime = millis();
+      changePending = false;
     }
-  else if (change_pending && millis - last_change_time > 250)
-    update_params();
+  else if (changePending && millis - lastChangeTime > 250)
+    {
+      // First check for new algorithm
+      newAlgo = algoList[curAlgo].potToParam(-1);
+      if (newAlgo != algo)
+	curAlgo = newAlgo;
+      algoList[curAlgo].UpdateParams();
+    }
   
   checkReset();
   if (counter == -1 || counter == period-1)
-    setupNextPeriod();
+    algoList[curAlgo].SetupNextPeriod();
       
-  if (!send_tick)
+  if (!sendTick)
     return;
-  send_tick = false;
+  sendTick = false;
 
-  clock_state = digitalRead(CLOCK_PIN);
-  if (clock_state == last_clock_state)
+  clockState = digitalRead(CLOCK_PIN);
+  if (clockState == lastClockState)
     return;
-  last_clock_state = clock_state;
+  lastClockState = clockState;
 
-  clock_state ? onClockOn() : onClockOff();
+  clockState ? onClockOn() : onClockOff();
 }
