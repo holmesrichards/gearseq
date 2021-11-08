@@ -52,8 +52,8 @@ bool lastResetState = false;
 // Pots handling
 
 param lastPotState[5] = {9999, 9999, 9999, 9999, 9999};
-int lastChangeTime = 0;
-bool changePending = false; // need to change pending parameters
+long lastChangeTime = -999999;
+bool displayChange = false;
 bool changeParAct = false; // need to change actual parameters or algorithm
 bool doDisplay = false; // update the display when you get a chance
 
@@ -98,7 +98,7 @@ class Algo
   void UpdatePars();
   virtual void SetParPend();
   virtual void SetStates() {statesPend = 0;}
-  bool GetState(stateindex i);
+  bool GetState(stateindex i, bool getPend = false);
   virtual param Period() const {return parAct[0];}
   virtual param PeriodPend() const {return parPend[0];}
   virtual param Offset() const {return parAct[3];}
@@ -190,6 +190,13 @@ bool Algo::checkPots()
       int potState = analogRead (potlist[ipot]);
       if (abs(int(potState)-int(lastPotState[ipot])) < delta[ipot])
 	continue;
+      Serial.print (ipot);
+      Serial.print (" ");
+      Serial.print (potState);
+      Serial.print (" ");
+      Serial.print (lastPotState[ipot]);
+      Serial.print (" ");
+      Serial.println (delta[ipot]);
       lastPotState[ipot] = potState;
       somethingChanged = true;
     }
@@ -232,32 +239,61 @@ param Algo::paramConstrain (int i, param p0, param p1, param p2, param p3)
 
 void Algo::DisParams ()
 {
+  String d_algName;
+  String d_parName[4];
+  param d_par[4];
+  int d_period;
+  
+  if (displayChange)
+    {
+      d_algName = algoList[reqAlgo]->algName;
+      for (int ip = 0; ip < 4; ++ip)
+	{
+	  d_parName[ip] = algoList[reqAlgo]->parName[ip];
+	  d_par[ip] = parPend[ip];
+	}
+      d_period = PeriodPend();
+    }
+  else
+    {
+      d_algName = algoList[curAlgo]->algName;
+      for (int ip = 0; ip < 4; ++ip)
+	{
+	  d_parName[ip] = algoList[curAlgo]->parName[ip];
+	  d_par[ip] = parAct[ip];
+	}
+      d_period = Period();
+    }
+
 #if OLED
   String str;
   char line[17];
 
-  String top = algName + (algoList[reqAlgo]->algName == algName ? "" :
+  String top = d_algName + (algoList[reqAlgo]->algName == d_algName ? "" :
 			  String ("[")+
 			  algoList[reqAlgo]->algName.substring(0,3)+String("]"));
   int c = (16-top.length())/2;
   top.toCharArray(line, 17);
   u8x8.drawString (0, 0, blank);
+  if (displayChange)
+    u8x8.drawString (0, 0, "*");
   u8x8.drawString (c, 0, line);
+    
   char l = 1;
   for (int ip = 0; ip < 4; ++ip)
     {
       u8x8.drawString (0, l, blank);
-      parName[ip].toCharArray(line, 6);
+      d_parName[ip].toCharArray(line, 6);
       u8x8.drawString (0, l, line);
-      if (parName[ip] != "-N/A-")
+      if (d_parName[ip] != "-N/A-")
 	{
-	  str = String(parAct[ip]);
+	  str = String(d_par[ip]);
 	  while (str.length() < 4)
 	    str = String(" ")+str;
 	  str.toCharArray(line, 5);
 	  u8x8.drawString (6, l, line);
 	  
-	  if (parAct[ip] != parReq[ip])
+	  if (d_par[ip] != parReq[ip])
 	    {
 	      str = String(parReq[ip]);
 	      while (str.length() < 4)
@@ -273,11 +309,15 @@ void Algo::DisParams ()
   while (l < 8)
     u8x8.drawString (0, l++, blank);
 
-  l = Period() < 17 ? 7 : 6;
+  l = d_period < 17 ? 7 : 6;
+  
   c = 0;
-  for (int i = 0; i < Period(); ++i)
+  for (int i = 0; i < d_period; ++i)
     {
-      u8x8.drawString (c++, l, GetState (i) ? "O" : "-");
+      if (displayChange)
+	u8x8.drawString (c++, l, GetState (i, true) ? "X" : ".");
+      else
+	u8x8.drawString (c++, l, GetState (i) ? "O" : "-");
       if (c == 16)
 	{
 	  c = 0;
@@ -288,19 +328,21 @@ void Algo::DisParams ()
 #if SERIAL
   // Print parameters and sequence to serial monitor
 
-  Serial.print (algName);
-  if (algoList[reqAlgo]->algName != algName)
+  if (displayChange)
+    Serial.print ("* ");
+  Serial.print (d_algName);
+  if (algoList[reqAlgo]->algName != d_algName)
     Serial.print (String ("[")+algoList[reqAlgo]->algName.substring(0,3)+String("]"));
   Serial.print (" ");
   
   for (int ip = 0; ip < 4; ++ip)
     {
-      Serial.print (parName[ip]);
+      Serial.print (d_parName[ip]);
       Serial.print (" ");
-      if (parName[ip] == "-N/A-")
+      if (d_parName[ip] == "-N/A-")
       	continue;
-      Serial.print (parAct[ip]);
-      if (parAct[ip] != parReq[ip])
+      Serial.print (d_par[ip]);
+      if (d_par[ip] != parReq[ip])
       	{
       	  Serial.print (" [");
       	  Serial.print (parReq[ip]);
@@ -309,8 +351,11 @@ void Algo::DisParams ()
       Serial.print (" ");
     }
   Serial.println();
-  for (int i = 0; i < Period(); ++i)
-    Serial.print (GetState (i) ? "O" : "-");
+  for (int i = 0; i < d_period; ++i)
+    if (displayChange)
+      Serial.print (GetState (i, true) ? "X" : ".");
+    else
+      Serial.print (GetState (i) ? "O" : "-");    
   Serial.println();
 #endif
 
@@ -353,13 +398,17 @@ void Algo::SetParPend()
   parPend[3] = paramConstrain (3, parPend[0], parReq[1], parReq[2], parReq[3]);
 }
 
-bool Algo::GetState(stateindex index)
+bool Algo::GetState(stateindex index, bool getPend)
 {
-  // Get (actual) state value with offset
+  // Get state value with offset. Actual state unless getPend = true,
+  // then do pending state
 
-  assert (Period() <= MAX_PERIOD);
-  stateindex stepIdx = (index + (Period()-Offset())) % Period();
-  return ((statesAct & (0x80000000 >> stepIdx)) != 0);
+  param p = getPend ? PeriodPend() : Period();
+  long s = getPend ? statesPend : statesAct;
+  param o = getPend ? OffsetPend() : Offset();
+  assert (p <= MAX_PERIOD);
+  stateindex stepIdx = (index + (p-o)) % p;
+  return ((s & (0x80000000 >> stepIdx)) != 0);
 }
 
 //============================================================
@@ -371,6 +420,7 @@ void GapAlgo::Setup()
   parName[1] = "Trigs"; // 5 chars
   parName[2] = "Gener";
   parName[3] = "Offs ";
+  parMin[2] = 1;
   parMax[2] = MAX_PERIOD/2;
   delta[3] = int(1024./(parMax[2]-parMin[2]+1));
 }
@@ -400,8 +450,8 @@ void GapAlgo::SetStates()
   assert (parPend[0] <= MAX_PERIOD);
 
   stateindex index = 0;
-  statesPend = 1;
-    
+  statesPend = 0x80000000;
+  
   for (int var = 1; var < parPend[1]; ++var)
     {
       index = (index + parPend[2]) % parPend[0];
@@ -608,7 +658,6 @@ void setup()
   algoList[reqAlgo]->checkPots();
   algoList[reqAlgo]->UpdatePars();
   SetupThisPeriod();
-  changePending = false;
   changeParAct = false;
   algoList[curAlgo]->DisParams();
 #if SERIAL
@@ -621,20 +670,22 @@ void loop()
   if (algoList[reqAlgo]->checkPots())
     {
       lastChangeTime = millis();
-      changePending = true;
-    }
-  else if (changePending && millis - lastChangeTime > 250)
-    {
-      // First check for new algorithm
+      displayChange = true;
+      doDisplay = true;
+      // Check for new algorithm
       unsigned short int newAlgo = constrain (algoList[curAlgo]->PotToParam(-1), 0, NALGO);
       if (newAlgo != reqAlgo)
 	reqAlgo = newAlgo;
       algoList[reqAlgo]->UpdatePars();
-      doDisplay = true;
-      changePending = false;
       changeParAct = true;
     }
-  
+
+  if (displayChange && (millis() - lastChangeTime > 2000))
+    {
+      displayChange = false;
+      doDisplay = true;
+    }
+	       
   checkReset();
   
   if (sendTick)
