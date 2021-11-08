@@ -8,18 +8,21 @@
 
  */
 
+#define OLED 1 // nonzero to use OLED
+#define SERIAL 1 // nonzero to use serial monitor
+
 #include <assert.h>
+#if OLED
+#include <U8g2lib.h>
+#endif
 
-enum Alg { NoneAlg, Gap, Euclid, ADeeCee, Rand };
-#define MAX_PERIOD          32
+#define MAX_PERIOD          32 // can be reduced; increasing would require significant changes
 
-int nalgo = 0;
-#define USEGAP 1
-#define USEEUC 1
-#define USEADC 1
-#define USERAN 1
+#define NALGO 4
 
-#define OLED 0 // nonzero to use OLED, else serial monitor
+#if OLED
+U8X8_SSD1306_128X64_NONAME_HW_I2C u8x8;
+#endif
 
 typedef unsigned short int param;
 typedef char stateindex;
@@ -50,69 +53,78 @@ bool lastResetState = false;
 
 param lastPotState[5] = {9999, 9999, 9999, 9999, 9999};
 int lastChangeTime = 0;
-bool changePending = false;
+bool changePending = false; // need to change pending parameters
+bool changeParAct = false; // need to change actual parameters or algorithm
+bool doDisplay = false; // update the display when you get a chance
 
-Alg alg;
-String name;
-String parName[4];
+char* blank = "                ";
 
-// parReq is requested values for next parameters
-// These may be modified by constraints, and do not go into use until
+// parReq is requested values for next parameters.
+// parPend is requested values modified by constraints, to go into use at
 // start of next period.
 // parAct is actual parameter values in use.
 
-param parReq[4];    // requested values
-param parMin[4];
-param parMax[4];
+param parReq[4] = {9999, 9999, 9999, 9999};    // requested values
+param parPend[4] = {9999, 9999, 9999, 9999};    // requested values
 param parAct[4]; // actual values
-bool states[MAX_PERIOD];
-bool changed; // if any par different than last time
-bool changedNotOffset; // if any of pars 0-3 different
+long statesPend; // bits for the pattern
+long statesAct;
 
-int gcd (int a,int b)
-{
-  int R;
-  while ((a % b) > 0)
-    {
-      R = a % b;
-      a = b;
-      b = R;
-    }
-  return b;
-}
+// current algorithm in use and requested next algorithm
+unsigned short int curAlgo = 0;
+unsigned short int reqAlgo = 0;
 
+int gcd (int a,int b);
+void checkReset();
+void SetupThisPeriod();
+void onClockOn();
+void onClockOff();
+void tick();
+void setup();
+void loop();
+
+
+//============================================================
 
 class Algo
 {
  public:
-  Algo(Alg alg = NoneAlg) {Setup();}
+  Algo() {Setup();}
   virtual void Setup();
-  void DisPot (int ipot, int potState);
+  bool checkPots();
+  param PotToParam(int i, int v=-1);
+  virtual param paramConstrain (int i, param p0, param p1, param p2, param p3);
   void DisParams();
   void UpdatePars();
-  virtual param paramConstrain (int i, param p0, param p1, param p2, param p3);
-  virtual void SetParAct();
-  void SetupNextPeriod();
-  virtual void SetStates() {assert (parAct[0] <= MAX_PERIOD); for (stateindex i = 0; i < parAct[0]; ++i) states[i] = false;}
-  bool GetState(stateindex i) const;
-  param PotToParam(int i) const;
-  param Period() const {return parAct[0];}
-  param Offset() const {return parAct[3];}
+  virtual void SetParPend();
+  virtual void SetStates() {statesPend = 0;}
+  bool GetState(stateindex i);
+  virtual param Period() const {return parAct[0];}
+  virtual param PeriodPend() const {return parPend[0];}
+  virtual param Offset() const {return parAct[3];}
+  virtual param OffsetPend() const {return parPend[3];}
+  String algName;
+  String parName[4];
+  param parMin[4];
+  param parMax[4];
+  short unsigned int delta[5]; // pot range corresponding to change
+  // of algo or parameter
 };
 
-#if USEGAP
+//============================================================
+
 class GapAlgo: public Algo
 {
  public:
   GapAlgo() {Setup();}
   void Setup();
   void SetStates();
-  virtual param paramConstrain (int i, param p0, param p1, param p2, param p3);
-  void SetParAct();
+  param paramConstrain (int i, param p0, param p1, param p2, param p3);
+  void SetParPend();
 };
-#endif
 
-#if USEEUC
+//============================================================
+
 class EuclidAlgo: public Algo
 {
  public:
@@ -120,20 +132,20 @@ class EuclidAlgo: public Algo
   void Setup();
   void SetStates();
 };
-#endif
 
-#if USEADC
+//============================================================
+
 class ADCAlgo: public Algo
 {
  public:
   ADCAlgo() {Setup();}
   void Setup();
   void SetStates();
-  virtual param paramConstrain (int i, param p0, param p1, param p2, param p3);
+  param paramConstrain (int i, param p0, param p1, param p2, param p3);
 };
-#endif
 
-#if USERAN
+//============================================================
+
 class RandAlgo: public Algo
 {
  public:
@@ -141,27 +153,20 @@ class RandAlgo: public Algo
   void Setup();
   void SetStates();
 };
-#endif
+
+//============================================================
 
 Algo* algoList[5];
-unsigned short int curAlgo = 0;
 
-
-
+//============================================================
 
 void Algo::Setup()
 {
-  Serial.println ("Algo::Setup");
-  alg = NoneAlg;
-  name = "None";
-  parName[0] = "Period";
-  parName[1] = "Triggers";
-  parName[2] = "";
-  parName[3] = "Offset";
-  parReq[0] = 9999;
-  parReq[1] = 9999;
-  parReq[2] = 9999;
-  parReq[3] = 9999;
+  algName = "None"; 
+  parName[0] = "Per  "; // 5 chars
+  parName[1] = "-N/A-";
+  parName[2] = "-N/A-";
+  parName[3] = "-N/A-";
   parMin[0] = 2;
   parMax[0] = MAX_PERIOD;
   parMin[1] = 0;
@@ -170,82 +175,40 @@ void Algo::Setup()
   parMax[2] = 31;
   parMin[3] = 0;
   parMax[3] = MAX_PERIOD-1;
-  changed = false;  // algo or param 1–4 changed
-  changedNotOffset = false; // algo or param 1–3 changed
+  delta[0] = int(1024./(NALGO+1));
+  for (int i = 0; i < 4; ++i)
+    delta[i+1] = int(1024./(parMax[i]-parMin[i]+1));
 }
 
-void Algo::DisPot (int ipot, int potState)
+bool Algo::checkPots()
 {
-#if OLED
-  return;
-#else
-  // Print pot status to serial monitor
-
-  if (ipot == 0)
+  // Read pots and store new values if changed enough
+  
+  bool somethingChanged = false;
+  for (int ipot = 0; ipot < 5; ++ipot)
     {
-      Serial.print ("Alg pot = ");
-      Serial.print (potState);
-      Serial.print (" -> ");
-      Serial.println (PotToParam(-1));
+      int potState = analogRead (potlist[ipot]);
+      if (abs(int(potState)-int(lastPotState[ipot])) < delta[ipot])
+	continue;
+      lastPotState[ipot] = potState;
+      somethingChanged = true;
     }
+  return somethingChanged;
+}
+
+
+param Algo::PotToParam(int i, int v)
+{
+  // Map pot value to parMin..parMax
+  // i == -1 for algorithm pot, 0-3 for parameter pots
+  // If v < 0 use lastPotState[i+i] else use v for pot value
+
+  if (v < 0)
+    v = lastPotState[i+1];
+  if (i == -1) // algorithm pot
+    return param(float(v)/(1024./(NALGO+1))); // 0 to NALGO
   else
-    {
-      Serial.print ("Pot ");
-      Serial.print (ipot);
-      Serial.print (" = ");
-      Serial.print (potState);
-      Serial.print (" -> ");
-      Serial.print (parName[ipot-1]);
-      Serial.print (" = ");
-      Serial.println (PotToParam(ipot-1));
-    }
-#endif
-}
-
-void Algo::DisParams ()
-{
-#if OLED
-  return;
-#else
-  // Print parameters and sequence to serial monitor
-
-  for (int ip = 0; ip < 4; ++ip)
-    {
-      if (parName[ip] == "")
-      	continue;
-      Serial.print (parName[ip]);
-      Serial.print (" ");
-      Serial.print (parAct[ip]);
-      if (parAct[ip] != parReq[ip])
-      	{
-      	  Serial.print (" [");
-      	  Serial.print (parReq[ip]);
-      	  Serial.print ("]");
-      	}
-      Serial.print (" ");
-    }
-  Serial.println();
-  for (int i = 0; i < Period(); ++i)
-    Serial.print (GetState (i) ? "O" : ".");
-  Serial.println();
-#endif
-}
-
-void Algo::UpdatePars()
-{
-  // Get new values for requested parameters
-
-  for (int ip = 0; ip < 4; ++ip)
-    {
-      param newPar = PotToParam(ip);
-      if (newPar != parReq[ip])
-      {
-	parReq[ip] = newPar;
-	changed = true;
-	if (ip != 4)
-	  changedNotOffset = true;
-      }
-    }
+    return param(float(v)/(1024./(parMax[i]-parMin[i]+1))+parMin[i]);
 }
 
 param Algo::paramConstrain (int i, param p0, param p1, param p2, param p3)
@@ -267,103 +230,193 @@ param Algo::paramConstrain (int i, param p0, param p1, param p2, param p3)
     }
 }
 
-void Algo::SetParAct()
+void Algo::DisParams ()
 {
-  parAct[0] = paramConstrain (0, parReq[0], parReq[1], parReq[2], parReq[3]);
-  // Other params may be constrained by constrained period
-  parAct[1] = paramConstrain (1, parAct[0], parReq[1], parReq[2], parReq[3]);
-  parAct[2] = paramConstrain (2, parAct[0], parReq[1], parReq[2], parReq[3]);
-  parAct[3] = paramConstrain (3, parAct[0], parReq[1], parReq[2], parReq[3]);
+#if OLED
+  String str;
+  char line[17];
+
+  String top = algName + (algoList[reqAlgo]->algName == algName ? "" :
+			  String ("[")+
+			  algoList[reqAlgo]->algName.substring(0,3)+String("]"));
+  int c = (16-top.length())/2;
+  top.toCharArray(line, 17);
+  u8x8.drawString (0, 0, blank);
+  u8x8.drawString (c, 0, line);
+  char l = 1;
+  for (int ip = 0; ip < 4; ++ip)
+    {
+      u8x8.drawString (0, l, blank);
+      parName[ip].toCharArray(line, 6);
+      u8x8.drawString (0, l, line);
+      if (parName[ip] != "-N/A-")
+	{
+	  str = String(parAct[ip]);
+	  while (str.length() < 4)
+	    str = String(" ")+str;
+	  str.toCharArray(line, 5);
+	  u8x8.drawString (6, l, line);
+	  
+	  if (parAct[ip] != parReq[ip])
+	    {
+	      str = String(parReq[ip]);
+	      while (str.length() < 4)
+		str = String(" ")+str;
+	      str = String("[") + str + String("]");
+	      str.toCharArray(line, 7);
+	      u8x8.drawString (10, l, line);
+	    }
+	}
+      ++l;
+    }
+
+  while (l < 8)
+    u8x8.drawString (0, l++, blank);
+
+  l = Period() < 17 ? 7 : 6;
+  c = 0;
+  for (int i = 0; i < Period(); ++i)
+    {
+      u8x8.drawString (c++, l, GetState (i) ? "O" : "-");
+      if (c == 16)
+	{
+	  c = 0;
+	  l++;
+	}
+    }
+#endif
+#if SERIAL
+  // Print parameters and sequence to serial monitor
+
+  Serial.print (algName);
+  if (algoList[reqAlgo]->algName != algName)
+    Serial.print (String ("[")+algoList[reqAlgo]->algName.substring(0,3)+String("]"));
+  Serial.print (" ");
+  
+  for (int ip = 0; ip < 4; ++ip)
+    {
+      Serial.print (parName[ip]);
+      Serial.print (" ");
+      if (parName[ip] == "-N/A-")
+      	continue;
+      Serial.print (parAct[ip]);
+      if (parAct[ip] != parReq[ip])
+      	{
+      	  Serial.print (" [");
+      	  Serial.print (parReq[ip]);
+      	  Serial.print ("]");
+      	}
+      Serial.print (" ");
+    }
+  Serial.println();
+  for (int i = 0; i < Period(); ++i)
+    Serial.print (GetState (i) ? "O" : "-");
+  Serial.println();
+#endif
+
+  doDisplay = false;
 }
 
-void Algo::SetupNextPeriod()
+void Algo::UpdatePars()
 {
-  // Set things for upcoming period
+  // Get new values for requested parameters
+
+  bool changed = false; // if any par different than last time
+  bool changedNotOffset = false; // if any of pars 0-3 different
+
+  for (int ip = 0; ip < 4; ++ip)
+    {
+      param newPar = PotToParam(ip);
+      if (newPar != parReq[ip])
+      {
+	parReq[ip] = newPar;
+	changed = true;
+	if (ip != 3)
+	  changedNotOffset = true;
+      }
+    }
   if (changed)
     {
-      SetParAct();
+      SetParPend();
       // New states if change other than offset
       if (changedNotOffset)
-      	SetStates ();
-      DisParams();
+	SetStates ();
     }
-  
-  changed = false;  // algo or param 1–4 changed
-  changedNotOffset = false; // algo or param 1–3 changed
 }
 
-bool Algo::GetState(stateindex index) const
+void Algo::SetParPend()
 {
-  // Get state value with offset
-
-  assert (parAct[0] <= MAX_PERIOD);
-  stateindex stepIdx = (index + (parAct[0]-parAct[3])) % parAct[0];
-  return states[stepIdx];
+  parPend[0] = paramConstrain (0, parReq[0], parReq[1], parReq[2], parReq[3]);
+  // Other params may be constrained by constrained period
+  parPend[1] = paramConstrain (1, parPend[0], parReq[1], parReq[2], parReq[3]);
+  parPend[2] = paramConstrain (2, parPend[0], parReq[1], parReq[2], parReq[3]);
+  parPend[3] = paramConstrain (3, parPend[0], parReq[1], parReq[2], parReq[3]);
 }
 
-param Algo::PotToParam(int i) const
+bool Algo::GetState(stateindex index)
 {
-  // Map pot value to parMin..parMax
-  // i == -1 for algorithm pot, 0-3 for parameter pots
+  // Get (actual) state value with offset
 
-  if (i == -1) // algorithm pot
-    return param(float(lastPotState[0])/(1024./(nalgo+1))); // 0 to nalgo
-  else
-    return param(float(lastPotState[i+1])/(1024./(parMax[i]-parMin[i]+1))+parMin[i]);
+  assert (Period() <= MAX_PERIOD);
+  stateindex stepIdx = (index + (Period()-Offset())) % Period();
+  return ((statesAct & (0x80000000 >> stepIdx)) != 0);
 }
 
-#if USEGAP
+//============================================================
+
 void GapAlgo::Setup()
 {
-  Serial.println ("GapAlgo::Setup");
   Algo::Setup();
-  alg = Gap;
-  name = "Gap";
-  parName[2] = "Generator";
+  algName = "Gap";
+  parName[1] = "Trigs"; // 5 chars
+  parName[2] = "Gener";
+  parName[3] = "Offs ";
   parMax[2] = MAX_PERIOD/2;
+  delta[3] = int(1024./(parMax[2]-parMin[2]+1));
 }
 
 param GapAlgo::paramConstrain (int i, param p0, param p1, param p2, param p3)
 {
   if (i == 1)
     return constrain (p1, parMin[1], p0+p2 > 0 ? p0/gcd(p0,p2) : p0);
+  else if (i == 2)
+    return constrain (p2, parMin[2], p0/2);
   else
     return Algo::paramConstrain (i, p0, p1, p2, p3);
 }
 
-void GapAlgo::SetParAct()
+void GapAlgo::SetParPend()
 {
-  parAct[0] = paramConstrain (0, parReq[0], parReq[1], parReq[2], parReq[3]);
+  parPend[0] = paramConstrain (0, parReq[0], parReq[1], parReq[2], parReq[3]);
   // Other params may be constrained by constrained period
-  parAct[2] = paramConstrain (2, parAct[0], parReq[1], parReq[2], parReq[3]);
+  parPend[2] = paramConstrain (2, parPend[0], parReq[1], parReq[2], parReq[3]);
   // Triggers may be further constrained by constrained generator
-  parAct[1] = paramConstrain (1, parAct[0], parReq[1], parAct[2], parReq[3]);
-  parAct[3] = paramConstrain (3, parAct[0], parReq[1], parReq[2], parReq[3]);
+  parPend[1] = paramConstrain (1, parPend[0], parReq[1], parPend[2], parReq[3]);
+  parPend[3] = paramConstrain (3, parPend[0], parReq[1], parPend[2], parReq[3]);
 }
 
 void GapAlgo::SetStates()
 {
-  assert (parAct[0] <= MAX_PERIOD);
-  for (stateindex i = 0; i < parAct[0]; ++i)
-    states[i] = false;
+  assert (parPend[0] <= MAX_PERIOD);
 
   stateindex index = 0;
-  states[index] = true;
+  statesPend = 1;
     
-  for (int var = 1; var < parAct[1]; ++var)
+  for (int var = 1; var < parPend[1]; ++var)
     {
-      index = (index + parAct[2]) % parAct[0];
-      states[index] = true;
+      index = (index + parPend[2]) % parPend[0];
+      statesPend |= 0x80000000 >> index;
     }
 }
-#endif
 
-#if USEEUC
+//============================================================
+
 void EuclidAlgo::Setup()
 {
   Algo::Setup();
-  alg = Euclid;
-  name = "Euclid";
+  algName = "Euclidean";
+  parName[1] = "Trigs"; // 5 chars
+  parName[3] = "Offs ";
 }
 
 void EuclidAlgo::SetStates()
@@ -371,45 +424,39 @@ void EuclidAlgo::SetStates()
   // Algorithm source:
   // https://www.computermusicdesign.com/simplest-euclidean-rhythm-algorithm-explained/
 
-  assert (parAct[0] <= MAX_PERIOD);
+  assert (parPend[0] <= MAX_PERIOD);
   int bucket = 0;
+  statesPend = 1;
 
-  for (stateindex var = 0; var < parAct[0]; ++var)
+  for (stateindex var = 0; var < parPend[0]; ++var)
     {
-      bucket += parAct[1];
-      if (bucket >= parAct[0])
+      bucket += parPend[1];
+      if (bucket >= parPend[0])
 	{
-	  bucket -= parAct[0];
-	  states[var] = true;
+	  bucket -= parPend[0];
+	  statesPend |= 0x80000000 >> var;
 	}
-      else
-	states[var] = false;
     }
 }
 
-#endif
+//============================================================
 
-#if USEADC
 void ADCAlgo::Setup()
 {
   Algo::Setup();
-  alg = ADeeCee;
-  name = "ADC";
-  parName[1] = "Value";
-  parName[2] = "";
-  parMin[0] = 2;
-  parMax[0] = 10;
+  algName = "ADC";
+  parName[1] = "Value"; // 5 chars
+  parName[3] = "Offs ";
   parMin[1] = 0;
   parMax[1] = 1023;
-  parMin[2] = 0;
-  parMax[2] = 31;
-  parMin[3] = 0;
-  parMax[3] = 9;
+  delta[2] = int(1024./(parMax[1]-parMin[1]+1))+2; /// Inflate to stop churn for now
 }
 
 param ADCAlgo::paramConstrain (int i, param p0, param p1, param p2, param p3)
 {
-  if (i == 1)
+  if (i == 0)
+    return constrain (p0, parMin[1], 10);
+  else if (i == 1)
     return constrain (p1, parMin[1], parMax[1]);
   else
     return Algo::paramConstrain (i, p0, p1, p2, p3);
@@ -417,24 +464,18 @@ param ADCAlgo::paramConstrain (int i, param p0, param p1, param p2, param p3)
 
 void ADCAlgo::SetStates()
 {
-  assert (parAct[0] <= MAX_PERIOD);
-  int bit = 1 << parAct[0];
-  for (stateindex var = 0; var < parAct[0]; ++var)
-    {
-      states[var] = (bit & parAct[1]) != 0;
-      bit >>= 1;
-    }
+  statesPend = long(parPend[1]) << 22;
 }
 
-#endif
+//============================================================
 
-#if USERAN
 void RandAlgo::Setup()
 {
   Algo::Setup();
-  alg = Rand;
-  name = "Rand";
+  algName = "Random";
+  parName[1] = "Trigs"; // 5 chars
   parName[2] = "Throw";
+  parName[3] = "Offs ";
 }
 
 void RandAlgo::SetStates()
@@ -445,46 +486,39 @@ void RandAlgo::SetStates()
   // state; move it to the end of the list and repeat with that
   // last entry excluded; et cetera
 
-  assert (parAct[0] <= MAX_PERIOD);
-  for (stateindex i = 0; i < parAct[0]; ++i)
-    states[i] = false;
-
-  int ldeck = parAct[0];
-  assert (ldeck < 64);
-  
+  assert (parPend[0] <= MAX_PERIOD);
+  statesPend = 0;
+    
+  int ldeck = parPend[0];  
   stateindex deck[ldeck];
+  
   for (int id = 0; id < ldeck; ++id)
     deck[id] = id;
 
-  for (int var = 0; var < parAct[1]; ++var)
+  for (int var = 0; var < parPend[1]; ++var)
     {
       int id = random(ldeck);
-      states[deck[id]] = true;
+      statesPend |= 0x80000000 >> deck[id];
       ldeck -= 1;
       int tmp = deck[ldeck];
       deck[ldeck] = deck[id];
       deck[id] = tmp;
     }
 }
-#endif
 
-bool checkPots()
+//============================================================
+
+int gcd (int a,int b)
 {
-  // Read pots and store new values if changed enough
-  
-  bool somethingChanged = false;
-  for (int ipot = 0; ipot < 5; ++ipot)
+  int R;
+  while ((a % b) > 0)
     {
-      int potState = analogRead (potlist[ipot]);
-      if (abs(potState - lastPotState[ipot]) < 10)
-	continue;
-      lastPotState[ipot] = potState;
-      somethingChanged = true;
-      algoList[curAlgo]->DisPot (ipot, potState);
+      R = a % b;
+      a = b;
+      b = R;
     }
-  return somethingChanged;
+  return b;
 }
-
 
 void checkReset()
 {
@@ -498,17 +532,33 @@ void checkReset()
   digitalWrite(RESET_LED_PIN, reset);
 }
 
+void SetupThisPeriod()
+{
+  // Set things for this period
+  curAlgo = reqAlgo;
+  for (int i = 0; i < 4; ++i)
+    parAct[i] = parPend[i];
+  statesAct = statesPend;
+}
+
 void onClockOn()
 {
-  // Write the next state, and turn on period output if counter is 0
+  // Write the next state, and turn on period output and set up new
+  // period if counter is 0
   
   counter += 1;
   if (counter >= algoList[curAlgo]->Period())
     {
       counter = 0;
       digitalWrite(PER_OUT_PIN, HIGH);
+      if (changeParAct)
+	{
+	  SetupThisPeriod();
+	  doDisplay = true;
+	  changeParAct = false;
+	}
     }
-
+  
   digitalWrite(SEQ_OUT_PIN, algoList[curAlgo]->GetState(counter));
 }
 
@@ -526,9 +576,15 @@ void tick() // ISR function
 }
 
 
+//============================================================
+
 void setup()
 {
-#if !OLED
+#if OLED
+  u8x8.begin();
+  u8x8.setFont(u8x8_font_victoriamedium8_r);
+#endif  
+#if SERIAL
   Serial.begin(9600);
   Serial.println("setup ");
 #endif
@@ -542,35 +598,27 @@ void setup()
 
   attachInterrupt (digitalPinToInterrupt(CLOCK_PIN), tick, CHANGE);
 
-  nalgo = 0;
-  algoList[nalgo++] = new Algo();
-#if USEGAP
-  algoList[nalgo++] = new GapAlgo();
-#endif
-#if USEEUC
-  algoList[nalgo++] = new EuclidAlgo();
-#endif
-#if USEADC
-  algoList[nalgo++] = new ADCAlgo();
-#endif
-#if USERAN
-  algoList[nalgo++] = new RandAlgo();
-#endif
+  algoList[0] = new Algo();
+  algoList[1] = new GapAlgo();
+  algoList[2] = new EuclidAlgo();
+  algoList[3] = new ADCAlgo();
+  algoList[4] = new RandAlgo();
   lastPotState[0] = analogRead (potlist[0]);
-  curAlgo = constrain (algoList[0]->PotToParam(-1), 0, nalgo-1);
-  Serial.print("algo "); Serial.print(algoList[0]->PotToParam(-1)); Serial.print ("->"); Serial.println(curAlgo);
-  algoList[curAlgo]->Setup();
-  Serial.println("setup2 ");
-  checkPots();
-  Serial.println("setup3 ");
-  algoList[curAlgo]->UpdatePars();
-  algoList[curAlgo]->SetupNextPeriod();
+  reqAlgo = constrain (algoList[curAlgo]->PotToParam(-1), 0, NALGO);
+  algoList[reqAlgo]->checkPots();
+  algoList[reqAlgo]->UpdatePars();
+  SetupThisPeriod();
   changePending = false;
+  changeParAct = false;
+  algoList[curAlgo]->DisParams();
+#if SERIAL
+  Serial.println("setup done ");
+#endif
 }
 
 void loop()
 {
-  if (checkPots())
+  if (algoList[reqAlgo]->checkPots())
     {
       lastChangeTime = millis();
       changePending = true;
@@ -578,31 +626,31 @@ void loop()
   else if (changePending && millis - lastChangeTime > 250)
     {
       // First check for new algorithm
-      unsigned short int newAlgo = constrain (algoList[curAlgo]->PotToParam(-1), 0, nalgo-1);
-      if (newAlgo != curAlgo)
-	{
-	  curAlgo = newAlgo;
-	  algoList[curAlgo]->Setup();
-	}
-      algoList[curAlgo]->UpdatePars();
+      unsigned short int newAlgo = constrain (algoList[curAlgo]->PotToParam(-1), 0, NALGO);
+      if (newAlgo != reqAlgo)
+	reqAlgo = newAlgo;
+      algoList[reqAlgo]->UpdatePars();
+      doDisplay = true;
       changePending = false;
+      changeParAct = true;
     }
   
   checkReset();
-  if (counter == algoList[curAlgo]->Period()-1)
-    algoList[curAlgo]->SetupNextPeriod();
-
-  if (!sendTick)
-    {
-      return;
-    }
-  sendTick = false;
   
-  clockState = !digitalRead(CLOCK_PIN); // inverted input
-  if (clockState == lastClockState)
-    return;
-  lastClockState = clockState;
-  digitalWrite(CLOCK_LED_PIN, clockState);
-
-  clockState ? onClockOn() : onClockOff();
+  if (sendTick)
+    {
+      sendTick = false;
+  
+      clockState = !digitalRead(CLOCK_PIN); // inverted input
+      if (clockState != lastClockState)
+	{
+	  lastClockState = clockState;
+	  digitalWrite(CLOCK_LED_PIN, clockState);
+      
+	  clockState ? onClockOn() : onClockOff();
+	}
+    }
+  
+  if (doDisplay)
+      algoList[curAlgo]->DisParams();      
 }

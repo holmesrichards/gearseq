@@ -17,9 +17,9 @@ Euclidean sequencing is familiar and need not be described here other than to sa
 
 More novel is the gap sequence, based on the procedure underlying linear scales in tuning theory and the [Three-gap Theorem](https://en.wikipedia.org/wiki/Three-gap_theorem) in mathematics. I'm not aware of any prior use of this idea for trigger sequencing although I would be quite surprised if no one else has done it before. In a gap sequence the pattern is defined by three parameters: *P*, *N*, and the generator (*G*). Whereas for a given *P* and *N* there is exactly one Euclidean sequence, there are up to *P*/2 gap sequences corresponding to different generators. Again, the position of the sequence start relative to the period can be specified by *O*. Details of the algorithm are given below.
 
-An ADC sequence uses a pattern based on digitization of an analog control voltage. The Barton Musical Circuits BMC006 Voltage To Rhythm Converter does this. In the G.E.A.R. sequencer there are two variants, Direct, in which the bits in the digitized value of the CV are the sequence pattern, and Gray, in which each bit is XORed with the next one to give the sequence pattern. The attractive thing about the Gray variant is that if one slowly ramps the CV up or down, the resulting consecutive patterns differ in only one bit. Again *P* and *O* (but not *N*) can be specified.
+An ADC sequence uses a pattern based on digitization of an analog control voltage. The Barton Musical Circuits BMC006 Voltage To Rhythm Converter does something similar. You specify *P* and a value to digitize, *V*, as well as, again, *O*. The sequence pattern is the last *P* bits in the digitization of *V*.
 
-A random sequence is fairly self explanatory. For a given *P* and *N*, the algorithm distributes *N* triggers randomly within *P* steps. The random pattern is then repeated indefinitely, offset by *O* as with the other types, until a new sequence is requested. Another "parameter" is the change (*C*). While the value of the change is not used to generate the pattern, if it changes, a new random pattern will be chosen. 
+A random sequence is fairly self explanatory. For a given *P* and *N*, the algorithm distributes *N* triggers randomly within *P* steps. The random pattern is then repeated indefinitely, offset by *O* as with the other types, until a new sequence is requested. Another "parameter" is the throw (*T*). While the value of the throw is not used to generate the pattern, if it changes, a new random pattern will be chosen. 
 
 ## Implementation
 
@@ -31,7 +31,7 @@ Other inputs are a clock and a reset pulse which sends the sequence back to its 
 
 Internally, an Arduino Nano collects the clock, reset, and CV inputs, reads the pots, updates the OLED, calculates the sequence, and sends the sequence and period pulses out.
 
-Pots are used instead of rotary switches to allow larger and variable, software defineable numbers of choices. (Rotary encoders would have been more complicated and expensive, and harder to integrate with control voltages.) One pot is for algorithm selection (or none, to disable the outputs). The other four, and the four CVs, are labeled 1 through 4. 
+Pots are used instead of rotary switches to allow larger and variable, software defineable numbers of choices. (Rotary encoders would have been more complicated and expensive, using more Arduino pins to read, and harder to integrate with control voltages.) One pot is for algorithm selection (or none, to disable the outputs). The other four, and the four CVs, are labeled 1 through 4. 
 
 ### Pot+CV 1 and 4
 
@@ -39,16 +39,15 @@ For the four G.E.A.R. algorithms (not necessarily for any future added algorithm
 
 ### Pot+CV 2
 
-For all but ADC, pot+CV 2 determines the number of triggers *N*. For ADC, it is the value to be digitized. 
+For all but ADC, pot+CV 2 determines the number of triggers *N*. For ADC, it is the value to be digitized, *V*. 
 
 ### Pot+CV 3
 
 Pot+CV 3's function varies between algorithms:
 
 * Gap: Generator *G*.
-* Euclidean: Not used.
-* ADC: Choice of Direct or Gray variant.
-* Random: 
+* Euclidean or ADC: Not used.
+* Random: Not used in determining the pattern, but a change in this parameter causes a new sequence to be generated.
 
 ### Parameter ranges:
 
@@ -58,8 +57,9 @@ Pot and CV ranges are as follows. The valid range for a parameter may be smaller
 |----|----|----|----|
 |1|*P*|2–32|ADC: 2–10; others: 2–32|
 |2|*N*|0–32|0–*P* *|
+|2|*V*|0–1023|0–1023|
 |3|*G*|0–16|0–*P*/2|
-|3|*C*|0–16|0–16|
+|3|*T*|0–31|0–31|
 |4|*O*|0–31|0–*P*-1
 
 The limit of 32 for *P* can be changed in software.

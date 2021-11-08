@@ -56,7 +56,7 @@ L ao_symbols:R_POT RV1
 U 1 1 6114F64E
 P 3750 2500
 F 0 "RV1" V 3543 2500 50  0000 C CNN
-F 1 "10k" V 3634 2500 50  0000 C CNN
+F 1 "100k" V 3634 2500 50  0000 C CNN
 F 2 "ao_tht:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical_centered" H 3750 2500 50  0001 C CNN
 F 3 "~" H 3750 2500 50  0001 C CNN
 F 4 "Tayda" H 3750 2500 50  0001 C CNN "Vendor"
@@ -68,7 +68,7 @@ L ao_symbols:R_POT RV2
 U 1 1 6114F830
 P 3750 3000
 F 0 "RV2" V 3543 3000 50  0000 C CNN
-F 1 "10k" V 3634 3000 50  0000 C CNN
+F 1 "100k" V 3634 3000 50  0000 C CNN
 F 2 "ao_tht:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical_centered" H 3750 3000 50  0001 C CNN
 F 3 "~" H 3750 3000 50  0001 C CNN
 F 4 "Tayda" H 3750 3000 50  0001 C CNN "Vendor"
@@ -80,7 +80,7 @@ L ao_symbols:R_POT RV3
 U 1 1 61150713
 P 3750 3500
 F 0 "RV3" V 3543 3500 50  0000 C CNN
-F 1 "10k" V 3634 3500 50  0000 C CNN
+F 1 "100k" V 3634 3500 50  0000 C CNN
 F 2 "ao_tht:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical_centered" H 3750 3500 50  0001 C CNN
 F 3 "~" H 3750 3500 50  0001 C CNN
 F 4 "Tayda" H 3750 3500 50  0001 C CNN "Vendor"
@@ -92,7 +92,7 @@ L ao_symbols:R_POT RV4
 U 1 1 61150719
 P 3750 4000
 F 0 "RV4" V 3543 4000 50  0000 C CNN
-F 1 "10k" V 3634 4000 50  0000 C CNN
+F 1 "100k" V 3634 4000 50  0000 C CNN
 F 2 "ao_tht:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical_centered" H 3750 4000 50  0001 C CNN
 F 3 "~" H 3750 4000 50  0001 C CNN
 F 4 "Tayda" H 3750 4000 50  0001 C CNN "Vendor"
@@ -291,7 +291,7 @@ L ao_symbols:R_POT RV5
 U 1 1 61152468
 P 3750 4500
 F 0 "RV5" V 3543 4500 50  0000 C CNN
-F 1 "10k" V 3634 4500 50  0000 C CNN
+F 1 "100k" V 3634 4500 50  0000 C CNN
 F 2 "ao_tht:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical_centered" H 3750 4500 50  0001 C CNN
 F 3 "~" H 3750 4500 50  0001 C CNN
 F 4 "Tayda" H 3750 4500 50  0001 C CNN "Vendor"
@@ -412,7 +412,7 @@ L ao_symbols:R_POT RV6
 U 1 1 617F83E5
 P 5000 2500
 F 0 "RV6" V 4793 2500 50  0000 C CNN
-F 1 "10k" V 4884 2500 50  0000 C CNN
+F 1 "100k" V 4884 2500 50  0000 C CNN
 F 2 "ao_tht:Potentiometer_Alpha_16mm_Single_Vertical" H 5000 2500 50  0001 C CNN
 F 3 "~" H 5000 2500 50  0001 C CNN
 F 4 "Tayda" H 5000 2500 50  0001 C CNN "Vendor"
@@ -424,7 +424,7 @@ L ao_symbols:R_POT RV7
 U 1 1 617F83EB
 P 5000 3000
 F 0 "RV7" V 4793 3000 50  0000 C CNN
-F 1 "10k" V 4884 3000 50  0000 C CNN
+F 1 "100k" V 4884 3000 50  0000 C CNN
 F 2 "ao_tht:Potentiometer_Alpha_16mm_Single_Vertical" H 5000 3000 50  0001 C CNN
 F 3 "~" H 5000 3000 50  0001 C CNN
 F 4 "Tayda" H 5000 3000 50  0001 C CNN "Vendor"
@@ -436,7 +436,7 @@ L ao_symbols:R_POT RV8
 U 1 1 617F83F1
 P 5000 3500
 F 0 "RV8" V 4793 3500 50  0000 C CNN
-F 1 "10k" V 4884 3500 50  0000 C CNN
+F 1 "100k" V 4884 3500 50  0000 C CNN
 F 2 "ao_tht:Potentiometer_Alpha_16mm_Single_Vertical" H 5000 3500 50  0001 C CNN
 F 3 "~" H 5000 3500 50  0001 C CNN
 F 4 "Tayda" H 5000 3500 50  0001 C CNN "Vendor"
@@ -448,7 +448,7 @@ L ao_symbols:R_POT RV9
 U 1 1 617F83F7
 P 5000 4000
 F 0 "RV9" V 4793 4000 50  0000 C CNN
-F 1 "10k" V 4884 4000 50  0000 C CNN
+F 1 "100k" V 4884 4000 50  0000 C CNN
 F 2 "ao_tht:Potentiometer_Alpha_16mm_Single_Vertical" H 5000 4000 50  0001 C CNN
 F 3 "~" H 5000 4000 50  0001 C CNN
 	1    5000 4000
@@ -531,7 +531,7 @@ L ao_symbols:R_POT RV10
 U 1 1 617F8424
 P 5000 4500
 F 0 "RV10" V 4793 4500 50  0000 C CNN
-F 1 "10k" V 4884 4500 50  0000 C CNN
+F 1 "100k" V 4884 4500 50  0000 C CNN
 F 2 "ao_tht:Potentiometer_Alpha_16mm_Single_Vertical" H 5000 4500 50  0001 C CNN
 F 3 "~" H 5000 4500 50  0001 C CNN
 F 4 "Tayda" H 5000 4500 50  0001 C CNN "Vendor"
@@ -610,4 +610,6 @@ F 4 "DNF" H 2800 6250 50  0001 C CNN "Config"
 	1    2800 6250
 	1    0    0    -1  
 $EndComp
+Text Notes 2100 4900 0    50   ~ 0
+100k pots for high input\nimpedance — normally for\nArduino one would limit to\n10k but the resolution \nrequired here is very low.
 $EndSCHEMATC
