@@ -1,6 +1,6 @@
 # G.E.A.R. Sequencer
 
-A trigger sequencer or, perhaps a better term, trigger sequence generator. Rather than sending triggers in a sequence that is completely specified by the user, it creates sequences based on user specified parameters.
+This is a trigger sequencer or, perhaps a better term, trigger sequence generator. Rather than sending triggers in a sequence that is completely specified by the user, it creates sequences based on user specified parameters.
 
 It offers a choice of four algorithms:
 
@@ -13,19 +13,21 @@ It offers a choice of four algorithms:
 
 ## Algorithms
 
-Euclidean sequencing is familiar and need not be described here other than to say the sequence pattern is determined by two parameters: Repetition period (*P*) and number of triggers (*N*). The algorithm distributes the *N* triggers as uniformly as possible among the *P* sequence steps. A third parameter, the rotational offset (*O*), governs not the pattern itself but where the pattern starts/stops relative to where the period starts/stops.
+Euclidean sequencing is familiar and need not be described here other than to say the sequence pattern is determined by two parameters: Repetition period (*P*) and number of triggers (*T*). The algorithm distributes the *T* triggers as uniformly as possible among the *P* sequence steps. A third parameter, the offset (*O*), governs not the pattern itself but where the pattern starts/stops relative to where the period starts/stops.
 
-More novel is the gap sequence, based on the procedure underlying linear scales in tuning theory and the [Three-gap Theorem](https://en.wikipedia.org/wiki/Three-gap_theorem) in mathematics. I'm not aware of any prior use of this idea for trigger sequencing although I would be quite surprised if no one else has done it before. In a gap sequence the pattern is defined by three parameters: *P*, *N*, and the generator (*G*). Whereas for a given *P* and *N* there is exactly one Euclidean sequence, there are up to *P*/2 gap sequences corresponding to different generators. Again, the position of the sequence start relative to the period can be specified by *O*. Details of the algorithm are given below.
+More novel is the gap sequence, based on the procedure underlying linear scales in tuning theory and the [Three-gap Theorem](https://en.wikipedia.org/wiki/Three-gap_theorem) in mathematics. I'm not aware of any prior use of this idea for trigger sequencing although I would be quite surprised if no one else has done it before. In a gap sequence the pattern is defined by three parameters: *P*, *T*, and the generator (*G*). Whereas for a given *P* and *T* there is exactly one Euclidean sequence, there are up to *P*/2 gap sequences corresponding to different generators. Again, the position of the sequence start relative to the period can be specified by *O*. Details of the algorithm are given [here](Docs/gap_sequence.md).
 
-An ADC sequence uses a pattern based on digitization of an analog control voltage. The Barton Musical Circuits BMC006 Voltage To Rhythm Converter does something similar. You specify *P* and a value to digitize, *V*, as well as, again, *O*. The sequence pattern is the last *P* bits in the digitization of *V*.
+An ADC sequence uses a pattern based on digitization of an analog control voltage. The Barton Musical Circuits BMC006 Voltage To Rhythm Converter does something similar. You specify *P* and a value to digitize, *V*, as well as, again, *O*. The sequence pattern is the first *P* bits in the digitization of *V*.
 
-A random sequence is fairly self explanatory. For a given *P* and *N*, the algorithm distributes *N* triggers randomly within *P* steps. The random pattern is then repeated indefinitely, offset by *O* as with the other types, until a new sequence is requested. Another "parameter" is the throw (*T*). While the value of the throw is not used to generate the pattern, if it changes, a new random pattern will be chosen. 
+A random sequence is fairly self explanatory. For a given *P* and *T*, the algorithm distributes *T* triggers randomly within *P* steps. The random pattern is then repeated indefinitely, offset by *O* as with the other types, until a new sequence is requested. Another "parameter" is the throw (*Th*). While the value of the throw is not used to determine the pattern, if it changes, a new random pattern will be chosen. 
 
 ## Implementation
 
-The algorithm and its (up to four) parameter values can be selected using five potentiometers and four CV inputs. With no cable plugged in a pot can be used to select a parameter manually; with a cable plugged in, the CV attenuated by the pot determines the parameter. Parameter values are shown on an OLED display. 
+The algorithm and its (up to four) parameter values can be selected using five potentiometers and four CV inputs. With no cable plugged in a pot can be used to select a parameter manually; with a cable plugged in, the CV attenuated by the pot (in the range 0 to 5 V) determines the parameter. 
 
 If a parameter value is changed, or a different algorithm is selected, the change takes effect at the start of the next period.
+
+Algorithm choice, parameter values, and the trigger pattern are shown on an OLED display. Normally it display the values currently in use, and if a parameter has a different value requested than the current one (either because the current one has not been updated yet, or because the requested value is outside the current valid range) it is shown in brackets. While adjusting a pot, the display switches to showing the values that will go into effect at the next period if no further changes occur. As visual hints you are looking at future instead of present values, there is an asterisk in the upper left corner, and the trigger pattern is shown at the bottom with Xs and dots (representing trigger and no trigger) instead of the normal Os and dashes.
 
 Other inputs are a clock and a reset pulse which sends the sequence back to its start on the next clock. Outputs are the sequence itself and a pulse at the start of each period. (One could ignore the sequence output and just use the period output as a clock divider.)
 
@@ -35,11 +37,11 @@ Pots are used instead of rotary switches to allow larger and variable, software 
 
 ### Pot+CV 1 and 4
 
-For the four G.E.A.R. algorithms (not necessarily for any future added algorithms), pot+CV 1 always determines the period *P* and pot+CV 4 determines the rotational offset *O*. 
+Pot+CV 1 always determines the period *P* and pot+CV 4 determines the offset *O*. 
 
 ### Pot+CV 2
 
-For all but ADC, pot+CV 2 determines the number of triggers *N*. For ADC, it is the value to be digitized, *V*. 
+For all but the ADC algorithm, pot+CV 2 determines the number of triggers *T*. For ADC, it is the value to be digitized, *V*. 
 
 ### Pot+CV 3
 
@@ -47,49 +49,36 @@ Pot+CV 3's function varies between algorithms:
 
 * Gap: Generator *G*.
 * Euclidean or ADC: Not used.
-* Random: Not used in determining the pattern, but a change in this parameter causes a new sequence to be generated.
+* Random: Throw *Th*. Not used in determining the pattern, but a change in this parameter causes a new sequence to be generated.
 
 ### Parameter ranges:
 
-Pot and CV ranges are as follows. The valid range for a parameter may be smaller than the range of values that can be requested. If the requested value is outside the valid range, it will be adjusted to a valid value.
+Parameters may be requested within ranges as follows. The valid range for a parameter may be smaller than the range of values that can be requested. If the requested value is outside the valid range, it will be adjusted to a valid value.
 
-|Pot|Parameter|Requested range|Valid range|
-|----|----|----|----|
-|1|*P*|2–32|ADC: 2–10; others: 2–32|
-|2|*N*|0–32|0–*P* *|
-|2|*V*|0–1023|0–1023|
-|3|*G*|0–16|0–*P*/2|
-|3|*T*|0–31|0–31|
-|4|*O*|0–31|0–*P*-1
+|Pot|Parameter|Algorithm|Requested range|Valid range|
+|----|----|----|----|----|
+|1|*P*|G,E,A,R|2–32|ADC: 2–10; others: 2–32|
+|2|*T*|G,E,R|0–32|0–*P* *|
+|2|*V*|A|0–1023|0–1023|
+|3|*G*|G|1–16|1–*P*/2|
+|3|*Th*|R|0–31|0–31|
+|4|*O*|G,E,A,R|0–31|0–*P*-1
 
-The limit of 32 for *P* can be changed in software.
+The limit of 32 for *P*, and the related upper limits for *T*, *G*, and *O*, can be changed in software. Reducing them should be trivial; increasing them would involve some coding.
 
 \* For the Gap algorithm, the actual maximum number of triggers may be some fraction of *P* (depending on *G*), in which case the requested value of *N* will be truncated if it is larger.
 
-## Gap sequence algorithm
+## Dependencies
 
-Given period *P*, number *N*, generator *G*, and offset *O*, there is a trigger at step *m* (in range 1 to *P*) if and only if *m* = (*O* + *k* * *G*) mod *P* + 1 for some *k* where 0 <= *k* < *N*. (Any positive value could be used for *G* but any *G* > *P*/2 will give the same pattern as one of the *G* values ≤ *P*/2. For instance, with *P* = 12, *G* = 7 gives the same pattern as *G* = 5 (but with a rotational offset)). 
+The following Arduino libraries must be installed:
 
-By the three-gap theorem, the number of steps between consecutive triggers will have one of no more than three values, and if there are three values, the largest will be the sum of the other two. Not that this is necessarily important for trigger sequencing purposes, but there it is.
+* DirectIO [https://github.com/mmarchetti/DirectIO](https://github.com/mmarchetti/DirectIO)
+* u8g2 [https://github.com/olikraus/u8g2/wiki](https://github.com/olikraus/u8g2/wiki)
 
-Less abstractly, imagine you have an analog clock with a chime. But instead of chiming from one to twelve times at each hour, it always chimes either once or not at all. There are twelve hours so the period is 12. Suppose the number is 6. Now suppose the offset is 3; that means it will chime at 3:00. And now if the generator is 5, it will also chime five hours later, at 8:00; and five hours after that, at 1:00; and five hours after that, at 6:00; and likewise at 11:00 and 4:00. So in each twelve hour time period there will be chimes at 1:00, 3:00, 4:00, 6:00, 8:00, and 11:00. Time gaps are 1, 2, and 3 hours.
-
-A gap sequencer is like that, except the period can be varied; and it doesn't chime, it makes triggers; and instead of one step per hour, the step rate is governed by a clock.
-
-Note that if, for instance, we requested a generator of 4 instead of 5, we'd get chimes at 3:00, four hours later at 7:00, and four hours later at 11:00. But four hours after that is 3:00 again. So the maximum number of triggers with *P* = 12 and *G* = 4 is 3. In general, if *P* and *G* have a common factor, then the maximum number of triggers is reduced by that factor. For example, if *P* = 12:
-
-|Generator|Maximum triggers|
-|----|----|
-|1|12|
-|2|6|
-|3|4|
-|4|3|
-|5|12|
-|6|2|
 
 ## Submodules
 
-This repo uses submodules aoKicad and Kosmo_panel, needed for KiCad. To clone:
+This repo uses submodules aoKicad and Kosmo_panel, providing libraries needed for KiCad. To clone:
 
 ```
 git clone git@github.com:holmesrichards/gapseq.git
