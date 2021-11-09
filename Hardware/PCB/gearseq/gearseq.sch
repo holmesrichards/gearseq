@@ -435,8 +435,6 @@ $EndComp
 NoConn ~ 9350 1050
 Text GLabel 8650 1650 0    50   Input ~ 0
 CLOCK_IN
-Wire Wire Line
-	8650 2250 8750 2250
 NoConn ~ 9750 1850
 NoConn ~ 9750 1550
 NoConn ~ 9750 1450
@@ -1117,7 +1115,6 @@ $EndComp
 NoConn ~ 8750 2450
 NoConn ~ 8750 2550
 NoConn ~ 8750 2650
-NoConn ~ 8650 2250
 Wire Wire Line
 	9750 2050 9850 2050
 Text GLabel 9850 2250 2    50   Input ~ 0
@@ -2290,4 +2287,40 @@ F 3 "" H 7150 5750 50  0001 C CNN
 	1    7150 5750
 	-1   0    0    -1  
 $EndComp
+$Comp
+L ao_symbols:2_pin_Molex_header J17
+U 1 1 618C9A15
+P 8300 3250
+F 0 "J17" H 8300 3050 50  0000 L CNN
+F 1 "2_pin_Molex_header" H 7950 2950 50  0000 L CNN
+F 2 "ao_tht:Molex_KK-254_AE-6410-02A_1x02_P2.54mm_Vertical" H 8300 3250 50  0001 C CNN
+F 3 "" H 8300 3250 50  0001 C CNN
+F 4 "Tayda" H 8300 3250 50  0001 C CNN "Vendor"
+F 5 "A-804" H 8300 3250 50  0001 C CNN "SKU"
+	1    8300 3250
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR026
+U 1 1 618CADB7
+P 8550 3300
+F 0 "#PWR026" H 8550 3050 50  0001 C CNN
+F 1 "GND" H 8555 3127 50  0000 C CNN
+F 2 "" H 8550 3300 50  0001 C CNN
+F 3 "" H 8550 3300 50  0001 C CNN
+	1    8550 3300
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	8500 3250 8550 3250
+Wire Wire Line
+	8550 3250 8550 3300
+Wire Wire Line
+	8500 3150 8550 3150
+Wire Wire Line
+	8550 3150 8550 2250
+Wire Wire Line
+	8550 2250 8750 2250
+Text Notes 8600 3250 0    50   ~ 0
+Display\nblank
 $EndSCHEMATC

@@ -56,7 +56,7 @@ L ao_symbols:R_POT RV1
 U 1 1 6114F64E
 P 3750 2500
 F 0 "RV1" V 3543 2500 50  0000 C CNN
-F 1 "100k" V 3634 2500 50  0000 C CNN
+F 1 "10k" V 3634 2500 50  0000 C CNN
 F 2 "ao_tht:Potentiometer_Alpha_RD901F-40-00D_Single_Vertical_centered" H 3750 2500 50  0001 C CNN
 F 3 "~" H 3750 2500 50  0001 C CNN
 F 4 "Tayda" H 3750 2500 50  0001 C CNN "Vendor"
@@ -387,15 +387,15 @@ Wire Wire Line
 Wire Wire Line
 	8150 5250 7950 5250
 Wire Notes Line
-	6500 4300 8500 4300
+	6500 4300 9500 4300
 Wire Notes Line
-	8500 4300 8500 5800
+	9500 4300 9500 5800
 Wire Notes Line
-	8500 5800 6500 5800
+	9500 5800 6500 5800
 Wire Notes Line
 	6500 5800 6500 4300
 Text Notes 6600 4600 0    50   ~ 0
-Push buttons (panel mounted)\nConnect to Clock and Reset inputs\nvia Molex
+Push buttons and toggle (panel mounted)\nConnect to Clock, Reset, Display Blank inputs\nvia Molex
 $Comp
 L power:GND1 #PWR052
 U 1 1 617F83DF
@@ -412,7 +412,7 @@ L ao_symbols:R_POT RV6
 U 1 1 617F83E5
 P 5000 2500
 F 0 "RV6" V 4793 2500 50  0000 C CNN
-F 1 "100k" V 4884 2500 50  0000 C CNN
+F 1 "10k" V 4884 2500 50  0000 C CNN
 F 2 "ao_tht:Potentiometer_Alpha_16mm_Single_Vertical" H 5000 2500 50  0001 C CNN
 F 3 "~" H 5000 2500 50  0001 C CNN
 F 4 "Tayda" H 5000 2500 50  0001 C CNN "Vendor"
@@ -612,4 +612,42 @@ F 4 "DNF" H 2800 6250 50  0001 C CNN "Config"
 $EndComp
 Text Notes 2100 4900 0    50   ~ 0
 100k pots for high input\nimpedance — normally for\nArduino one would limit to\n10k but the resolution \nrequired here is very low.
+$Comp
+L ao_symbols:SW_SPST SW3
+U 1 1 618C1D86
+P 8850 5000
+F 0 "SW3" H 8850 5235 50  0000 C CNN
+F 1 "SW_SPST" H 8850 5144 50  0000 C CNN
+F 2 "ao_tht:SPDT-toggle-switch-1M-series" H 8850 5000 50  0001 C CNN
+F 3 "~" H 8850 5000 50  0001 C CNN
+F 4 "Tayda" H 8850 5000 50  0001 C CNN "Vendor"
+F 5 "A-3186 (SPDT, use as SPST)" H 8850 5000 50  0001 C CNN "SKU"
+	1    8850 5000
+	1    0    0    -1  
+$EndComp
+$Comp
+L ao_symbols:2_pin_Molex_connector J18
+U 1 1 618C2CDC
+P 8900 5450
+F 0 "J18" V 9050 5400 50  0000 L CNN
+F 1 "2_pin_Molex_connector" V 9150 5000 50  0000 L CNN
+F 2 "ao_tht:Molex_KK-254_AE-6410-02A_1x02_P2.54mm_Vertical" H 8900 5450 50  0001 C CNN
+F 3 "" H 8900 5450 50  0001 C CNN
+F 4 "Tayda" H 8900 5450 50  0001 C CNN "Vendor"
+F 5 "A-826" H 8900 5450 50  0001 C CNN "SKU"
+	1    8900 5450
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8650 5000 8600 5000
+Wire Wire Line
+	8600 5000 8600 5250
+Wire Wire Line
+	8600 5250 8800 5250
+Wire Wire Line
+	9050 5000 9100 5000
+Wire Wire Line
+	9100 5000 9100 5250
+Wire Wire Line
+	9100 5250 8900 5250
 $EndSCHEMATC

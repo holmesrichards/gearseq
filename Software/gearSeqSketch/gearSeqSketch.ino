@@ -9,6 +9,8 @@
  */
 
 #define OLED 1 // nonzero to use OLED
+#define FLIPPED 1 // nonzero to flip display vertically
+//                   (for yellow stripe at bottom)
 #define SERIAL 0 // nonzero to use serial monitor
 
 #include <assert.h>
@@ -38,6 +40,7 @@ typedef char stateindex;
 #define RESET_IN_PIN      5
 #define SEQ_OUT_PIN       6
 #define PER_OUT_PIN       7
+#define DISP_BLANK_PIN    8
 
 #define ALG_POT  A2
 #define CV1_POT  A6
@@ -49,6 +52,7 @@ typedef char stateindex;
 
 InputLow<CLOCK_PIN> i_clock (false);
 InputLow<RESET_IN_PIN> i_reset (false);
+InputLow<DISP_BLANK_PIN> i_disp_blank (true); // internal pullup on
 Output<CLOCK_LED_PIN> o_clock;
 Output<RESET_LED_PIN> o_reset;
 Output<SEQ_OUT_PIN> o_seq;
@@ -67,11 +71,10 @@ bool lastResetState = false;
 
 param lastPotState[5] = {9999, 9999, 9999, 9999, 9999};
 long lastChangeTime = -999999;
-bool displayChange = false;
+bool displayPend = false; // display pending, not actual, parameters
+bool displayBlank = false;  // don't display anything
 bool changeParAct = false; // need to change actual parameters or algorithm
 bool doDisplay = false; // update the display when you get a chance
-
-char* blank = "                ";
 
 // parReq is requested values for next parameters.
 // parPend is requested values modified by constraints, to go into use at
@@ -266,7 +269,7 @@ void Algo::DisParams ()
   char* d_on;
   char* d_off;
   
-  if (displayChange)
+  if (displayPend)
     {
       d_algName = algoList[reqAlgo]->algName;
       for (int ip = 0; ip < 4; ++ip)
@@ -304,15 +307,15 @@ void Algo::DisParams ()
 			  algoList[reqAlgo]->algName.substring(0,3)+String("]"));
   int c = (16-top.length())/2;
   top.toCharArray(line, 17);
-  u8x8.drawString (0, 0, blank);
-  if (displayChange)
+  u8x8.clearLine (0);
+  if (displayPend)
     u8x8.drawString (0, 0, "*");
   u8x8.drawString (c, 0, line);
     
   char l = 1;
   for (int ip = 0; ip < 4; ++ip)
     {
-      u8x8.drawString (0, l, blank);
+      u8x8.clearLine (l);
       d_parName[ip].toCharArray(line, 6);
       u8x8.drawString (0, l, line);
       if (d_parName[ip] != "-N/A-")
@@ -337,7 +340,7 @@ void Algo::DisParams ()
     }
 
   while (l < 8)
-    u8x8.drawString (0, l++, blank);
+    u8x8.clearLine (l++);
 
   l = d_period < 17 ? 7 : 6;
   
@@ -355,7 +358,7 @@ void Algo::DisParams ()
 #if SERIAL
   // Print parameters and sequence to serial monitor
 
-  if (displayChange)
+  if (displayPend)
     Serial.print ("* ");
   Serial.print (d_algName);
   if (algoList[reqAlgo]->algName != d_algName)
@@ -629,13 +632,14 @@ void onClockOn()
     counter = 0;
   if (counter == 0)
     {
-      o_per.write(HIGH);
       if (changeParAct)
 	{
 	  SetupThisPeriod();
 	  doDisplay = true;
 	  changeParAct = false;
 	}
+      if (curAlgo > 0) // no period output if algo is None
+	o_per.write(HIGH);
     }
 
   o_seq.write(algoList[curAlgo]->GetState(counter));
@@ -669,6 +673,7 @@ void setup()
 #if OLED
   u8x8.begin();
   u8x8.setFont(u8x8_font_victoriamedium8_r);
+  u8x8.setFlipMode(FLIPPED);
 #endif  
 #if SERIAL
   Serial.begin(9600);
@@ -706,7 +711,7 @@ void loop()
   if (algoList[reqAlgo]->checkPots())
     {
       lastChangeTime = millis();
-      displayChange = true;
+      displayPend = true;
       doDisplay = true;
       // Check for new algorithm
       unsigned short int newAlgo = constrain (algoList[curAlgo]->PotToParam(-1), 0, NALGO);
@@ -716,14 +721,42 @@ void loop()
       changeParAct = true;
     }
 
-  if (displayChange && (millis() - lastChangeTime > 2000))
+  checkReset();
+
+  // Stop displaying pending values after changes stop for a while
+  
+  if (displayPend && (millis() - lastChangeTime > 2000))
     {
-      displayChange = false;
+      displayPend = false;
       doDisplay = true;
     }
-	       
-  checkReset();
-    
-  if (doDisplay)
+
+  // If the display blanking switch has changed, change the boolean
+  // and if it's now on, blank the display; if it's off, trigger display.
+  // (This affects serial output too.)
+  
+  bool dbValue = i_disp_blank.read();
+  if (dbValue != displayBlank)
+    {
+      displayBlank = dbValue;
+      if (displayBlank)
+	{
+#if OLED
+	/* u8x8.clearDisplay(); */
+	u8x8.setPowerSave(true);
+#endif
+	}
+      else
+	{
+	  doDisplay = true;
+#if OLED
+	  u8x8.setPowerSave(false);
+#endif
+	}
+    }
+
+  // Update the display if needed
+  
+  if (doDisplay && !displayBlank)
       algoList[curAlgo]->DisParams();      
 }
