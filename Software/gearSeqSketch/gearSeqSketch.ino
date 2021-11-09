@@ -12,6 +12,11 @@
 #define SERIAL 0 // nonzero to use serial monitor
 
 #include <assert.h>
+
+#if defined __AVR__
+#include <DirectIO.h> // --> https://github.com/mmarchetti/DirectIO.git
+#endif
+
 #if OLED
 #include <U8g2lib.h>
 #endif
@@ -39,6 +44,15 @@ typedef char stateindex;
 #define CV2_POT  A3
 #define CV3_POT  A1
 #define CV4_POT  A0
+
+// Set up DirectIO
+
+InputLow<CLOCK_PIN> i_clock (false);
+InputLow<RESET_IN_PIN> i_reset (false);
+Output<CLOCK_LED_PIN> o_clock;
+Output<RESET_LED_PIN> o_reset;
+Output<SEQ_OUT_PIN> o_seq;
+Output<PER_OUT_PIN> o_per;
 
 char potlist[5] = {ALG_POT, CV1_POT, CV2_POT, CV3_POT, CV4_POT}; // alg first, then params pots
 
@@ -98,7 +112,7 @@ class Algo
   void UpdatePars();
   virtual void SetParPend();
   virtual void SetStates() {statesPend = 0;}
-  bool GetState(stateindex i, bool getPend = false);
+  bool GetState(stateindex i, long theStates = -999, param thePeriod = 0, param theOffset = 0);
   virtual param Period() const {return parAct[0];}
   virtual param PeriodPend() const {return parPend[0];}
   virtual param Offset() const {return parAct[3];}
@@ -242,7 +256,15 @@ void Algo::DisParams ()
   String d_algName;
   String d_parName[4];
   param d_par[4];
+  long d_states;
   int d_period;
+  int d_offset;
+  char* xchar = "X";
+  char* dotchar = ".";
+  char* ochar = "O";
+  char* dashchar = "-";
+  char* d_on;
+  char* d_off;
   
   if (displayChange)
     {
@@ -252,7 +274,11 @@ void Algo::DisParams ()
 	  d_parName[ip] = algoList[reqAlgo]->parName[ip];
 	  d_par[ip] = parPend[ip];
 	}
+      d_states = statesPend;
       d_period = PeriodPend();
+      d_offset = OffsetPend();
+      d_on = xchar;
+      d_off = dotchar;
     }
   else
     {
@@ -262,7 +288,11 @@ void Algo::DisParams ()
 	  d_parName[ip] = algoList[curAlgo]->parName[ip];
 	  d_par[ip] = parAct[ip];
 	}
+      d_states = statesAct;
       d_period = Period();
+      d_offset = Offset();
+      d_on = ochar;
+      d_off = dashchar;
     }
 
 #if OLED
@@ -314,10 +344,7 @@ void Algo::DisParams ()
   c = 0;
   for (int i = 0; i < d_period; ++i)
     {
-      if (displayChange)
-	u8x8.drawString (c++, l, GetState (i, true) ? "X" : ".");
-      else
-	u8x8.drawString (c++, l, GetState (i) ? "O" : "-");
+      u8x8.drawString (c++, l, GetState (i, d_states, d_period, d_offset) ? d_on : d_off);
       if (c == 16)
 	{
 	  c = 0;
@@ -352,10 +379,7 @@ void Algo::DisParams ()
     }
   Serial.println();
   for (int i = 0; i < d_period; ++i)
-    if (displayChange)
-      Serial.print (GetState (i, true) ? "X" : ".");
-    else
-      Serial.print (GetState (i) ? "O" : "-");    
+    Serial.print (GetState (i, d_states, d_period, d_offset) ? d_on : d_off);
   Serial.println();
 #endif
 
@@ -398,17 +422,21 @@ void Algo::SetParPend()
   parPend[3] = paramConstrain (3, parPend[0], parReq[1], parReq[2], parReq[3]);
 }
 
-bool Algo::GetState(stateindex index, bool getPend)
+bool Algo::GetState(stateindex index, long theStates, param thePeriod, param theOffset)
 {
-  // Get state value with offset. Actual state unless getPend = true,
-  // then do pending state
+  // Get state value with offset. Use specified theStates, thePeriod, and
+  // theOffset, unless theStates is -999, then use actual current ones.
 
-  param p = getPend ? PeriodPend() : Period();
-  long s = getPend ? statesPend : statesAct;
-  param o = getPend ? OffsetPend() : Offset();
-  assert (p <= MAX_PERIOD);
-  stateindex stepIdx = (index + (p-o)) % p;
-  return ((s & (0x80000000 >> stepIdx)) != 0);
+  if (theStates == -999)
+    {
+      theStates = statesAct;
+      thePeriod = Period();
+      theOffset = Offset();
+    }
+  
+  assert (thePeriod <= MAX_PERIOD);
+  stateindex stepIdx = (index + (thePeriod-theOffset)) % thePeriod;
+  return ((theStates & (0x80000000 >> stepIdx)) != 0);
 }
 
 //============================================================
@@ -574,12 +602,12 @@ void checkReset()
 {
   // See if we need to reset this sequence
 
-  bool reset = !digitalRead(RESET_IN_PIN); // inverted input
+  bool reset = i_reset.read();
   if (reset == lastResetState) return;
   lastResetState = reset;
   if (reset)
     counter = -1; // will be zero next clock pulse
-  digitalWrite(RESET_LED_PIN, reset);
+  o_reset.write(reset);
 }
 
 void SetupThisPeriod()
@@ -601,7 +629,7 @@ void onClockOn()
     counter = 0;
   if (counter == 0)
     {
-      digitalWrite(PER_OUT_PIN, HIGH);
+      o_per.write(HIGH);
       if (changeParAct)
 	{
 	  SetupThisPeriod();
@@ -609,21 +637,28 @@ void onClockOn()
 	  changeParAct = false;
 	}
     }
-  
-  digitalWrite(SEQ_OUT_PIN, algoList[curAlgo]->GetState(counter));
+
+  o_seq.write(algoList[curAlgo]->GetState(counter));
 }
 
 void onClockOff()
 {
   // Turn off state and param1 output
-  
-  digitalWrite(SEQ_OUT_PIN, LOW);
-  digitalWrite(PER_OUT_PIN, LOW);
+
+  o_seq.write(LOW);
+  o_per.write(LOW);
 }
 
 void tick() // ISR function
 {
-  sendTick = true;
+  clockState = i_clock.read();
+  if (clockState != lastClockState)
+    {
+      lastClockState = clockState;
+      o_clock.write(clockState);
+      
+      clockState ? onClockOn() : onClockOff();
+    }
 }
 
 
@@ -688,21 +723,7 @@ void loop()
     }
 	       
   checkReset();
-  
-  if (sendTick)
-    {
-      sendTick = false;
-  
-      clockState = !digitalRead(CLOCK_PIN); // inverted input
-      if (clockState != lastClockState)
-	{
-	  lastClockState = clockState;
-	  digitalWrite(CLOCK_LED_PIN, clockState);
-      
-	  clockState ? onClockOn() : onClockOff();
-	}
-    }
-  
+    
   if (doDisplay)
       algoList[curAlgo]->DisParams();      
 }
