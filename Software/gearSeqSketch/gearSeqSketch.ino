@@ -9,7 +9,7 @@
  */
 
 #define OLED 1 // nonzero to use OLED
-#define SERIAL 1 // nonzero to use serial monitor
+#define SERIAL 0 // nonzero to use serial monitor
 
 #include <assert.h>
 #if OLED
@@ -573,7 +573,7 @@ int gcd (int a,int b)
 void checkReset()
 {
   // See if we need to reset this sequence
-  
+
   bool reset = !digitalRead(RESET_IN_PIN); // inverted input
   if (reset == lastResetState) return;
   lastResetState = reset;
@@ -598,8 +598,9 @@ void onClockOn()
   
   counter += 1;
   if (counter >= algoList[curAlgo]->Period())
+    counter = 0;
+  if (counter == 0)
     {
-      counter = 0;
       digitalWrite(PER_OUT_PIN, HIGH);
       if (changeParAct)
 	{
