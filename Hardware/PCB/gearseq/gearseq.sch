@@ -2323,4 +2323,6 @@ Wire Wire Line
 	8550 2250 8750 2250
 Text Notes 8600 3250 0    50   ~ 0
 Display\nblank
+Text Notes 5450 3100 0    50   ~ 0
+RL = LED resistor value depending on taste and LED. The \nTayda A-1553 green LEDs seem to me want about \n470R. The A-261 red about 2k.
 $EndSCHEMATC

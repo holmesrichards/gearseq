@@ -329,8 +329,6 @@ void Algo::DisParams ()
 	  if (d_par[ip] != parReq[ip])
 	    {
 	      str = String(parReq[ip]);
-	      while (str.length() < 4)
-		str = String(" ")+str;
 	      str = String("[") + str + String("]");
 	      str.toCharArray(line, 7);
 	      u8x8.drawString (10, l, line);
