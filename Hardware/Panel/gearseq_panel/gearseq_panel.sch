@@ -365,4 +365,18 @@ $EndComp
 Connection ~ 3500 3200
 Wire Wire Line
 	3500 3200 4350 3200
+$Comp
+L Kosmo:Switch_Hole H14
+U 1 1 6197802A
+P 8800 2400
+F 0 "H14" H 8985 2427 50  0000 L CNN
+F 1 "Switch_Hole" H 8985 2336 50  0000 L CNN
+F 2 "Kosmo_panel:Kosmo_Switch_Hole" H 8825 2660 50  0001 C CNN
+F 3 "" H 8800 2400 50  0001 C CNN
+	1    8800 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8800 2650 8400 2650
+Connection ~ 8400 2650
 $EndSCHEMATC

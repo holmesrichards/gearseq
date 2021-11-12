@@ -21,6 +21,17 @@
      id="defs2">
     <inkscape:path-effect
        effect="bspline"
+       id="path-effect3827"
+       is_visible="true"
+       lpeversion="1"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+    <inkscape:path-effect
+       effect="bspline"
        id="path-effect8853"
        is_visible="true"
        lpeversion="1"
@@ -666,11 +677,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.85"
-     inkscape:cx="237.64706"
-     inkscape:cy="599.41176"
+     inkscape:zoom="0.60104076"
+     inkscape:cx="246.23954"
+     inkscape:cy="470.01804"
      inkscape:document-units="mm"
-     inkscape:current-layer="layer16"
+     inkscape:current-layer="layer14"
      showgrid="false"
      units="in"
      inkscape:window-width="1581"
@@ -683,7 +694,7 @@
      inkscape:snap-midpoints="false"
      inkscape:snap-others="true"
      inkscape:snap-grids="true"
-     inkscape:snap-nodes="false"
+     inkscape:snap-nodes="true"
      inkscape:snap-object-midpoints="true"
      inkscape:snap-center="true"
      inkscape:snap-text-baseline="true"
@@ -692,12 +703,12 @@
      inkscape:object-paths="true"
      inkscape:document-rotation="0"
      inkscape:snap-bbox="true"
-     inkscape:snap-bbox-edge-midpoints="true"
-     inkscape:snap-smooth-nodes="true"
+     inkscape:snap-bbox-edge-midpoints="false"
+     inkscape:snap-smooth-nodes="false"
      inkscape:object-nodes="true"
      inkscape:pagecheckerboard="0"
      inkscape:snap-intersection-paths="true"
-     inkscape:snap-bbox-midpoints="false"
+     inkscape:snap-bbox-midpoints="true"
      inkscape:snap-global="true">
     <inkscape:grid
        type="xygrid"
@@ -1885,13 +1896,6 @@
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Gap sequencer/Hardware/Panel/mockup_9knob.png"
        inkscape:export-xdpi="999.99799"
        inkscape:export-ydpi="999.99799" />
-    <path
-       style="font-variation-settings:normal;vector-effect:none;fill:#00ffff;fill-opacity:1;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
-       d="M 5.6155205,4.9094485 H 4.2218192 v -1.318898 l 0.42126,10e-8 V 3.7086608 H 5.1942605 V 3.5905506 l 0.42126,-4e-7 z"
-       id="path9635"
-       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Gap sequencer/Hardware/Panel/mockup_9knob.png"
-       inkscape:export-xdpi="999.99799"
-       inkscape:export-ydpi="999.99799" />
     <rect
        style="font-variation-settings:normal;opacity:0.353095;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.00520833;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        id="rect7922"
@@ -1899,57 +1903,6 @@
        x="-5.5978041"
        y="-4.7027559"
        height="0.9055118"
-       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Gap sequencer/Hardware/Panel/mockup_9knob.png"
-       inkscape:export-xdpi="999.99799"
-       inkscape:export-ydpi="999.99799"
-       transform="scale(-1)" />
-    <circle
-       style="vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       id="path8748"
-       cx="-5.5170956"
-       cy="-4.8110232"
-       r="0.05905512"
-       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Gap sequencer/Hardware/Panel/mockup_9knob.png"
-       inkscape:export-xdpi="999.99799"
-       inkscape:export-ydpi="999.99799"
-       transform="scale(-1)" />
-    <circle
-       style="vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       id="circle8978"
-       cx="-4.3202448"
-       cy="-4.8110232"
-       r="0.05905512"
-       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Gap sequencer/Hardware/Panel/mockup_9knob.png"
-       inkscape:export-xdpi="999.99799"
-       inkscape:export-ydpi="999.99799"
-       transform="scale(-1)" />
-    <circle
-       style="vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       id="circle8982"
-       cx="-5.5170956"
-       cy="-3.6889756"
-       r="0.05905512"
-       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Gap sequencer/Hardware/Panel/mockup_9knob.png"
-       inkscape:export-xdpi="999.99799"
-       inkscape:export-ydpi="999.99799"
-       transform="scale(-1)" />
-    <circle
-       style="vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       id="circle8986"
-       cx="-4.3202448"
-       cy="-3.6889756"
-       r="0.05905512"
-       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Gap sequencer/Hardware/Panel/mockup_9knob.png"
-       inkscape:export-xdpi="999.99799"
-       inkscape:export-ydpi="999.99799"
-       transform="scale(-1)" />
-    <rect
-       style="font-variation-settings:normal;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.00520833;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
-       id="rect10385"
-       width="1.1582677"
-       height="0.57874018"
-       x="-5.4990234"
-       y="-4.620079"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/Gap sequencer/Hardware/Panel/mockup_9knob.png"
        inkscape:export-xdpi="999.99799"
        inkscape:export-ydpi="999.99799"
@@ -2048,6 +2001,264 @@
          id="circle25362"
          style="opacity:1;vector-effect:none;fill:#666666;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
     </g>
+    <path
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#0000ff;fill-opacity:1;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
+       d="m -10.274517,11.96916 h 1.0748033 v 1.094489 l -0.261811,-10e-7 v -0.07874 h -0.5511803 v 0.07874 l -0.261812,10e-7 z"
+       id="path3730"
+       sodipodi:nodetypes="ccccccccc" />
+    <circle
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#ffff00;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0208333;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+       id="circle9243"
+       cx="-10.195775"
+       cy="12.984908"
+       r="0.068897635" />
+    <circle
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#ffff00;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0208333;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+       id="circle9117"
+       cx="-9.2784548"
+       cy="12.984908"
+       r="0.068897635" />
+    <circle
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#ffff00;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0208333;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+       id="circle9245"
+       cx="-10.195775"
+       cy="12.047899"
+       r="0.068897635" />
+    <circle
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#ffff00;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0208333;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+       id="circle9249"
+       cx="-9.2784548"
+       cy="12.047899"
+       r="0.068897635" />
+    <g
+       id="g10696"
+       style="fill:#808080"
+       transform="translate(1.4340723,17.643383)">
+      <rect
+         style="font-variation-settings:normal;fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.00787402;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
+         id="rect3742"
+         width="0.85590553"
+         height="0.42755905"
+         x="-11.59914"
+         y="-5.4234352" />
+      <circle
+         style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0208333;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+         id="path8967"
+         cx="-11.629848"
+         cy="-4.6584744"
+         r="0.039370079" />
+      <circle
+         style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0208333;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+         id="circle9115"
+         cx="-10.712526"
+         cy="-4.6584744"
+         r="0.039370079" />
+      <circle
+         style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0208333;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+         id="circle9247"
+         cx="-11.629848"
+         cy="-5.5954823"
+         r="0.039370079" />
+      <circle
+         style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0208333;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+         id="circle9251"
+         cx="-10.712526"
+         cy="-5.5954823"
+         r="0.039370079" />
+    </g>
+    <rect
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#cccccc;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0208333;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.993004;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+       id="rect9377"
+       width="0.05905512"
+       height="0.05905512"
+       x="-9.9166431"
+       y="11.998688" />
+    <circle
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0208333;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+       id="path9525"
+       cx="-9.8871155"
+       cy="12.028215"
+       r="0.019685039" />
+    <g
+       id="g9891"
+       transform="translate(1.4397777,17.644532)">
+      <circle
+         style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#cccccc;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0208333;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+         id="path9695"
+         cx="-11.226892"
+         cy="-5.6163168"
+         r="0.02952756" />
+      <circle
+         style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0208333;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+         id="circle9887"
+         cx="-11.226892"
+         cy="-5.6163168"
+         r="0.019685039" />
+    </g>
+    <g
+       id="g9897"
+       transform="translate(1.5397778,17.644532)">
+      <circle
+         style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#cccccc;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0208333;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+         id="circle9893"
+         cx="-11.226892"
+         cy="-5.6163168"
+         r="0.02952756" />
+      <circle
+         style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0208333;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+         id="circle9895"
+         cx="-11.226892"
+         cy="-5.6163168"
+         r="0.019685039" />
+    </g>
+    <g
+       id="g9903"
+       transform="translate(1.6397777,17.644532)">
+      <circle
+         style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#cccccc;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0208333;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+         id="circle9899"
+         cx="-11.226892"
+         cy="-5.6163168"
+         r="0.02952756" />
+      <circle
+         style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0208333;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+         id="circle9901"
+         cx="-11.226892"
+         cy="-5.6163168"
+         r="0.019685039" />
+    </g>
+    <path
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#0000ff;fill-opacity:1;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
+       d="M 5.4572905,4.7952753 H 4.3824876 V 3.7007872 l 0.2618109,10e-8 v 0.07874 h 0.55118 v -0.07874 l 0.261812,-10e-8 z"
+       id="path15518"
+       sodipodi:nodetypes="ccccccccc" />
+    <circle
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#ffff00;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0208333;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+       id="circle15520"
+       cx="-5.3785486"
+       cy="-3.7795277"
+       r="0.068897635"
+       transform="scale(-1)" />
+    <circle
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#ffff00;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0208333;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+       id="circle15522"
+       cx="-4.4612274"
+       cy="-3.7795277"
+       r="0.068897635"
+       transform="scale(-1)" />
+    <circle
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#ffff00;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0208333;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+       id="circle15524"
+       cx="-5.3785486"
+       cy="-4.716536"
+       r="0.068897635"
+       transform="scale(-1)" />
+    <circle
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#ffff00;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0208333;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+       id="circle15526"
+       cx="-4.4612274"
+       cy="-4.716536"
+       r="0.068897635"
+       transform="scale(-1)" />
+    <g
+       id="g15538"
+       style="fill:#808080"
+       transform="rotate(180,-3.1256495,-0.43947342)">
+      <rect
+         style="font-variation-settings:normal;fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.00787402;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
+         id="rect15528"
+         width="0.85590553"
+         height="0.42755905"
+         x="-11.59914"
+         y="-5.4234352" />
+      <circle
+         style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0208333;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+         id="circle15530"
+         cx="-11.629848"
+         cy="-4.6584744"
+         r="0.039370079" />
+      <circle
+         style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0208333;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+         id="circle15532"
+         cx="-10.712526"
+         cy="-4.6584744"
+         r="0.039370079" />
+      <circle
+         style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0208333;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+         id="circle15534"
+         cx="-11.629848"
+         cy="-5.5954823"
+         r="0.039370079" />
+      <circle
+         style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0208333;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+         id="circle15536"
+         cx="-10.712526"
+         cy="-5.5954823"
+         r="0.039370079" />
+    </g>
+    <rect
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#cccccc;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0208333;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.993004;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+       id="rect15540"
+       width="0.05905512"
+       height="0.05905512"
+       x="-5.0994158"
+       y="-4.7657485"
+       transform="scale(-1)" />
+    <circle
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0208333;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+       id="circle15542"
+       cx="-5.0698881"
+       cy="-4.7362208"
+       r="0.019685039"
+       transform="scale(-1)" />
+    <g
+       id="g15548"
+       transform="rotate(180,-3.128502,-0.44004822)">
+      <circle
+         style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#cccccc;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0208333;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+         id="circle15544"
+         cx="-11.226892"
+         cy="-5.6163168"
+         r="0.02952756" />
+      <circle
+         style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0208333;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+         id="circle15546"
+         cx="-11.226892"
+         cy="-5.6163168"
+         r="0.019685039" />
+    </g>
+    <g
+       id="g15554"
+       transform="rotate(180,-3.178502,-0.44004832)">
+      <circle
+         style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#cccccc;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0208333;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+         id="circle15550"
+         cx="-11.226892"
+         cy="-5.6163168"
+         r="0.02952756" />
+      <circle
+         style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0208333;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+         id="circle15552"
+         cx="-11.226892"
+         cy="-5.6163168"
+         r="0.019685039" />
+    </g>
+    <g
+       id="g15560"
+       transform="rotate(180,-3.228502,-0.44004822)">
+      <circle
+         style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#cccccc;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0208333;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+         id="circle15556"
+         cx="-11.226892"
+         cy="-5.6163168"
+         r="0.02952756" />
+      <circle
+         style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0208333;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+         id="circle15558"
+         cx="-11.226892"
+         cy="-5.6163168"
+         r="0.019685039" />
+    </g>
   </g>
   <g
      inkscape:groupmode="layer"
@@ -2115,30 +2326,30 @@
     <text
        xml:space="preserve"
        style="font-size:0.194444px;line-height:0;font-family:Limelight;-inkscape-font-specification:Limelight;text-align:center;text-decoration:none;text-decoration-line:none;text-decoration-color:#000000;text-anchor:middle;fill:#ff0000;stroke-width:0.01;stroke-linejoin:bevel;stop-color:#000000"
-       x="3.9370079"
-       y="2.2440946"
+       x="3.9354413"
+       y="2.2322893"
        id="text3657"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_art.png"
        inkscape:export-xdpi="999.99799"
        inkscape:export-ydpi="999.99799"><tspan
          sodipodi:role="line"
          id="tspan3655"
-         x="3.9370079"
-         y="2.2440946"
+         x="3.9354413"
+         y="2.2322893"
          style="font-size:0.194444px;fill:#000000;stroke-width:0.01">G.E.A.R. SEQUENCER</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:0.194444px;line-height:0;font-family:Limelight;-inkscape-font-specification:Limelight;text-align:center;text-decoration:none;text-decoration-line:none;text-decoration-color:#000000;text-anchor:middle;display:inline;fill:#ff0000;stroke-width:0.01;stroke-linejoin:bevel;stop-color:#000000"
-       x="3.9370079"
-       y="9.6850405"
+       x="3.9382422"
+       y="9.7132692"
        id="text3657-4"
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_art.png"
        inkscape:export-xdpi="999.99799"
        inkscape:export-ydpi="999.99799"><tspan
          sodipodi:role="line"
          id="tspan3655-4"
-         x="3.9370079"
-         y="9.6850405"
+         x="3.9382422"
+         y="9.7132692"
          style="font-size:0.194444px;fill:#000000;stroke-width:0.01">ANALOG OUTPUT</tspan></text>
   </g>
   <g
@@ -4073,7 +4284,7 @@
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.194444px;font-family:'Copasetic NF';-inkscape-font-specification:'Copasetic NF, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:end;writing-mode:lr-tb;text-anchor:end;stroke-width:0.0104167">DISPLAY</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:0.333333px;line-height:0;font-family:Limelight;-inkscape-font-specification:Limelight;text-align:center;text-decoration:none;text-decoration-line:none;text-decoration-color:#000000;text-anchor:middle;fill:#000000;stroke-width:0.01;stroke-linejoin:bevel;stop-color:#000000"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.138889px;line-height:0;font-family:'Copasetic NF';-inkscape-font-specification:'Copasetic NF, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-decoration:none;text-decoration-line:none;text-decoration-color:#000000;text-anchor:middle;fill:#000000;stroke-width:0.01;stroke-linejoin:bevel;stop-color:#000000"
        x="4.9212551"
        y="6.4960656"
        id="text29186"
@@ -4082,12 +4293,12 @@
        inkscape:export-ydpi="999.99799"><tspan
          sodipodi:role="line"
          id="tspan29184"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.138889px;font-family:'Copasetic NF';-inkscape-font-specification:'Copasetic NF, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.01"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.138889px;font-family:'Copasetic NF';-inkscape-font-specification:'Copasetic NF, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.01"
          x="4.9212551"
          y="6.4960656">ON</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:0.333333px;line-height:0;font-family:Limelight;-inkscape-font-specification:Limelight;text-align:center;text-decoration:none;text-decoration-line:none;text-decoration-color:#000000;text-anchor:middle;fill:#000000;stroke-width:0.01;stroke-linejoin:bevel;stop-color:#000000"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.138889px;line-height:0;font-family:'Copasetic NF';-inkscape-font-specification:'Copasetic NF, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-decoration:none;text-decoration-line:none;text-decoration-color:#000000;text-anchor:middle;fill:#000000;stroke-width:0.01;stroke-linejoin:bevel;stop-color:#000000"
        x="4.9218106"
        y="6.9954605"
        id="text30408"
@@ -4096,7 +4307,7 @@
        inkscape:export-ydpi="999.99799"><tspan
          sodipodi:role="line"
          id="tspan30406"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.138889px;font-family:'Copasetic NF';-inkscape-font-specification:'Copasetic NF, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.01"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.138889px;font-family:'Copasetic NF';-inkscape-font-specification:'Copasetic NF, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.01"
          x="4.9218106"
          y="6.9954605">OFF</tspan></text>
   </g>
@@ -4899,57 +5110,6 @@
     </g>
     <rect
        style="font-variation-settings:normal;display:inline;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.00520833;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
-       id="rect11283"
-       width="1.1582677"
-       height="0.57874018"
-       x="-5.4990234"
-       y="-4.6200786"
-       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_holes.png"
-       inkscape:export-xdpi="999.99799"
-       inkscape:export-ydpi="999.99799"
-       transform="scale(-1)" />
-    <circle
-       style="display:inline;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       id="circle12962"
-       cx="-5.5170956"
-       cy="-4.8110232"
-       r="0.05905512"
-       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_holes.png"
-       inkscape:export-xdpi="999.99799"
-       inkscape:export-ydpi="999.99799"
-       transform="scale(-1)" />
-    <circle
-       style="display:inline;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       id="circle12964"
-       cx="-4.3202453"
-       cy="-4.8110232"
-       r="0.05905512"
-       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_holes.png"
-       inkscape:export-xdpi="999.99799"
-       inkscape:export-ydpi="999.99799"
-       transform="scale(-1)" />
-    <circle
-       style="display:inline;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       id="circle12966"
-       cx="-5.5170956"
-       cy="-3.6889756"
-       r="0.05905512"
-       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_holes.png"
-       inkscape:export-xdpi="999.99799"
-       inkscape:export-ydpi="999.99799"
-       transform="scale(-1)" />
-    <circle
-       style="display:inline;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       id="circle12968"
-       cx="-4.3202453"
-       cy="-3.6889756"
-       r="0.05905512"
-       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_holes.png"
-       inkscape:export-xdpi="999.99799"
-       inkscape:export-ydpi="999.99799"
-       transform="scale(-1)" />
-    <rect
-       style="font-variation-settings:normal;display:inline;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.00520833;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
        id="rect17564"
        width="1.1582677"
        height="0.57874018"
@@ -5314,6 +5474,95 @@
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_holes.png"
        inkscape:export-xdpi="999.99799"
        inkscape:export-ydpi="999.99799" />
+    <rect
+       style="font-variation-settings:normal;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.00787402;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
+       id="rect10698"
+       width="1.023622"
+       height="0.5905512"
+       x="-10.247752"
+       y="12.13974" />
+    <circle
+       style="font-variation-settings:normal;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0208333;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
+       id="circle10700"
+       cx="-10.195775"
+       cy="12.984908"
+       r="0.039370079" />
+    <circle
+       style="font-variation-settings:normal;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0208333;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
+       id="circle10702"
+       cx="-9.2784538"
+       cy="12.984908"
+       r="0.039370079" />
+    <circle
+       style="font-variation-settings:normal;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0208333;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
+       id="circle10704"
+       cx="-10.195775"
+       cy="12.0479"
+       r="0.039370079" />
+    <circle
+       style="font-variation-settings:normal;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0208333;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
+       id="circle10706"
+       cx="-9.2784538"
+       cy="12.0479"
+       r="0.039370079" />
+    <rect
+       style="font-variation-settings:normal;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.00787402;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
+       id="rect15562"
+       width="1.023622"
+       height="0.5905512"
+       x="-5.4316993"
+       y="-4.6259847"
+       transform="scale(-1)"
+       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_holes.png"
+       inkscape:export-xdpi="999.99799"
+       inkscape:export-ydpi="999.99799" />
+    <circle
+       style="font-variation-settings:normal;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0208333;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
+       id="circle15564"
+       cx="-5.3785486"
+       cy="-3.7795277"
+       r="0.039370079"
+       transform="scale(-1)"
+       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_holes.png"
+       inkscape:export-xdpi="999.99799"
+       inkscape:export-ydpi="999.99799" />
+    <circle
+       style="font-variation-settings:normal;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0208333;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
+       id="circle15566"
+       cx="-4.4612274"
+       cy="-3.7795277"
+       r="0.039370079"
+       transform="scale(-1)"
+       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_holes.png"
+       inkscape:export-xdpi="999.99799"
+       inkscape:export-ydpi="999.99799" />
+    <circle
+       style="font-variation-settings:normal;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0208333;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
+       id="circle15568"
+       cx="-5.3785486"
+       cy="-4.7165356"
+       r="0.039370079"
+       transform="scale(-1)"
+       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_holes.png"
+       inkscape:export-xdpi="999.99799"
+       inkscape:export-ydpi="999.99799" />
+    <circle
+       style="font-variation-settings:normal;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0208333;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
+       id="circle15570"
+       cx="-4.4612274"
+       cy="-4.7165356"
+       r="0.039370079"
+       transform="scale(-1)"
+       inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Images/gearseq_panel_holes.png"
+       inkscape:export-xdpi="999.99799"
+       inkscape:export-ydpi="999.99799" />
+    <rect
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.0208333;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.993004;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+       id="rect41389"
+       width="0.15552589"
+       height="0.076034479"
+       x="4.7643638"
+       y="4.3307104" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -5373,58 +5622,6 @@
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Kassutronics/Precision ADSR/PrecADSRmod/Images/precadsr-panel.png"
        inkscape:export-xdpi="101.46574"
        inkscape:export-ydpi="101.46574" />
-    <text
-       xml:space="preserve"
-       style="font-size:0.146279px;line-height:0.6;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-color:#000000;text-anchor:start;display:inline;fill:#00ffff;stroke-width:0.01;stroke-linejoin:bevel;stop-color:#000000"
-       x="2.9345605"
-       y="6.1971955"
-       id="text2611-7"
-       transform="scale(1.4967021,0.66813562)"><tspan
-         sodipodi:role="line"
-         id="tspan2609-8"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.0731399px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;text-anchor:start;fill:#00ffff;stroke-width:0.01"
-         x="2.9345605"
-         y="6.1971955">      Gap </tspan><tspan
-         sodipodi:role="line"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.0731399px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;text-anchor:start;fill:#00ffff;stroke-width:0.01"
-         x="2.9345605"
-         y="6.2849631"
-         id="tspan8865-5">Par     11</tspan><tspan
-         sodipodi:role="line"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.0731399px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;text-anchor:start;fill:#00ffff;stroke-width:0.01"
-         x="2.9345605"
-         y="6.3727303"
-         id="tspan12219-7">Trigs    8</tspan><tspan
-         sodipodi:role="line"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.0731399px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;text-anchor:start;fill:#00ffff;stroke-width:0.01"
-         x="2.9345605"
-         y="6.4604979"
-         id="tspan13325-4">Gener    3</tspan><tspan
-         sodipodi:role="line"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.0731399px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;text-anchor:start;fill:#00ffff;stroke-width:0.01"
-         x="2.9345605"
-         y="6.548265"
-         id="tspan11137">Offs    10[  31]</tspan><tspan
-         sodipodi:role="line"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.0731399px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;text-anchor:start;fill:#00ffff;stroke-width:0.01"
-         x="2.9345605"
-         y="6.6360326"
-         id="tspan11139" /><tspan
-         sodipodi:role="line"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.0731399px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;text-anchor:start;fill:#00ffff;stroke-width:0.01"
-         x="2.9345605"
-         y="6.7238002"
-         id="tspan11141" /><tspan
-         sodipodi:role="line"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.0731399px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;text-anchor:start;fill:#00ffff;stroke-width:0.01"
-         x="2.9345605"
-         y="6.8115673"
-         id="tspan12115">O-OO-OO-OOO</tspan><tspan
-         sodipodi:role="line"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.0731399px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;text-anchor:start;fill:#00ffff;stroke-width:0.01"
-         x="2.9345605"
-         y="6.8993349"
-         id="tspan12119" /></text>
     <g
        id="g3230-5"
        style="display:inline"
@@ -6532,70 +6729,6 @@
          d="M -4.1174816,1.1011159 H -4.3236004"
          style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.0208333;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
     </g>
-    <g
-       id="g16154-5"
-       transform="rotate(180,0.64827725,2.9560695)"
-       style="display:inline">
-      <circle
-         cy="1.1011159"
-         cx="-4.220541"
-         id="circle16035-9"
-         style="vector-effect:none;fill:#999999;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-         r="0.10305937" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path16037-7"
-         d="M -4.1174816,1.1011159 H -4.3236004"
-         style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.0208333;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
-    </g>
-    <g
-       id="g16154-53"
-       transform="rotate(180,0.04985195,2.9560695)"
-       style="display:inline">
-      <circle
-         cy="1.1011159"
-         cx="-4.220541"
-         id="circle16035-8"
-         style="vector-effect:none;fill:#999999;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-         r="0.10305937" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path16037-8"
-         d="M -4.1174816,1.1011159 H -4.3236004"
-         style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.0208333;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
-    </g>
-    <g
-       id="g16154-3"
-       transform="rotate(180,0.04985195,2.3950457)"
-       style="display:inline">
-      <circle
-         cy="1.1011159"
-         cx="-4.220541"
-         id="circle16035-1"
-         style="vector-effect:none;fill:#999999;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-         r="0.10305937" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path16037-89"
-         d="M -4.1174816,1.1011159 H -4.3236004"
-         style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.0208333;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
-    </g>
-    <g
-       id="g16154-3-6"
-       transform="rotate(180,0.64827725,2.3950457)"
-       style="display:inline">
-      <circle
-         cy="1.1011159"
-         cx="-4.220541"
-         id="circle16035-1-4"
-         style="vector-effect:none;fill:#999999;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.0104167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-         r="0.10305937" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path16037-89-3"
-         d="M -4.1174816,1.1011159 H -4.3236004"
-         style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.0208333;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
-    </g>
     <text
        xml:space="preserve"
        style="font-size:0.111111px;line-height:1;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-color:#000000;text-anchor:start;display:inline;fill:#00ffff;stroke-width:0.01;stroke-linejoin:bevel;stop-color:#000000"
@@ -6783,28 +6916,6 @@
        inkscape:export-filename="/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Kassutronics/Precision ADSR/PrecADSRmod/Images/precadsr-panel.png"
        inkscape:export-xdpi="101.46574"
        inkscape:export-ydpi="101.46574" />
-    <text
-       xml:space="preserve"
-       style="font-size:0.146279px;line-height:0.6;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-color:#000000;text-anchor:start;display:inline;fill:#ffff00;stroke-width:0.01;stroke-linejoin:bevel;stop-color:#000000"
-       x="2.9346001"
-       y="6.7236667"
-       id="text21911"
-       transform="scale(1.4967021,0.66813562)"><tspan
-         sodipodi:role="line"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.0731399px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;text-anchor:start;fill:#ffff00;stroke-width:0.01"
-         x="2.9346001"
-         y="6.7236667"
-         id="tspan21905">      </tspan><tspan
-         sodipodi:role="line"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.0731399px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;text-anchor:start;fill:#ffff00;stroke-width:0.01"
-         x="2.9346001"
-         y="6.8114343"
-         id="tspan21907">O-OO-OO-OOO</tspan><tspan
-         sodipodi:role="line"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.0731399px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;text-anchor:start;fill:#ffff00;stroke-width:0.01"
-         x="2.9346001"
-         y="6.8992014"
-         id="tspan21909" /></text>
     <g
        transform="matrix(1.000002,0,0,1.000002,3.3464493,0.61418408)"
        id="g25384"
@@ -6829,6 +6940,287 @@
          x="1.5427476"
          y="5.8563037" />
     </g>
+    <g
+       id="g3772"
+       transform="matrix(0.75171498,0,0,0.75168394,-7.0231313,12.157217)"
+       style="display:inline;stroke-width:1.33032">
+      <circle
+         cy="1.1011159"
+         cx="-4.220541"
+         id="circle3768"
+         style="vector-effect:none;fill:#999999;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.0138576;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         r="0.10305937" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path3770"
+         d="M -4.1174816,1.1011159 H -4.3236004"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.0277149;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    </g>
+    <g
+       id="g10978"
+       transform="matrix(0.75171498,0,0,0.75168394,-6.1058101,12.157217)"
+       style="display:inline;stroke-width:1.33032">
+      <circle
+         cy="1.1011159"
+         cx="-4.220541"
+         id="circle10974"
+         style="vector-effect:none;fill:#999999;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.0138576;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         r="0.10305937" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path10976"
+         d="M -4.1174816,1.1011159 H -4.3236004"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.0277149;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    </g>
+    <g
+       id="g10984"
+       transform="matrix(0.75171498,0,0,0.75168394,-6.1058101,11.220209)"
+       style="display:inline;stroke-width:1.33032">
+      <circle
+         cy="1.1011159"
+         cx="-4.220541"
+         id="circle10980"
+         style="vector-effect:none;fill:#999999;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.0138576;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         r="0.10305937" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path10982"
+         d="M -4.1174816,1.1011159 H -4.3236004"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.0277149;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    </g>
+    <g
+       id="g10990"
+       transform="matrix(0.75171498,0,0,0.75168394,-7.0231313,11.220209)"
+       style="display:inline;stroke-width:1.33032">
+      <circle
+         cy="1.1011159"
+         cx="-4.220541"
+         id="circle10986"
+         style="vector-effect:none;fill:#999999;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.0138576;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         r="0.10305937" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path10988"
+         d="M -4.1174816,1.1011159 H -4.3236004"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.0277149;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:0.130226px;line-height:0.6;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-color:#000000;text-anchor:start;display:inline;fill:#00ffff;stroke-width:0.00999995;stroke-linejoin:bevel;stop-color:#000000"
+       x="-7.2898216"
+       y="17.088058"
+       id="text11010"
+       transform="scale(1.3944194,0.71714436)"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.0651134px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;text-anchor:start;fill:#00ffff;stroke-width:0.00999995"
+         x="-7.2898216"
+         y="17.088058"
+         id="tspan11008">Lorem ipsum </tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.0651134px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;text-anchor:start;fill:#00ffff;stroke-width:0.00999995"
+         x="-7.2898216"
+         y="17.166195"
+         id="tspan19073">dolor sit amet, </tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.0651134px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;text-anchor:start;fill:#00ffff;stroke-width:0.00999995"
+         x="-7.2898216"
+         y="17.244329"
+         id="tspan21645">consectetur </tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.0651134px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;text-anchor:start;fill:#00ffff;stroke-width:0.00999995"
+         x="-7.2898216"
+         y="17.322466"
+         id="tspan19075">adipiscing elit,</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.0651134px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;text-anchor:start;fill:#00ffff;stroke-width:0.00999995"
+         x="-7.2898216"
+         y="17.4006"
+         id="tspan19077">sed do eiusmod </tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.0651134px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;text-anchor:start;fill:#00ffff;stroke-width:0.00999995"
+         x="-7.2898216"
+         y="17.478737"
+         id="tspan22369">tempor. Lorem</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.0651134px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;text-anchor:start;fill:#00ffff;stroke-width:0.00999995"
+         x="-7.2898216"
+         y="17.556871"
+         id="tspan30113">ipsum dolor sit </tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.0651134px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;text-anchor:start;fill:#00ffff;stroke-width:0.00999995"
+         x="-7.2898216"
+         y="17.635008"
+         id="tspan30119">amet, </tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.0651134px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;text-anchor:start;fill:#00ffff;stroke-width:0.00999995"
+         x="-7.2898216"
+         y="17.713142"
+         id="tspan25387" /></text>
+    <text
+       xml:space="preserve"
+       style="font-size:0.130226px;line-height:0.6;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-color:#000000;text-anchor:start;display:inline;fill:#ffff00;stroke-width:0.00999995;stroke-linejoin:bevel;stop-color:#000000"
+       x="-7.2898216"
+       y="17.088058"
+       id="text11066"
+       transform="scale(1.3944194,0.71714436)"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.0651134px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;text-anchor:start;fill:#ffff00;stroke-width:0.00999995"
+         x="-7.2898216"
+         y="17.088058"
+         id="tspan28423">Lorem ipsum </tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.0651134px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;text-anchor:start;fill:#ffff00;stroke-width:0.00999995"
+         x="-7.2898216"
+         y="17.166195"
+         id="tspan37601">dolor sit amet, </tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.0651134px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;text-anchor:start;fill:#ffff00;stroke-width:0.00999995"
+         x="-7.2898216"
+         y="17.244329"
+         id="tspan37603" /></text>
+    <g
+       id="g15578"
+       transform="matrix(-0.75171498,0,0,-0.75168394,2.2059051,4.6072185)"
+       style="display:inline;stroke-width:1.33032">
+      <circle
+         cy="1.1011159"
+         cx="-4.220541"
+         id="circle15574"
+         style="vector-effect:none;fill:#999999;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.0138576;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         r="0.10305937" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path15576"
+         d="M -4.1174816,1.1011159 H -4.3236004"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.0277149;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    </g>
+    <g
+       id="g15584"
+       transform="matrix(-0.75171498,0,0,-0.75168394,1.288584,4.6072185)"
+       style="display:inline;stroke-width:1.33032">
+      <circle
+         cy="1.1011159"
+         cx="-4.220541"
+         id="circle15580"
+         style="vector-effect:none;fill:#999999;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.0138576;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         r="0.10305937" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path15582"
+         d="M -4.1174816,1.1011159 H -4.3236004"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.0277149;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    </g>
+    <g
+       id="g15590"
+       transform="matrix(-0.75171498,0,0,-0.75168394,1.288584,5.5442265)"
+       style="display:inline;stroke-width:1.33032">
+      <circle
+         cy="1.1011159"
+         cx="-4.220541"
+         id="circle15586"
+         style="vector-effect:none;fill:#999999;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.0138576;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         r="0.10305937" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path15588"
+         d="M -4.1174816,1.1011159 H -4.3236004"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.0277149;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    </g>
+    <g
+       id="g15596"
+       transform="matrix(-0.75171498,0,0,-0.75168394,2.2059051,5.5442265)"
+       style="display:inline;stroke-width:1.33032">
+      <circle
+         cy="1.1011159"
+         cx="-4.220541"
+         id="circle15592"
+         style="vector-effect:none;fill:#999999;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.0138576;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         r="0.10305937" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path15594"
+         d="M -4.1174816,1.1011159 H -4.3236004"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.0277149;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:0.130226px;line-height:0.6;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-color:#000000;text-anchor:start;display:inline;fill:#00ffff;stroke-width:0.00999995;stroke-linejoin:bevel;stop-color:#000000"
+       x="3.2214432"
+       y="5.7890515"
+       id="text15616"
+       transform="scale(1.3944194,0.71714436)"><tspan
+         sodipodi:role="line"
+         id="tspan15598"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.0651134px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;text-anchor:start;fill:#00ffff;stroke-width:0.00999995"
+         x="3.2214432"
+         y="5.7890515">      Gap </tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.0651134px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;text-anchor:start;fill:#00ffff;stroke-width:0.00999995"
+         x="3.2214432"
+         y="5.867187"
+         id="tspan15600">Par     11</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.0651134px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;text-anchor:start;fill:#00ffff;stroke-width:0.00999995"
+         x="3.2214432"
+         y="5.9453225"
+         id="tspan15602">Trigs    8</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.0651134px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;text-anchor:start;fill:#00ffff;stroke-width:0.00999995"
+         x="3.2214432"
+         y="6.0234585"
+         id="tspan15604">Gener    3</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.0651134px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;text-anchor:start;fill:#00ffff;stroke-width:0.00999995"
+         x="3.2214432"
+         y="6.101594"
+         id="tspan15606">Offs    10[  31]</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.0651134px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;text-anchor:start;fill:#00ffff;stroke-width:0.00999995"
+         x="3.2214432"
+         y="6.1797295"
+         id="tspan15608" /><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.0651134px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;text-anchor:start;fill:#00ffff;stroke-width:0.00999995"
+         x="3.2214432"
+         y="6.257865"
+         id="tspan15610" /><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.0651134px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;text-anchor:start;fill:#00ffff;stroke-width:0.00999995"
+         x="3.2214432"
+         y="6.3360009"
+         id="tspan15612">O-OO-OO-OOO</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.0651134px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;text-anchor:start;fill:#00ffff;stroke-width:0.00999995"
+         x="3.2214432"
+         y="6.4141364"
+         id="tspan15614" /></text>
+    <text
+       xml:space="preserve"
+       style="font-size:0.130226px;line-height:0.6;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-color:#000000;text-anchor:start;display:inline;fill:#ffff00;stroke-width:0.00999995;stroke-linejoin:bevel;stop-color:#000000"
+       x="3.2213669"
+       y="6.179533"
+       id="text15626"
+       transform="scale(1.3944194,0.71714436)"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.0651134px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;text-anchor:start;fill:#ffff00;stroke-width:0.00999995"
+         x="3.2213669"
+         y="6.179533"
+         id="tspan15618">      </tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.0651134px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;text-anchor:start;fill:#ffff00;stroke-width:0.00999995"
+         x="3.2213669"
+         y="6.2576685"
+         id="tspan15620" /><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.0651134px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;text-anchor:start;fill:#ffff00;stroke-width:0.00999995"
+         x="3.2213669"
+         y="6.335804"
+         id="tspan15622">O-OO-OO-OOO</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:0.0651134px;font-family:'Bitstream Vera Sans Mono';-inkscape-font-specification:'Bitstream Vera Sans Mono, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;text-anchor:start;fill:#ffff00;stroke-width:0.00999995"
+         x="3.2213669"
+         y="6.41394"
+         id="tspan15624" /></text>
   </g>
   <g
      inkscape:groupmode="layer"
