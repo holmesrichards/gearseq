@@ -2231,7 +2231,7 @@ Wire Wire Line
 Wire Wire Line
 	8550 2250 8750 2250
 Text Notes 5450 3100 0    50   ~ 0
-RL = LED resistor value depending on taste and LED. The \nTayda A-1553 green LEDs seem to me want about \n470R. The A-261 red about 2k.
+RL = LED resistor value depending on taste and LED. The \nTayda A-1553 green LEDs seem to me to want about \n470R. The A-1554 superbright red about 2k.
 $Comp
 L ao_symbols:1N5817 D4
 U 1 1 616B3EDF
@@ -2311,4 +2311,6 @@ Wire Wire Line
 	1500 2300 1500 2350
 Wire Wire Line
 	1500 2350 1550 2350
+Text Notes 5450 3500 0    38   ~ 0
+A-1554 superbright red: Vf = 1.9, R = 2k, I = (5-1.9)/2000 = 1.5 mA\n\nA-1553 green: Vf = 2.3, R = 470, I = (5-2.3)/470 = 5.7 mA\n\nSummed current is 1.6+3*5.7 = 18.7 mA, well under 30A max per port.
 $EndSCHEMATC
