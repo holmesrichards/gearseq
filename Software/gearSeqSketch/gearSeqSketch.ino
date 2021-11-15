@@ -69,6 +69,8 @@ bool lastResetState = false;
 
 // Pots handling
 
+enum change {noChange, someChange, specialChange};
+
 param lastPotState[5] = {9999, 9999, 9999, 9999, 9999};
 long lastChangeTime = -999999;
 bool displayPend = false; // display pending, not actual, parameters
@@ -108,7 +110,7 @@ class Algo
  public:
   Algo() {Setup();}
   virtual void Setup();
-  bool checkPots();
+  change checkPots();
   param PotToParam(int i, int v=-1);
   virtual param paramConstrain (int i, param p0, param p1, param p2, param p3);
   void DisParams();
@@ -197,27 +199,30 @@ void Algo::Setup()
     delta[i+1] = int(1024./(parMax[i]-parMin[i]+1));
 }
 
-bool Algo::checkPots()
+change Algo::checkPots()
 {
   // Read pots and store new values if changed enough
+  // If anything changed return someChange, otherwise noChange
+  // unless only change was smallish change in ADC algo param 2
+  // then return specialChange
   
-  bool somethingChanged = false;
+  change whatChanged = noChange;
+  bool onlySmallADCValChange = true;
   for (int ipot = 0; ipot < 5; ++ipot)
     {
       int potState = analogRead (potlist[ipot]);
-      if (abs(int(potState)-int(lastPotState[ipot])) < delta[ipot])
+      int ch = abs(int(potState)-int(lastPotState[ipot]));
+      if (ch < delta[ipot])
 	continue;
-      Serial.print (ipot);
-      Serial.print (" ");
-      Serial.print (potState);
-      Serial.print (" ");
-      Serial.print (lastPotState[ipot]);
-      Serial.print (" ");
-      Serial.println (delta[ipot]);
       lastPotState[ipot] = potState;
-      somethingChanged = true;
+      if (reqAlgo != 3 || ipot != 2 || ch > 10)
+	onlySmallADCValChange = false;
+      whatChanged = someChange;
     }
-  return somethingChanged;
+  if (whatChanged == someChange && onlySmallADCValChange)
+    return specialChange;
+  else
+    return whatChanged;
 }
 
 
@@ -227,6 +232,7 @@ param Algo::PotToParam(int i, int v)
   // i == -1 for algorithm pot, 0-3 for parameter pots
   // If v < 0 use lastPotState[i+i] else use v for pot value
 
+  assert (i >= -1 && i < 4);
   if (v < 0)
     v = lastPotState[i+1];
   if (i == -1) // algorithm pot
@@ -268,7 +274,7 @@ void Algo::DisParams ()
   char* dashchar = "-";
   char* d_on;
   char* d_off;
-  
+
   if (displayPend)
     {
       d_algName = algoList[reqAlgo]->algName;
@@ -300,7 +306,7 @@ void Algo::DisParams ()
 
 #if OLED
   String str;
-  char line[17];
+  char line[32];
 
   String top = d_algName + (algoList[reqAlgo]->algName == d_algName ? "" :
 			  String ("[")+
@@ -341,7 +347,6 @@ void Algo::DisParams ()
     u8x8.clearLine (l++);
 
   l = d_period < 17 ? 7 : 6;
-  
   c = 0;
   for (int i = 0; i < d_period; ++i)
     {
@@ -352,6 +357,7 @@ void Algo::DisParams ()
 	  l++;
 	}
     }
+
 #endif
 #if SERIAL
   // Print parameters and sequence to serial monitor
@@ -476,15 +482,18 @@ void GapAlgo::SetParPend()
 
 void GapAlgo::SetStates()
 {
-  assert (parPend[0] <= MAX_PERIOD);
-
-  stateindex index = 0;
-  statesPend = 0x80000000;
-  
-  for (int var = 1; var < parPend[1]; ++var)
+  if (parPend[1] == 0)
+    statesPend = 0x0;
+  else
     {
-      index = (index + parPend[2]) % parPend[0];
-      statesPend |= 0x80000000 >> index;
+      stateindex index = 0;
+      statesPend = 0x80000000;
+
+      for (int var = 1; var < parPend[1]; ++var)
+	{
+	  index = (index + parPend[2]) % parPend[0];
+	  statesPend |= 0x80000000 >> index;
+	}
     }
 }
 
@@ -685,20 +694,26 @@ void setup()
   pinMode(RESET_IN_PIN, INPUT);
   pinMode(CLOCK_PIN, INPUT);
 
-  attachInterrupt (digitalPinToInterrupt(CLOCK_PIN), tick, CHANGE);
-
   algoList[0] = new Algo();
   algoList[1] = new GapAlgo();
   algoList[2] = new EuclidAlgo();
   algoList[3] = new ADCAlgo();
   algoList[4] = new RandAlgo();
-  lastPotState[0] = analogRead (potlist[0]);
-  reqAlgo = constrain (algoList[curAlgo]->PotToParam(-1), 0, NALGO);
-  algoList[reqAlgo]->checkPots();
+
+  for (int ipot = 0; ipot < 5; ++ipot)
+    lastPotState[ipot] = analogRead (potlist[ipot]);
+
+  reqAlgo = constrain (algoList[0]->PotToParam(-1), 0, NALGO);
+  curAlgo = reqAlgo;
+  
   algoList[reqAlgo]->UpdatePars();
   SetupThisPeriod();
-  changeParAct = false;
+  assert (curAlgo >= 0 && curAlgo < 5);
   algoList[curAlgo]->DisParams();
+  changeParAct = false;
+
+  attachInterrupt (digitalPinToInterrupt(CLOCK_PIN), tick, CHANGE);
+
 #if SERIAL
   Serial.println("setup done ");
 #endif
@@ -706,10 +721,16 @@ void setup()
 
 void loop()
 {
-  if (algoList[reqAlgo]->checkPots())
+  change whatChanged = algoList[reqAlgo]->checkPots();
+  if (whatChanged != noChange)
     {
-      lastChangeTime = millis();
-      displayPend = true;
+      if (whatChanged == someChange)
+	{
+	  // Turn on pending values display and update change time only
+	  // if change was NOT just ADC algo channel 2 by a small amount
+	  displayPend = true;
+	  lastChangeTime = millis();
+	}
       doDisplay = true;
       // Check for new algorithm
       unsigned short int newAlgo = constrain (algoList[curAlgo]->PotToParam(-1), 0, NALGO);
@@ -740,7 +761,6 @@ void loop()
       if (displayBlank)
 	{
 #if OLED
-	/* u8x8.clearDisplay(); */
 	u8x8.setPowerSave(true);
 #endif
 	}
