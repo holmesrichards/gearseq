@@ -8,27 +8,21 @@
 
  */
 
-#define OLED 1 // nonzero to use OLED
-#define FLIPPED 1 // nonzero to flip display vertically
-//                   (for yellow stripe at bottom)
-#define SERIAL 0 // nonzero to use serial monitor
+#define OLED    1 // nonzero to use OLED
+#define FLIPPED 1 // nonzero to flip display vertically (yellow stripe at bottom)
+#define SERIAL  0 // nonzero to use serial monitor
+#define MAX_PERIOD  32 // can be reduced; increasing would require significant changes
+#define NALGO 4   // number of algorithms (other than None)
 
-#include <assert.h>
+#include <assert.h>   // for assert macro
 
-#if defined __AVR__
+#if defined __AVR__   // use DirectIO library for fast digital read/write
 #include <DirectIO.h> // --> https://github.com/mmarchetti/DirectIO.git
 #endif
 
 #if OLED
-#include <U8g2lib.h>
-#endif
-
-#define MAX_PERIOD          32 // can be reduced; increasing would require significant changes
-
-#define NALGO 4
-
-#if OLED
-U8X8_SSD1306_128X64_NONAME_HW_I2C u8x8;
+#include <U8g2lib.h>  // library for drawing to OLED
+U8X8_SSD1306_128X64_NONAME_HW_I2C u8x8;  // object for OLED control
 #endif
 
 typedef unsigned short int param;
@@ -50,48 +44,51 @@ typedef char stateindex;
 
 // Set up DirectIO
 
-InputLow<CLOCK_PIN> i_clock (false);
-InputLow<RESET_IN_PIN> i_reset (false);
-InputLow<DISP_BLANK_PIN> i_disp_blank (true); // internal pullup on
-Output<CLOCK_LED_PIN> o_clock;
-Output<RESET_LED_PIN> o_reset;
-Output<SEQ_OUT_PIN> o_seq;
-Output<PER_OUT_PIN> o_per;
+volatile InputLow<CLOCK_PIN>      i_clock (false);
+InputLow<RESET_IN_PIN>            i_reset (false);
+InputLow<DISP_BLANK_PIN>          i_disp_blank (true); // internal pullup on
+volatile Output<CLOCK_LED_PIN>    o_clock;
+Output<RESET_LED_PIN>             o_reset;
+volatile Output<SEQ_OUT_PIN>      o_seq;
+volatile Output<PER_OUT_PIN>      o_per;
+
+// current algorithm in use and requested next algorithm
+volatile unsigned short int curAlgo = 0;
+volatile unsigned short int reqAlgo = 0;
+
+// Potentiometers
 
 char potlist[5] = {ALG_POT, CV1_POT, CV2_POT, CV3_POT, CV4_POT}; // alg first, then params pots
-
-int counter = -1;                 // Current step #
-
-volatile bool sendTick = false;
-bool clockState = false;
-bool lastClockState = false;
-bool lastResetState = false;
-
-// Pots handling
 
 enum change {noChange, someChange, specialChange};
 
 param lastPotState[5] = {9999, 9999, 9999, 9999, 9999};
 long lastChangeTime = -999999;
-bool displayPend = false; // display pending, not actual, parameters
-bool displayBlank = false;  // don't display anything
-bool changeParAct = false; // need to change actual parameters or algorithm
-bool doDisplay = false; // update the display when you get a chance
+
+// Sequence control
+volatile int counter = -1;            // Current step #
+volatile bool clockState = false;     // True if clock pulse high
+volatile bool lastClockState = false; // old clockState value
+bool lastResetState = false;          // old reset value
+volatile bool changeParAct = false;   // need to change actual parameters or algorithm
 
 // parReq is requested values for next parameters.
 // parPend is requested values modified by constraints, to go into use at
 // start of next period.
 // parAct is actual parameter values in use.
 
-param parReq[4] = {9999, 9999, 9999, 9999};    // requested values
-param parPend[4] = {9999, 9999, 9999, 9999};    // requested values
-param parAct[4]; // actual values
-long statesPend; // bits for the pattern
-long statesAct;
+param parReq[4] = {9999, 9999, 9999, 9999};           // requested values
+volatile param parPend[4] = {9999, 9999, 9999, 9999}; // constrained values pending
+volatile param parAct[4];                             // actual current values
+volatile long statesPend;                             // bits for the pending pattern
+volatile long statesAct;                              // bits for the current pattern
 
-// current algorithm in use and requested next algorithm
-unsigned short int curAlgo = 0;
-unsigned short int reqAlgo = 0;
+// Display control
+bool displayPend = false;        // display pending, not actual, parameters
+bool displayBlank = false;       // don't display anything
+volatile bool doDisplay = false; // update the display when you get a chance
+
+// Forward declarations
 
 int gcd (int a,int b);
 void checkReset();
@@ -102,38 +99,48 @@ void tick();
 void setup();
 void loop();
 
-
+//============================================================
+//
+// Main algorithm class and derivatives
+//
 //============================================================
 
 class Algo
 {
+  // Implements an sequence creating algorithm, its parameters, and
+  // methods relating to it
+  
  public:
   Algo() {Setup();}
-  virtual void Setup();
-  change checkPots();
-  param PotToParam(int i, int v=-1);
+  virtual void Setup();                        // Set up a new Algo object
+  change checkPots();                          // Read the pots and note changes
+  param PotToParam(int i);                     // Convert pot to parameter
   virtual param paramConstrain (int i, param p0, param p1, param p2, param p3);
-  void DisParams();
-  void UpdatePars();
-  virtual void SetParPend();
-  virtual void SetStates() {statesPend = 0;}
+  //                                           // Constrain parameter values
+  void DisParams();                            // OLED display
+  void UpdatePars();                           // Set requesteed params
+  virtual void SetParPend();                   // Set constrained params
+  virtual void SetStates() {statesPend = 0;}   // Set the trigger pattern
   bool GetState(stateindex i, long theStates = -999, param thePeriod = 0, param theOffset = 0);
+  //                                           // Read the trigger pattern
   virtual param Period() const {return parAct[0];}
   virtual param PeriodPend() const {return parPend[0];}
   virtual param Offset() const {return parAct[3];}
   virtual param OffsetPend() const {return parPend[3];}
-  String algName;
-  String parName[4];
-  param parMin[4];
-  param parMax[4];
-  short unsigned int delta[5]; // pot range corresponding to change
-  // of algo or parameter
+  String algName;               // Name of this algorithm
+  String parName[4];            // Names of four parameters
+  param parMin[4];              // Minimum for requested parameter value
+  param parMax[4];              // Maximum for requested parameter value
+  short unsigned int delta[5];  // pot range corresponding to change
+  //                            // of algo or parameter
 };
 
 //============================================================
 
 class GapAlgo: public Algo
 {
+  // Gap algorithm
+  
  public:
   GapAlgo() {Setup();}
   void Setup();
@@ -146,6 +153,8 @@ class GapAlgo: public Algo
 
 class EuclidAlgo: public Algo
 {
+  // Euclidean algorithm
+  
  public:
   EuclidAlgo() {Setup();}
   void Setup();
@@ -156,6 +165,8 @@ class EuclidAlgo: public Algo
 
 class ADCAlgo: public Algo
 {
+  // ADC algorithm
+  
  public:
   ADCAlgo() {Setup();}
   void Setup();
@@ -167,6 +178,8 @@ class ADCAlgo: public Algo
 
 class RandAlgo: public Algo
 {
+  // Random algorithm
+  
  public:
   RandAlgo() {Setup();}
   void Setup();
@@ -175,7 +188,8 @@ class RandAlgo: public Algo
 
 //============================================================
 
-Algo* algoList[5];
+volatile Algo* algoList[5];  // Vector of pointers to singleton algorithms:
+//                           // None, Gap, Euclidean, ADC, Random
 
 //============================================================
 
@@ -194,10 +208,13 @@ void Algo::Setup()
   parMax[2] = 31;
   parMin[3] = 0;
   parMax[3] = MAX_PERIOD-1;
+  // Significant pot change is width corresponding to change of parameter
   delta[0] = int(1024./(NALGO+1));
   for (int i = 0; i < 4; ++i)
     delta[i+1] = int(1024./(parMax[i]-parMin[i]+1));
 }
+
+//==============================
 
 change Algo::checkPots()
 {
@@ -225,24 +242,28 @@ change Algo::checkPots()
     return whatChanged;
 }
 
+//==============================
 
-param Algo::PotToParam(int i, int v)
+param Algo::PotToParam(int i)
 {
   // Map pot value to parMin..parMax
   // i == -1 for algorithm pot, 0-3 for parameter pots
-  // If v < 0 use lastPotState[i+i] else use v for pot value
 
   assert (i >= -1 && i < 4);
-  if (v < 0)
-    v = lastPotState[i+1];
+  v = lastPotState[i+1];
   if (i == -1) // algorithm pot
     return param(float(v)/(1024./(NALGO+1))); // 0 to NALGO
   else
     return param(float(v)/(1024./(parMax[i]-parMin[i]+1))+parMin[i]);
 }
 
+//==============================
+
 param Algo::paramConstrain (int i, param p0, param p1, param p2, param p3)
 {
+  // Constrain the ith requested parameter value, given value of it
+  // and other three; this is used as the pending value of that parameter
+  
   switch (i)
     {
     case 0:
@@ -260,8 +281,13 @@ param Algo::paramConstrain (int i, param p0, param p1, param p2, param p3)
     }
 }
 
+//==============================
+
 void Algo::DisParams ()
 {
+  // Display algorithm, parameters, and trigger pattern on OLED
+  // and/or serial monitor
+  
   String d_algName;
   String d_parName[4];
   param d_par[4];
@@ -275,8 +301,12 @@ void Algo::DisParams ()
   char* d_on;
   char* d_off;
 
+  // collect the data to be shown
+  
   if (displayPend)
     {
+      // For pending parameters display (while a pot is being changed)
+      
       d_algName = algoList[reqAlgo]->algName;
       for (int ip = 0; ip < 4; ++ip)
 	{
@@ -291,6 +321,8 @@ void Algo::DisParams ()
     }
   else
     {
+      // For actual parameters display (while things are static)
+      
       d_algName = algoList[curAlgo]->algName;
       for (int ip = 0; ip < 4; ++ip)
 	{
@@ -305,9 +337,12 @@ void Algo::DisParams ()
     }
 
 #if OLED
+
+  // OLED update
+
+  // Top line, algorithm name and "*" for pending display
   String str;
   char line[32];
-
   String top = d_algName + (algoList[reqAlgo]->algName == d_algName ? "" :
 			  String ("[")+
 			  algoList[reqAlgo]->algName.substring(0,3)+String("]"));
@@ -317,7 +352,9 @@ void Algo::DisParams ()
   if (displayPend)
     u8x8.drawString (0, 0, "*");
   u8x8.drawString (c, 0, line);
-    
+
+  // Next four lines, parameters — actual or pending — and requested
+  // values if different
   char l = 1;
   for (int ip = 0; ip < 4; ++ip)
     {
@@ -343,9 +380,11 @@ void Algo::DisParams ()
       ++l;
     }
 
+  // Clear the following lines
   while (l < 8)
     u8x8.clearLine (l++);
 
+  // Last one or two lines are the trigger pattern
   l = d_period < 17 ? 7 : 6;
   c = 0;
   for (int i = 0; i < d_period; ++i)
@@ -362,13 +401,16 @@ void Algo::DisParams ()
 #if SERIAL
   // Print parameters and sequence to serial monitor
 
+  // Name and "*" for pending display
   if (displayPend)
     Serial.print ("* ");
   Serial.print (d_algName);
   if (algoList[reqAlgo]->algName != d_algName)
     Serial.print (String ("[")+algoList[reqAlgo]->algName.substring(0,3)+String("]"));
   Serial.print (" ");
-  
+
+  // Parameters — actual or pending — and requested values if
+  // different
   for (int ip = 0; ip < 4; ++ip)
     {
       Serial.print (d_parName[ip]);
@@ -385,6 +427,8 @@ void Algo::DisParams ()
       Serial.print (" ");
     }
   Serial.println();
+
+  // Trigger pattern
   for (int i = 0; i < d_period; ++i)
     Serial.print (GetState (i, d_states, d_period, d_offset) ? d_on : d_off);
   Serial.println();
@@ -393,9 +437,12 @@ void Algo::DisParams ()
   doDisplay = false;
 }
 
+//==============================
+
 void Algo::UpdatePars()
 {
-  // Get new values for requested parameters
+  // Get values for requested parameters, and if any have changed,
+  // update the pending parameters (and algorithm) and trigger pattern
 
   bool changed = false; // if any par different than last time
   bool changedNotOffset = false; // if any of pars 0-3 different
@@ -420,8 +467,12 @@ void Algo::UpdatePars()
     }
 }
 
+//==============================
+
 void Algo::SetParPend()
 {
+  // Set pending parameters from constrained requested parameters
+  
   parPend[0] = paramConstrain (0, parReq[0], parReq[1], parReq[2], parReq[3]);
   // Other params may be constrained by constrained period
   parPend[1] = paramConstrain (1, parPend[0], parReq[1], parReq[2], parReq[3]);
@@ -429,11 +480,15 @@ void Algo::SetParPend()
   parPend[3] = paramConstrain (3, parPend[0], parReq[1], parReq[2], parReq[3]);
 }
 
+//==============================
+
 bool Algo::GetState(stateindex index, long theStates, param thePeriod, param theOffset)
 {
   // Get state value with offset. Use specified theStates, thePeriod, and
   // theOffset, unless theStates is -999, then use actual current ones.
 
+  // Pettern is stored as a 32 bit word, one bit per sequencer step
+  
   if (theStates == -999)
     {
       theStates = statesAct;
@@ -460,8 +515,13 @@ void GapAlgo::Setup()
   delta[3] = int(1024./(parMax[2]-parMin[2]+1));
 }
 
+//==============================
+
 param GapAlgo::paramConstrain (int i, param p0, param p1, param p2, param p3)
 {
+  // Constrain the ith requested parameter value, given value of it
+  // and other three; this is used as the pending value of that parameter
+  
   if (i == 1)
     return constrain (p1, parMin[1], p0+p2 > 0 ? p0/gcd(p0,p2) : p0);
   else if (i == 2)
@@ -470,8 +530,12 @@ param GapAlgo::paramConstrain (int i, param p0, param p1, param p2, param p3)
     return Algo::paramConstrain (i, p0, p1, p2, p3);
 }
 
+//==============================
+
 void GapAlgo::SetParPend()
 {
+  // Set pending parameters from constrained requested parameters
+  
   parPend[0] = paramConstrain (0, parReq[0], parReq[1], parReq[2], parReq[3]);
   // Other params may be constrained by constrained period
   parPend[2] = paramConstrain (2, parPend[0], parReq[1], parReq[2], parReq[3]);
@@ -480,8 +544,13 @@ void GapAlgo::SetParPend()
   parPend[3] = paramConstrain (3, parPend[0], parReq[1], parPend[2], parReq[3]);
 }
 
+//==============================
+
 void GapAlgo::SetStates()
 {
+  // Set the trigger pattern using the gap algorithm
+  // Pettern is stored as a 32 bit word, one bit per sequencer step
+  
   if (parPend[1] == 0)
     statesPend = 0x0;
   else
@@ -507,8 +576,13 @@ void EuclidAlgo::Setup()
   parName[3] = "Offs ";
 }
 
+//==============================
+
 void EuclidAlgo::SetStates()
 {
+  // Set the trigger pattern using the Euclidean algorithm
+  // Pettern is stored as a 32 bit word, one bit per sequencer step
+
   // Algorithm source:
   // https://www.computermusicdesign.com/simplest-euclidean-rhythm-algorithm-explained/
 
@@ -540,8 +614,13 @@ void ADCAlgo::Setup()
   delta[2] = int(1024./(parMax[1]-parMin[1]+1))+2; /// Inflate to stop churn for now
 }
 
+//==============================
+
 param ADCAlgo::paramConstrain (int i, param p0, param p1, param p2, param p3)
 {
+  // Constrain the ith requested parameter value, given value of it
+  // and other three; this is used as the pending value of that parameter
+  
   if (i == 0)
     return constrain (p0, parMin[1], 10);
   else if (i == 1)
@@ -550,9 +629,14 @@ param ADCAlgo::paramConstrain (int i, param p0, param p1, param p2, param p3)
     return Algo::paramConstrain (i, p0, p1, p2, p3);
 }
 
+//==============================
+
 void ADCAlgo::SetStates()
 {
-  statesPend = long(parPend[1]) << 22;
+  // Set the trigger pattern using the gap algorithm
+  // Pettern is stored as a 32 bit word, one bit per sequencer step
+
+  statesPend = long(parPend[1]) << 22;  // OK, that was easy
 }
 
 //============================================================
@@ -566,12 +650,15 @@ void RandAlgo::Setup()
   parName[3] = "Offs ";
 }
 
+//==============================
+
 void RandAlgo::SetStates()
 {
-  // Set states for a random sequence
+  // Set the trigger pattern using the ramdom algorithm
+  // Pettern is stored as a 32 bit word, one bit per sequencer step
 
-  // Make a list of all step numbers, pick one at random and add it to
-  // state; move it to the end of the list and repeat with that
+  // Make a list of all step numbers, pick one at random and set it to
+  // 1 in state; move it to the end of the list and repeat with that
   // last entry excluded; et cetera
 
   assert (parPend[0] <= MAX_PERIOD);
@@ -598,6 +685,9 @@ void RandAlgo::SetStates()
 
 int gcd (int a,int b)
 {
+  // Greatest common divisor (the REAL Euclidean algorithm!) for
+  // Gap sequence trigger parameter constraints
+  
   int R;
   while ((a % b) > 0)
     {
@@ -607,6 +697,8 @@ int gcd (int a,int b)
     }
   return b;
 }
+
+//==============================
 
 void checkReset()
 {
@@ -620,14 +712,18 @@ void checkReset()
   o_reset.write(reset);
 }
 
+//==============================
+
 void SetupThisPeriod()
 {
-  // Set things for this period
+  // Set things for this period — copying pending values to actual
   curAlgo = reqAlgo;
   for (int i = 0; i < 4; ++i)
     parAct[i] = parPend[i];
   statesAct = statesPend;
 }
+
+//==============================
 
 void onClockOn()
 {
@@ -642,8 +738,8 @@ void onClockOn()
       if (changeParAct)
 	{
 	  SetupThisPeriod();
-	  doDisplay = true;
-	  changeParAct = false;
+	  doDisplay = true;     // update the display when there's time 
+	  changeParAct = false; // no changes are pending any more
 	}
       if (curAlgo > 0) // no period output if algo is None
 	o_per.write(HIGH);
@@ -652,6 +748,8 @@ void onClockOn()
   o_seq.write(algoList[curAlgo]->GetState(counter));
 }
 
+//==============================
+
 void onClockOff()
 {
   // Turn off state and param1 output
@@ -659,6 +757,8 @@ void onClockOff()
   o_seq.write(LOW);
   o_per.write(LOW);
 }
+
+//==============================
 
 void tick() // ISR function
 {
@@ -671,7 +771,6 @@ void tick() // ISR function
       clockState ? onClockOn() : onClockOff();
     }
 }
-
 
 //============================================================
 
@@ -694,24 +793,31 @@ void setup()
   pinMode(RESET_IN_PIN, INPUT);
   pinMode(CLOCK_PIN, INPUT);
 
+  // Set up array of singleton algorithm objects
   algoList[0] = new Algo();
   algoList[1] = new GapAlgo();
   algoList[2] = new EuclidAlgo();
   algoList[3] = new ADCAlgo();
   algoList[4] = new RandAlgo();
 
+  // Get initial pot values
   for (int ipot = 0; ipot < 5; ++ipot)
     lastPotState[ipot] = analogRead (potlist[ipot]);
 
+  // Initial algo value
   reqAlgo = constrain (algoList[0]->PotToParam(-1), 0, NALGO);
   curAlgo = reqAlgo;
-  
+
+  // Update pending and actual parameters and states
   algoList[reqAlgo]->UpdatePars();
   SetupThisPeriod();
+
+  // Display starting parameters
   assert (curAlgo >= 0 && curAlgo < 5);
   algoList[curAlgo]->DisParams();
   changeParAct = false;
 
+  // Ready to start interrupts now
   attachInterrupt (digitalPinToInterrupt(CLOCK_PIN), tick, CHANGE);
 
 #if SERIAL
@@ -719,8 +825,11 @@ void setup()
 #endif
 }
 
+//==============================
+
 void loop()
 {
+  // Examine the pots and see if there's been a significant change
   change whatChanged = algoList[reqAlgo]->checkPots();
   if (whatChanged != noChange)
     {
@@ -728,6 +837,8 @@ void loop()
 	{
 	  // Turn on pending values display and update change time only
 	  // if change was NOT just ADC algo channel 2 by a small amount
+	  // (because that one has 10 significant bits and they can
+	  // fluctuate if there's noise)
 	  displayPend = true;
 	  lastChangeTime = millis();
 	}
@@ -736,14 +847,17 @@ void loop()
       unsigned short int newAlgo = constrain (algoList[curAlgo]->PotToParam(-1), 0, NALGO);
       if (newAlgo != reqAlgo)
 	reqAlgo = newAlgo;
+
+      // Update the requested parameters, and remind ourself to change'
+      // actual parameters next sequencer period
       algoList[reqAlgo]->UpdatePars();
       changeParAct = true;
     }
 
+  // Did someone say RESET?
   checkReset();
 
   // Stop displaying pending values after changes stop for a while
-  
   if (displayPend && (millis() - lastChangeTime > 2000))
     {
       displayPend = false;
@@ -753,17 +867,14 @@ void loop()
   // If the display blanking switch has changed, change the boolean
   // and if it's now on, blank the display; if it's off, trigger display.
   // (This affects serial output too.)
-  
   bool dbValue = i_disp_blank.read();
   if (dbValue != displayBlank)
     {
       displayBlank = dbValue;
       if (displayBlank)
-	{
 #if OLED
 	u8x8.setPowerSave(true);
 #endif
-	}
       else
 	{
 	  doDisplay = true;
@@ -774,7 +885,6 @@ void loop()
     }
 
   // Update the display if needed
-  
   if (doDisplay && !displayBlank)
       algoList[curAlgo]->DisParams();      
 }
