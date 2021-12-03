@@ -8,11 +8,19 @@
 
  */
 
-#define OLED    1 // nonzero to use OLED
-#define FLIPPED 1 // nonzero to flip display vertically (yellow stripe at bottom)
-#define SERIAL  0 // nonzero to use serial monitor
-#define MAX_PERIOD  32 // can be reduced; increasing would require significant changes
-#define NALGO 4   // number of algorithms (other than None)
+#define OLED    1        // Nonzero to use OLED
+#define FLIPPED 1        // Nonzero to flip display vertically (yellow
+//                       // stripe at bottom)
+#define SERIAL  0        // Nonzero to use serial monitor
+#define MAX_PERIOD  32   // Can be reduced; increasing would require
+//                       // significant changes
+#define DEBOUNCEMILLIS 5 // For button debouncing, wait this long before
+//                       // handling any new button presses.
+//                       // 5 ms isn't much but it seems to handle the
+//                       // bouncing on my switch, increase it to 10 or
+//                       // 20 if needed with yours
+
+#define NALGO 4          // Number of algorithms (other than None)
 
 #include <assert.h>   // for assert macro
 
@@ -46,7 +54,7 @@ typedef char stateindex;
 
 volatile InputLow<CLOCK_PIN>      i_clock (false);
 InputLow<RESET_IN_PIN>            i_reset (false);
-InputLow<DISP_BLANK_PIN>          i_disp_blank (true); // internal pullup on
+Input<DISP_BLANK_PIN>             i_disp_blank (true); // internal pullup on
 volatile Output<CLOCK_LED_PIN>    o_clock;
 Output<RESET_LED_PIN>             o_reset;
 volatile Output<SEQ_OUT_PIN>      o_seq;
@@ -67,6 +75,7 @@ long lastChangeTime = -999999;
 
 // Sequence control
 volatile int counter = -1;            // Current step #
+int lastClockTime = 0;                // When last clock occurred
 volatile bool clockState = false;     // True if clock pulse high
 volatile bool lastClockState = false; // old clockState value
 bool lastResetState = false;          // old reset value
@@ -107,7 +116,7 @@ void loop();
 
 class Algo
 {
-  // Implements an sequence creating algorithm, its parameters, and
+  // Implements a sequence-creating algorithm, its parameters, and
   // methods relating to it
   
  public:
@@ -118,7 +127,7 @@ class Algo
   virtual param paramConstrain (int i, param p0, param p1, param p2, param p3);
   //                                           // Constrain parameter values
   void DisParams();                            // OLED display
-  void UpdatePars();                           // Set requesteed params
+  void UpdatePars();                           // Set requested params
   virtual void SetParPend();                   // Set constrained params
   virtual void SetStates() {statesPend = 0;}   // Set the trigger pattern
   bool GetState(stateindex i, long theStates = -999, param thePeriod = 0, param theOffset = 0);
@@ -188,7 +197,7 @@ class RandAlgo: public Algo
 
 //============================================================
 
-volatile Algo* algoList[5];  // Vector of pointers to singleton algorithms:
+Algo* algoList[5];  // Vector of pointers to singleton algorithms:
 //                           // None, Gap, Euclidean, ADC, Random
 
 //============================================================
@@ -250,7 +259,7 @@ param Algo::PotToParam(int i)
   // i == -1 for algorithm pot, 0-3 for parameter pots
 
   assert (i >= -1 && i < 4);
-  v = lastPotState[i+1];
+  param v = lastPotState[i+1];
   if (i == -1) // algorithm pot
     return param(float(v)/(1024./(NALGO+1))); // 0 to NALGO
   else
@@ -745,14 +754,14 @@ void onClockOn()
 	o_per.write(HIGH);
     }
 
-  o_seq.write(algoList[curAlgo]->GetState(counter));
+  o_seq.write(algoList[curAlgo]->GetState(counter)); // might as well output the sequence
 }
 
 //==============================
 
 void onClockOff()
 {
-  // Turn off state and param1 output
+  // Turn off state and period output
 
   o_seq.write(LOW);
   o_per.write(LOW);
@@ -762,6 +771,17 @@ void onClockOff()
 
 void tick() // ISR function
 {
+  // Debouncing
+  int nowTime = millis();
+  if (nowTime - lastClockTime < DEBOUNCEMILLIS)
+    {
+      lastClockTime = nowTime;
+      return; // last interrupt was very recent, don't process it
+    }
+  lastClockTime = nowTime;
+
+  // Make sure we've changed from clock on to off or vice versa
+  // and then handle whichever it is
   clockState = i_clock.read();
   if (clockState != lastClockState)
     {
@@ -848,7 +868,7 @@ void loop()
       if (newAlgo != reqAlgo)
 	reqAlgo = newAlgo;
 
-      // Update the requested parameters, and remind ourself to change'
+      // Update the requested parameters, and remind ourself to change
       // actual parameters next sequencer period
       algoList[reqAlgo]->UpdatePars();
       changeParAct = true;

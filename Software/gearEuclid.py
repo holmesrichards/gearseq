@@ -1,6 +1,16 @@
 #!/usr/bin/python3
 
+# This just demonstrates the Euclidean and Gap algorithms
+
+# invoke with e.g.
+#
+# python3 gearEuclid.py 16 5 7 2
+#
+# to see Euclidean pattern with period 16, # triggers 5, and offset 2 (7 is ignored)
+# and Gap pattern with period 16, # triggers 5, generator 7, and offset 2
+
 from math import gcd
+from sys import argv
 
 def gap (steps,  events, gen):
     storedRhythm = [1] + [0] * (steps-1)
@@ -28,31 +38,24 @@ def euclid (steps,  events):
 
     return storedRhythm
 
-def seqstr (a):
+def seqstr (a, offs):
     ret = ""
-    for ai in a:
+    for ai in a[offs:]+a[:offs]:
         ret += "O" if ai == 1 else "-"
     return ret
 
 def main():
-    steps = 26
-    events = 14
+    par = [16, 5, 7, 0]
 
+    for i in range (1, 5):
+        if len(argv) > i:
+            par[i-1] = int(argv[i])
 
-    for steps in range (8, 17):
-        for events in range (3, steps-2): 
-            print ("\nSteps", steps, "events", events)
-            print ("Euclid")
-            sse = seqstr(euclid(steps, events))
-            print ("      ", sse)
-            sser = [sse]
-            for i in range (1, steps):
-                sser.append (sser[-1][1:]+sser[-1][0:1])
-            print ("Gap")
-            for gen in range (1, int(steps/2)+1):
-                if events <= steps / gcd(steps, gen):
-                    ss3 = seqstr(gap(steps, events, gen))
-                    print ("gen {:2d}".format(gen), ss3, "= Euclid" if ss3 in sser else "")
+    print ("\nPar1", par[0], "par2", par[1], "par1", par[2], "par2", par[3])
+    sse = seqstr(euclid(par[0], par[1]), par[3])
+    print ("Euclidean", sse)
+    sse = seqstr(gap(par[0], par[1], par[2]), par[3])
+    print ("Gap      ", sse)
 
 main()
 

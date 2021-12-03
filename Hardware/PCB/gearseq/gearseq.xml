@@ -2,7 +2,7 @@
 <export version="D">
   <design>
     <source>/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/GEAR sequencer/Hardware/PCB/gearseq/gearseq.sch</source>
-    <date>Sat 13 Nov 2021 12:51:51 PM EST</date>
+    <date>Thu 02 Dec 2021 06:33:21 PM EST</date>
     <tool>Eeschema 5.1.12-84ad8e8a86~92~ubuntu20.04.1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -186,7 +186,7 @@
       <footprint>ao_tht:C_Disc_D3.0mm_W1.6mm_P2.50mm</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="SKU">A-553</field>
+        <field name="SKU">A-319</field>
         <field name="Vendor">Tayda</field>
       </fields>
       <libsource lib="ao_symbols" part="C" description="Unpolarized capacitor"/>
@@ -198,7 +198,7 @@
       <footprint>ao_tht:C_Disc_D3.0mm_W1.6mm_P2.50mm</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="SKU">A-553</field>
+        <field name="SKU">A-962</field>
         <field name="Vendor">Tayda</field>
       </fields>
       <libsource lib="ao_symbols" part="C" description="Unpolarized capacitor"/>
@@ -605,7 +605,7 @@
       <footprint>ao_tht:C_Disc_D3.0mm_W1.6mm_P2.50mm</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="SKU">A-553</field>
+        <field name="SKU">A-962</field>
         <field name="Vendor">Tayda</field>
       </fields>
       <libsource lib="ao_symbols" part="C" description="Unpolarized capacitor"/>
@@ -617,7 +617,7 @@
       <footprint>ao_tht:C_Disc_D3.0mm_W1.6mm_P2.50mm</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="SKU">A-553</field>
+        <field name="SKU">A-962</field>
         <field name="Vendor">Tayda</field>
       </fields>
       <libsource lib="ao_symbols" part="C" description="Unpolarized capacitor"/>
@@ -629,7 +629,7 @@
       <footprint>ao_tht:C_Disc_D3.0mm_W1.6mm_P2.50mm</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="SKU">A-553</field>
+        <field name="SKU">A-962</field>
         <field name="Vendor">Tayda</field>
       </fields>
       <libsource lib="ao_symbols" part="C" description="Unpolarized capacitor"/>
@@ -641,7 +641,7 @@
       <footprint>ao_tht:C_Disc_D3.0mm_W1.6mm_P2.50mm</footprint>
       <datasheet>~</datasheet>
       <fields>
-        <field name="SKU">A-553</field>
+        <field name="SKU">A-962</field>
         <field name="Vendor">Tayda</field>
       </fields>
       <libsource lib="ao_symbols" part="C" description="Unpolarized capacitor"/>
@@ -652,6 +652,7 @@
       <value>10nF</value>
       <footprint>ao_tht:C_Disc_D3.0mm_W1.6mm_P2.50mm</footprint>
       <fields>
+        <field name="SKU">A-962</field>
         <field name="Vendor">Tayda</field>
       </fields>
       <libsource lib="ao_symbols" part="C" description="Unpolarized capacitor"/>
