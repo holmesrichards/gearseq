@@ -31,11 +31,11 @@ Generated from schematic by Eeschema 5.1.12-84ad8e8a86~92~ubuntu20.04.1
 | R3, R4 | 2 | 1M | Resistor | Tayda |  |
 | R5, R6, R11, R12, R13, R15 | 6 | 1k | Resistor | Tayda |  |
 | R7, R8 | 2 | 10k | Resistor | Tayda |  |
-| R9, R10, R14, R16 | 4 | RL | Resistor | Tayda |  |
-| RV1 | 1 | 10k | 9 mm vertical board mount potentiometer\*\* | Tayda |  |
-| RV2, RV3, RV4, RV5 | 4 | 100k | 9 mm vertical board mount potentiometer\*\* | Tayda |  |
-| RV6 | 1 | 10k | 16 mm vertical board mount potentiometer\*\* | Tayda |  |
-| RV7, RV8, RV9, RV10 | 4 | 100k | 16 mm vertical board mount potentiometer\*\* | Tayda |  |
+| R9, R10, R14, R16 | 4 | RL\*\* | Resistor | Tayda |  |
+| RV1 | 1 | 10k | 9 mm vertical board mount potentiometer\*\*\* | Tayda |  |
+| RV2, RV3, RV4, RV5 | 4 | 100k | 9 mm vertical board mount potentiometer\*\*\* | Tayda |  |
+| RV6 | 1 | 10k | 16 mm vertical board mount potentiometer\*\*\* | Tayda |  |
+| RV7, RV8, RV9, RV10 | 4 | 100k | 16 mm vertical board mount potentiometer\*\*\* | Tayda |  |
 | SW1 | 1 | SW_Push_black | Push button switch, normally open | Tayda | A-3487 |
 | SW2 | 1 | SW_Push_red | Push button switch, normally open | Tayda | A-3486 |
 | SW3 | 1 | SW_SPST | SPST toggle switch | Tayda | A-3186 (SPDT, use as SPST) |
@@ -51,4 +51,6 @@ Generated from schematic by Eeschema 5.1.12-84ad8e8a86~92~ubuntu20.04.1
 
 \* This can be MC096VX or MC096GX or other compatible OLED. Note these have VCC and GND in the opposite order on their header. 
 
-\*\* Fit either 9 mm or 16 mm potentiometers (not both)
+\*\* Resistor for LED current limit and brightness; use whatever value you prefer for your LEDs. See [build notes](build.md).
+
+\*\*\* Fit either 9 mm or 16 mm potentiometers (not both)

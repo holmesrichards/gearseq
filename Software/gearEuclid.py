@@ -51,7 +51,7 @@ def main():
         if len(argv) > i:
             par[i-1] = int(argv[i])
 
-    print ("\nPar1", par[0], "par2", par[1], "par1", par[2], "par2", par[3])
+    print ("Period:", par[0], "| Triggers:", par[1], "| Generator:", par[2], "| Offset:", par[3])
     sse = seqstr(euclid(par[0], par[1]), par[3])
     print ("Euclidean", sse)
     sse = seqstr(gap(par[0], par[1], par[2]), par[3])
