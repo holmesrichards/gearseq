@@ -1,21 +1,3 @@
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
-
-- [G.E.A.R. Sequencer](#gear-sequencer)
-  - [Algorithms](#algorithms)
-  - [Implementation](#implementation)
-  - [Pot assignments](#pot-assignments)
-    - [Pot+CV 1 and 4](#potcv-1-and-4)
-    - [Pot+CV 2](#potcv-2)
-    - [Pot+CV 3](#potcv-3)
-    - [Parameter ranges](#parameter-ranges)
-  - [Usage notes](#usage-notes)
-  - [Dependencies](#dependencies)
-  - [Submodules](#submodules)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
 # G.E.A.R. Sequencer
 
 This is a voltage controlled trigger sequencer or, perhaps a better term, trigger sequence generator. It can function as a Euclidean rhythm generator, but it can also create other rhythms via different means. It is designed in Kosmo format, though it can be adapted to any other ±12 V or (probably) ±15 V format.

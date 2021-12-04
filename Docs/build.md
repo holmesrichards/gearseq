@@ -14,6 +14,8 @@ The two circuit boards are connected with a 12-pin header/socket pair, and with 
 
 Pay attention to what goes on what side. On the main PCB, the jacks, LEDs, and 12-pin header go on one side, everything else on the other. On the pots board the pots and toggle switch go on one side, the 12-pin socket goes on the other. That should be evident from the silkscreen.
 
+![](../Images/side.jpg)
+
 ## Panel components
 
 There are footprints provided for both 9 mm and 16 mm vertical board mount pots. Buy and mount only one or the other! (You can mix and match between pot positions.)
@@ -25,6 +27,10 @@ As usual with the pots, jacks, LEDs, and toggle switch, put them in position; pl
 The OLED can be MC096VX or MC096GX or other compatible OLED. Note these have VCC and GND in the opposite order on their header, so reverse their order with the jumpers if you need to. You can get these displays in white, blue, or blue and yellow versions; any of these will work. The reason it is mounted upside down is to have the yellow stripe at the bottom, if you use a blue and yellow version, to highlight the trigger pattern on the display. The OLED should be mounted to the front panel using M2 screws. I secured four screws to the panel with nuts, then put the OLED on and secured it with four more nuts. 
 
 The OLED and the push button switches connect to the PCB via wires. You can solder the wires directly to the PCB, but for the push buttons I recommend fitting Molex connectors to the wires and Molex headers on the board. Route the wires through the slot in the PCB. For the OLED I mounted a 1x4 pin header on the PCB and used short female-female Dupont jumpers to connect it up. 
+
+![](../Images/oled.jpg)
+
+![](../Images/pushbuttons.jpg)
 
 ## Software
 
