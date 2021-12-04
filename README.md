@@ -1,6 +1,6 @@
 # G.E.A.R. Sequencer
 
-This is a voltage controlled trigger sequencer or, perhaps a better term, trigger sequence generator. It can function as a Euclidean rhythm generator, but it can also create other rhythms via different means. It is designed in Kosmo format, though it can be adapted to any other ±12 V or (probably) ±15 V format.
+This is a voltage controlled trigger sequencer or, perhaps a better term, trigger sequence generator. It can function as a Euclidean rhythm generator, but it can also create other rhythms via different means. It is designed in Kosmo format, though it can presumably be adapted to any other format capable of supplying enough positive voltage for 9 V voltage regulators.
 
 ## What it does
 
