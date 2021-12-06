@@ -45,7 +45,7 @@ A **random sequence** is fairly self explanatory. For a given *P* and *T*, the a
 
 ## GitHub repository
 
-* [https://github.com/holmesrichards/gapseq](https://github.com/holmesrichards/gapseq)
+* [https://github.com/holmesrichards/gearseq](https://github.com/holmesrichards/gearseq)
 
 ## Submodules
 
