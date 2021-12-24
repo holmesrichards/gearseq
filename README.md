@@ -27,6 +27,10 @@ An **ADC sequence** uses a pattern based on digitization of an analog control vo
 
 A **random sequence** is fairly self explanatory. For a given *P* and *T*, the algorithm distributes *T* triggers randomly within *P* steps. The random pattern is then repeated indefinitely, offset by *O* as with the other types, until a new sequence is requested. Another "parameter" is the throw (*Th*). The value of the throw is not used to determine the pattern, but if it changes, a new random pattern will be chosen.
 
+## Current draw
+28 mA +12 V, 0 mA -12 V
+
+
 ## Photos
 
 ![](Images/front.jpg)
