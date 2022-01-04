@@ -56,7 +56,7 @@ A **random sequence** is fairly self explanatory. For a given *P* and *T*, the a
 This repo uses submodules aoKicad and Kosmo_panel, providing libraries needed for KiCad. To clone:
 
 ```
-git clone git@github.com:holmesrichards/gapseq.git
+git clone git@github.com:holmesrichards/gearseq.git
 git submodule init
 git submodule update
 ```
@@ -65,7 +65,7 @@ git submodule update
 Alternatively do
 
 ```
-git clone --recurse-submodules git@github.com:holmesrichards/gapseq.git
+git clone --recurse-submodules git@github.com:holmesrichards/gearseq.git
 ```
 
 Or if you download the repository as a zip file, you must also click on the "aoKicad" and "Kosmo\_panel" links on the GitHub page (they'll have "@ something" after them) and download them as separate zip files which you can unzip into this repo's aoKicad and Kosmo\_panel directories.
